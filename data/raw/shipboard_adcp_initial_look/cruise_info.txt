@@ -1,0 +1,99 @@
+LAST CHANGED    : 2021/09/07 19:16:41
+CRUISE NAME(S)  : oc2109a
+CRUISE DATES    : 2021/09/03 18:02:28 to 2021/09/03 18:04:35
+SHIP NAME       : unspecified
+PORTS           : unspecified
+CHIEF SCIENTIST : unspecified
+DATABASE NAME   : a_oc
+DATA FILES      : oc2021_245_64947.raw to oc2021_249_64800.raw
+
+STATUS          :  to do                           done
+                  ------                       -----------
+                  averaged                       [     ]
+                  loaded                         [     ]
+
+                  NOTE: No automated time-dependent
+                        heading correction exists
+
+                  check heading correction       [     ]
+                  calibration                    [     ]
+                  edited                         [     ]
+                  re-check heading correction    [     ]
+                  check editing                  [     ]
+                  figures                        [     ]
+
+INSTRUMENT      : wh300
+
+ACQUISITION     : 
+     PROGRAM    : uhdas
+     PROCESSING:    : python
+
+LOGGING         : 
+
+     PARAMETERS : BT : bottom track mode (on or off)
+                  SI : sampling interval or averaging period for ensemble (sec)
+                  NB : number of bins
+                  BL : bin length (m)
+                  TD : transducer depth (m)
+                  BK : blanking length (m)
+                  HO : heading offset applied by DAS (deg)
+                  HB : heading bias (deg)
+                  CRPH : compensation for roll-pitch-heading, 1:on, 0:off)
+                  
+                  yy/mm/dd  hh:mm:ss   BT   SI  NB  BL  TD BK     HO     HB CRPH
+                  2021/09/03 18:04:28  off  120  70   2   5  2  53.16   0.00 0001
+                  2021/09/04 04:04:28  off  120  70   2   5  2  53.16   0.00 0001
+                  2021/09/04 14:04:28  off  120  70   2   5  2  53.16   0.00 0001
+                  2021/09/05 10:04:28  off  120  70   2   5  2  53.16   0.00 0001
+                  2021/09/05 20:04:28  off  120  70   2   5  2  53.16   0.00 0001
+                  2021/09/06 06:04:28  off  120  70   2   5  2  53.16   0.00 0001
+                  2021/09/07 02:04:28  off  120  70   2   5  2  53.16   0.00 0001
+                  2021/09/07 12:04:28  off  120  70   2   5  2  53.16   0.00 0001
+
+HEADING         : 
+     PRIMARY    : heading from abxtwo_udp
+     CORRECTION : does not exist?
+
+POSITIONS       : gps positions from gpsnav
+
+CALIBRATION     : (check original processing parameters)
+                  additional rotation 0
+                  final transducer angle is:
+                       (original transducer angle) - (rotate_angle)
+                  applied scale factor 1
+                  additional scale factor (none)
+
+COMMENTS        : gaps in heading correction?
+                  scattering layers?
+                  bubbles?
+                  underway bias?
+                  
+PROCESSOR       : I.M. Persistent
+
+
+--- processing parameters ----------
+
+
+## (determined from "sonar"): model = wh
+## (determined from "sonar"): frequency = 300
+## (determined from "sonar"): instname = wh300
+## (determined from "sonar"): pingtype = bb
+           beamangle   20
+          cruisename   oc2109a
+            datatype   uhdas
+             ens_len   120
+             fixfile   a_oc.gps
+           frequency   300
+          hcorr_inst   None
+            instname   wh300
+               model   wh
+            pingtype   bb
+         proc_engine   python
+          ref_method   refsm
+     refuv_smoothwin   3
+        refuv_source   nav
+               sonar   wh300
+            txy_file   a_oc.agt
+           xducer_dx   1
+           xducer_dy   -30
+            yearbase   2021

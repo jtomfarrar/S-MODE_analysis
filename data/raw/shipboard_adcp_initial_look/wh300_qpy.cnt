@@ -1,0 +1,25 @@
+--yearbase    2021
+--cruisename  oc2109a
+--configtype  python
+--sonar       wh300
+--dbname      a_oc
+--datatype    uhdas 
+--cfgpath     /home/data/oc2109a/proc/wh300/config 
+--ens_len     120 
+#--update_gbin  ## python gbins: run by "run_lastensq.py" at sea 
+#offset between transducer and gps, applied in at-sea processing
+# NOTE : read special instructions to change offsets
+#        diagnostics in cal/watertrk/guess_xducerxy.out
+# parameters used: 
+    --xducer_dx 1  
+    --xducer_dy -30   
+## see config/oc2109a_proc.py for other settings
+--skip_avg  ##  see above  
+--max_search_depth  500 
+## no heading correction device, so not using "--ping_headcorr" 
+--proc_engine python
+--refuv_smoothwin 3
+--incremental
+--top_plotbin  1
+--auto
+

@@ -89,3 +89,7 @@ target/
 
 # Mypy cache
 .mypy_cache/
+
+# netrc file with NASA PO.DAAC login info
+_netrc
+.netrc

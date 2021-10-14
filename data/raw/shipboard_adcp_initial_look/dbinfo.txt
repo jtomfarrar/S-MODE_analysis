@@ -1,0 +1,29 @@
+#this file was automatically generated. DO NOT EDIT
+#
+# written 2021/09/03 18:04:35
+# this file contains CODAS quick_adcp.py info
+#name, value pairs
+#--------------------
+## (determined from "sonar"): model = wh
+## (determined from "sonar"): frequency = 300
+## (determined from "sonar"): instname = wh300
+## (determined from "sonar"): pingtype = bb
+           beamangle   20
+          cruisename   oc2109a
+            datatype   uhdas
+             ens_len   120
+             fixfile   a_oc.gps
+           frequency   300
+          hcorr_inst   None
+            instname   wh300
+               model   wh
+            pingtype   bb
+         proc_engine   python
+          ref_method   refsm
+     refuv_smoothwin   3
+        refuv_source   nav
+               sonar   wh300
+            txy_file   a_oc.agt
+           xducer_dx   1
+           xducer_dy   -30
+            yearbase   2021
