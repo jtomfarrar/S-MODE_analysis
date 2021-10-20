@@ -93,3 +93,6 @@ target/
 # netrc file with NASA PO.DAAC login info
 _netrc
 .netrc
+
+# Exclude saved plots
+/data/*
