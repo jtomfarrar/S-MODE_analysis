@@ -94,5 +94,6 @@ target/
 _netrc
 .netrc
 
-# Exclude saved plots
+# Exclude saved plots and data
 /data/*
+/plots/*
