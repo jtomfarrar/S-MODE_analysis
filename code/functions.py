@@ -49,3 +49,25 @@ def plot_ops_area(ax,**kwargs):
 
    return(xs,ys,ax)
 
+def get_current_position(platform_str,**kwargs):
+    """
+    Plot current position of particular S-MODE assets (using JSON file from http://smode.whoi.edu/status.php?format=json).
+    
+    Parameters
+    ----------
+    platform_str : str
+        Name of platform: can be 'saildrone', 'navo_glider', 'drifter', 'ship' or 'waveglider'.
+
+    Returns
+    -------
+    A Pandas DataFrame with positions and other info.  Plot with ax.plot(platform['longitude'],platform['latitude'],**kwargs)
+
+    """
+    import matplotlib.pyplot as plt
+    import pandas as pd
+    df1=pd.read_json('http://smode.whoi.edu/status.php?format=json')
+    platform=df1[df1['type']==platform_str]
+    
+    
+    return(platform)
+
