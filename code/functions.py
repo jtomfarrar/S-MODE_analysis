@@ -98,18 +98,21 @@ def sst_map_SMODE(url,zoom,V,time_window):
     import xarray as xr
     import matplotlib.pyplot as plt
     import matplotlib
+    from matplotlib.patheffects import Stroke
     import copy
     import cartopy.crs as ccrs                   # import projections
     import cartopy
     import datetime
+    import shapely.geometry
+
     
     if zoom == 0: #wide view of S-MODE ops area and San Francisco
         xmin, xmax = (-126,-121)
         ymin, ymax = (36, 39)
         zoom_str='_wide'
     elif zoom == 1: #centered on S-MODE ops area, but shows San Francisco
-        xmin, xmax = (-126,-122)
-        ymin, ymax = (36, 39)
+        xmin, xmax = (-126.0,-122.0)
+        ymin, ymax = (36.0, 39.0)
         zoom_str='_zoom1'
     elif zoom == 2: #tight on S-MODE ops area
         xmin, xmax = (-125.5,-123)
@@ -140,7 +143,7 @@ def sst_map_SMODE(url,zoom,V,time_window):
     cmap.set_bad(color='white')
     gl = ax.gridlines(draw_labels=True, dms=True, x_inline=False, y_inline=False, alpha=0.5, linestyle='--')
     gl.top_labels = False
-    gl.ylabels_right = False
+    gl.right_labels = False
     
     ax.coastlines()
     ax.add_feature(cartopy.feature.LAND, zorder=3, facecolor=[.6,.6,.6], edgecolor='black')
@@ -148,11 +151,11 @@ def sst_map_SMODE(url,zoom,V,time_window):
     cs = ax.pcolormesh(sst.lon,sst.lat,np.squeeze(arr)-273.15, vmin=levels[0], vmax=levels[-1], transform=ccrs.PlateCarree())
     cb = plt.colorbar(cs,fraction = 0.022,extend='both')
     cb.set_label('SST [$\circ$C]',fontsize = 10)
-    plot_ops_area(ax,transform=ccrs.PlateCarree(),color='w')
+    plot_ops_area(ax,transform=ccrs.PlateCarree(),color='k')
 
     ################################################
     ## Now read in HF radar for appropriate time
-    # This could easily be spun off into a separrate function
+    # This could easily be spun off into a seperate function
     center_timeDT = datetime.datetime.strptime(str(sst.time[0].values),'%Y-%m-%d %H:%M:%S') #time of SST image
     # Choose time interval
     time_delta=datetime.timedelta(hours=time_window/2)
@@ -182,6 +185,28 @@ def sst_map_SMODE(url,zoom,V,time_window):
     ax.quiver(np.array([x0]), np.array([y0]), np.array([0.25/np.sqrt(2)]), np.array([0.25/np.sqrt(2)]), color='w', scale=3, transform=ccrs.PlateCarree())
     ax.text(x0+3/60, y0+.15/60, '0.25 m/s', color = 'w', fontsize=6, transform=ccrs.PlateCarree())
     ax.set_title('SST, ' + day_str + ', surface currents averaged over +/- ' + f'{time_window/2:.1f}' + ' hr', size = 10.)
+    
+    # Create an inset GeoAxes showing the location of the Solomon Islands.
+    sub_ax = plt.axes([0.65, 0.655, 0.2, 0.2], projection=ccrs.PlateCarree())
+    sub_ax.set_extent([-130, -115, 29, 45])
+
+    # Make a nice border around the inset axes.
+    effect = Stroke(linewidth=2, foreground='wheat', alpha=0.5)
+    sub_ax.outline_patch.set_path_effects([effect])
+
+    # Add the land, coastlines and the extent of the Solomon Islands.
+    sub_ax.add_feature(cartopy.feature.LAND)
+    sub_ax.coastlines()
+    sub_ax.add_feature(cartopy.feature.STATES, zorder=3, linewidth=0.5)
+    # extent_box = shapely.geometry.box(xmin, ymin, xmax, ymax)
+    coord = [[xmin,ymin], [xmax,ymin], [xmax,ymax], [xmin,ymax]]
+    coord.append(coord[0]) #repeat the first point to create a 'closed loop'
+    xs, ys = zip(*coord) #create lists of x and y values
+    sub_ax.plot(xs,ys, transform=ccrs.PlateCarree(), linewidth=2)
+    plot_ops_area(sub_ax,transform=ccrs.PlateCarree(),color='k')
+
+    # sub_ax.add_geometries([extent_box], ccrs.PlateCarree(), color='none', edgecolor='blue', linewidth=2)
+
     
     return(ax,startTimeDT,endTimeDT,day_str2)
 
