@@ -7,7 +7,7 @@ Created on Sun Oct 24 10:37:33 2021
 @author: jtomfarrar
 """
 
-def plot_IOP1_ops_area(ax,**kwargs):
+def plot_ops_area(ax,**kwargs):
    """ Add polygon to show S-MODE IOP1 operations area.
          
    Inputs
@@ -50,7 +50,7 @@ def plot_IOP1_ops_area(ax,**kwargs):
 
 
 
-def plot_ops_area(ax,**kwargs):
+def plot_ops_area_old(ax,**kwargs):
    """ Add polygon to show S-MODE pilot operations area.
          
    Inputs
