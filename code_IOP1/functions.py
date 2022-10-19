@@ -41,10 +41,12 @@ def plot_ops_area(ax,**kwargs):
    SF_lat= 37+47/60
 
    # mark a known place to help us geo-locate ourselves
+   '''
    ax.plot(SF_lon, SF_lat, 'o', markersize=3, zorder=10, **kwargs)
    ax.text(SF_lon-5/60, SF_lat+5/60, 'San Francisco', fontsize=8, zorder=10, **kwargs)
    # ax.text(np.mean(xs)-.6, np.mean(ys)-.3, 'S-MODE ops area', fontsize=8, **kwargs)
    print(kwargs)
+   '''
 
    return(xs,ys,ax)
 
@@ -97,7 +99,7 @@ def get_current_position(platform_str,**kwargs):
     Parameters
     ----------
     platform_str : str
-        Name of platform: can be 'saildrone', 'navo_glider', 'drifter', 'ship' or 'waveglider'.
+        Name of platform: can be 'saildrone', 'navo_glider', 'drifter', 'ship', 'seaglider' or 'waveglider'.
 
     Returns
     -------
@@ -160,12 +162,12 @@ def sst_map_SMODE(url,zoom,V,time_window):
         ymin, ymax = (36.5,38)
         zoom_str='_zoom2'
     elif zoom == 3: #zoom on eastern part of ops area
-        xmin, xmax = (-124.75,-122.5)
-        ymin, ymax = (36.3,38)
+        xmin, xmax = (-125.25,-123.75)
+        ymin, ymax = (36.75, 37.75)
         zoom_str='zoom3'
     elif zoom == 4: #not yet determined
-        xmin, xmax = (-126,-122)
-        ymin, ymax = (36, 39)
+        xmin, xmax = (-125,-124)
+        ymin, ymax = (36.75, 37.5)
         zoom_str='_zoom4'
     
     #Set color scale range (define V with input file)
@@ -193,8 +195,8 @@ def sst_map_SMODE(url,zoom,V,time_window):
     cb = plt.colorbar(cs,fraction = 0.022,extend='both')
     cb.set_label('SST [$\circ$C]',fontsize = 10)
     #plot_ops_area(ax,transform=ccrs.PlateCarree(),color='k')
-    plot_IOP1_ops_area(ax,transform=ccrs.PlateCarree(),color='k')
-
+    plot_ops_area(ax,transform=ccrs.PlateCarree(),color='k')
+    '''
     ################################################
     ## Now read in HF radar for appropriate time
     # This could easily be spun off into a seperate function
@@ -227,7 +229,7 @@ def sst_map_SMODE(url,zoom,V,time_window):
     ax.quiver(np.array([x0]), np.array([y0]), np.array([0.25/np.sqrt(2)]), np.array([0.25/np.sqrt(2)]), color='w', scale=3, transform=ccrs.PlateCarree())
     ax.text(x0+3/60, y0+.15/60, '0.25 m/s', color = 'w', fontsize=6, transform=ccrs.PlateCarree())
     ax.set_title('SST, ' + day_str + ', surface currents averaged over +/- ' + f'{time_window/2:.1f}' + ' hr', size = 10.)
-    
+    '''
     # Create an inset GeoAxes showing the location of the Solomon Islands.
     sub_ax = plt.axes([0.65, 0.655, 0.2, 0.2], projection=ccrs.PlateCarree())
     sub_ax.set_extent([-130, -115, 29, 45])
@@ -250,5 +252,6 @@ def sst_map_SMODE(url,zoom,V,time_window):
     # sub_ax.add_geometries([extent_box], ccrs.PlateCarree(), color='none', edgecolor='blue', linewidth=2)
 
     
-    return(ax,startTimeDT,endTimeDT,day_str2)
+    #return(ax,startTimeDT,endTimeDT,day_str2)
+    return(ax,day_str2)
 
