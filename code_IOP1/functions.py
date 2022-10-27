@@ -255,7 +255,7 @@ def sst_map_SMODE(url,zoom,V,time_window):
 
     
     #return(ax,startTimeDT,endTimeDT,day_str2)
-    return(ax,day_str2)
+    return(ax,day_str)
 
 def chl_map_SMODE(url,zoom,V,time_window):
     """
