@@ -364,3 +364,52 @@ def chl_map_SMODE(url,zoom,V,time_window):
     
     #return(ax,startTimeDT,endTimeDT,day_str2)
     return(ax,day_str2)
+
+def run_avg2d(f, N, dim):
+    """
+    Calculate N-point running average of the 2d array f. 
+    (Copied from Tom_tools_v1.py)
+ 
+    Parameters
+    ----------
+    f : numeric
+        So far I have only used a 2d Numpy.array.
+    N : numeric
+        Number of points for running average
+    dim : numeric
+        dimension on which to operate (1 or 2, default 1)
+
+    Returns
+    -------
+    result : numeric
+        running average of f [same size as f].
+
+    Example
+    -------
+    >>> x = np.linspace(0, 100, 1000)
+    >>> y = np.linspace(0, 80, 800)
+    >>> xx, yy = np.meshgrid(x, y)
+    >>> z=np.cos(2*np.pi/10*xx+2*np.pi/19*yy)+np.random.normal(0,1,np.shape(xx))
+    >>> z[400, 400] = np.nan
+    >>> N = 51
+    >>> fz = run_avg2d(z, N, 1)
+    >>> fz2 = run_avg2d(fz, N, 2)
+
+    """
+    import numpy as np
+
+    win = np.ones((N,))
+    sumwin = sum(win)
+    # Initialize fz
+    fz = np.empty(np.shape(f))
+    if dim == 1:
+        for n in range(0, len(f[0, :])-1):
+            fz[:, n] = np.convolve(f[:, n], win, mode='same') 
+
+    elif dim == 2:
+        for n in range(0, len(f[:, 0])-1):
+           fz[n, :] = np.convolve(f[n, :], np.transpose(win), mode='same') 
+
+    return fz / sumwin
+
+
