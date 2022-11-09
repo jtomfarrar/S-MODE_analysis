@@ -150,8 +150,8 @@ def sst_map_SMODE(url,zoom,V,time_window):
 
     
     if zoom == 0: #wide view of S-MODE ops area and San Francisco
-        xmin, xmax = (-126,-121)
-        ymin, ymax = (36, 39)
+        xmin, xmax = (-127,-121)
+        ymin, ymax = (35, 39.25)
         zoom_str='_wide'
     elif zoom == 1: #centered on S-MODE ops area, but shows San Francisco
         xmin, xmax = (-126.0,-122.0)
@@ -196,7 +196,7 @@ def sst_map_SMODE(url,zoom,V,time_window):
     cb = plt.colorbar(cs,fraction = 0.022,extend='both')
     cb.set_label('SST [$\circ$C]',fontsize = 10)
     #plot_ops_area(ax,transform=ccrs.PlateCarree(),color='k')
-    plot_ops_area(ax,transform=ccrs.PlateCarree(),color='k')
+    #plot_ops_area(ax,transform=ccrs.PlateCarree(),color='k')
     '''
     ################################################
     ## Now read in HF radar for appropriate time
@@ -233,7 +233,7 @@ def sst_map_SMODE(url,zoom,V,time_window):
     '''
     ax.set_title('SST, ' + day_str , size = 10.)
     # Create an inset GeoAxes showing the location of the Solomon Islands.
-    sub_ax = plt.axes([0.65, 0.655, 0.2, 0.2], projection=ccrs.PlateCarree())
+    sub_ax = plt.axes([0.74, 0.64, 0.1, 0.1], projection=ccrs.PlateCarree())
     sub_ax.set_extent([-130, -115, 29, 45])
 
     # Make a nice border around the inset axes.
@@ -249,7 +249,7 @@ def sst_map_SMODE(url,zoom,V,time_window):
     coord.append(coord[0]) #repeat the first point to create a 'closed loop'
     xs, ys = zip(*coord) #create lists of x and y values
     sub_ax.plot(xs,ys, transform=ccrs.PlateCarree(), linewidth=2)
-    plot_ops_area(sub_ax,transform=ccrs.PlateCarree(),color='k')
+    #plot_ops_area(sub_ax,transform=ccrs.PlateCarree(),color='k')
 
     # sub_ax.add_geometries([extent_box], ccrs.PlateCarree(), color='none', edgecolor='blue', linewidth=2)
 
