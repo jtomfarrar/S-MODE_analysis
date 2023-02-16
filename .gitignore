@@ -97,3 +97,5 @@ _netrc
 # Exclude saved plots and data
 /data/*
 /plots/*
+# Keep SWOT orbit data
+!/data/SWOT_orbit

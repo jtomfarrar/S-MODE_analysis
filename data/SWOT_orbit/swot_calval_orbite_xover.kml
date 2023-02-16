@@ -1,0 +1,3882 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document id="root_doc">
+	<name>CalVal Xovers</name>
+	<Snippet maxLines='1'><![CDATA[Version: 11/21/2017]]></Snippet>
+	<description><![CDATA[<i>CROSSOVER POINTS<br>FOR SWOT CALVAL ORBIT</i><br><br>
+Producer: CNES / Claire Pottier<br>
+Version date = 11/21/2017<br><br>
+Reference file: ephem_calval_june2015_ell.txt<br><br>
+Contact: <a href="mailto:claire.pottier@cnes.fr?subject=[SWOT] KML of CalVal crossover points">claire.pottier@cnes.fr</a><br><br> <i>For illustration only.<br>
+User to verify all information.</i>]]></description>
+	<Schema name="calval_orbite_xover" id="calval_orbite_xover">
+		<SimpleField type="string" name="Description"></SimpleField>
+		<SimpleField type="string" name="ID"></SimpleField>
+		<SimpleField type="string" name="PASS1"></SimpleField>
+		<SimpleField type="float" name="T1"></SimpleField>
+		<SimpleField type="string" name="PASS2"></SimpleField>
+		<SimpleField type="float" name="T2"></SimpleField>
+		<SimpleField type="string" name="PASS3"></SimpleField>
+		<SimpleField type="float" name="T3"></SimpleField>
+		<SimpleField type="string" name="DELTA_P1"></SimpleField>
+		<SimpleField type="float" name="DELTA_T1"></SimpleField>
+		<SimpleField type="string" name="DELTA_P2"></SimpleField>
+		<SimpleField type="float" name="DELTA_T2"></SimpleField>
+	</Schema>
+	<Style id="s_ylw-pushpin">
+		<IconStyle>
+			<scale>3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LabelStyle>
+			<scale>3</scale>
+		</LabelStyle>
+	</Style>
+	<StyleMap id="m_ylw-pushpin">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin_hl">
+		<IconStyle>
+			<scale>3.54545</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LabelStyle>
+			<scale>3</scale>
+		</LabelStyle>
+	</Style>
+	<Folder>
+		<name>calval_orbite_xover</name>
+		<Placemark>
+			<name>ID = 1</name>
+			<description><![CDATA[dT_min = 38615s = 10h43min35s<br>(= 13 passes)<br>dT_max = 47222s = 13h07min02s<br>(= 15 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">1</SimpleData>
+					<SimpleData name="PASS1">1</SimpleData>
+					<SimpleData name="T1">621.000</SimpleData>
+					<SimpleData name="PASS2">14</SimpleData>
+					<SimpleData name="T2">39236.000</SimpleData>
+					<SimpleData name="PASS3">30</SimpleData>
+					<SimpleData name="T3">86458.536</SimpleData>
+					<SimpleData name="DELTA_P1">13</SimpleData>
+					<SimpleData name="DELTA_T1">38615.000</SimpleData>
+					<SimpleData name="DELTA_P2">15</SimpleData>
+					<SimpleData name="DELTA_T2">47222.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-112.5395609541638,-35.64744008737028,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 2</name>
+			<description><![CDATA[dT_min = 31542s = 08h45min42s<br>(= 11 passes)<br>dT_max = 54295s = 15h04min55s<br>(= 17 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">2</SimpleData>
+					<SimpleData name="PASS1">1</SimpleData>
+					<SimpleData name="T1">1092.000</SimpleData>
+					<SimpleData name="PASS2">12</SimpleData>
+					<SimpleData name="T2">32634.000</SimpleData>
+					<SimpleData name="PASS3">30</SimpleData>
+					<SimpleData name="T3">86929.536</SimpleData>
+					<SimpleData name="DELTA_P1">11</SimpleData>
+					<SimpleData name="DELTA_T1">31542.000</SimpleData>
+					<SimpleData name="DELTA_P2">17</SimpleData>
+					<SimpleData name="DELTA_T2">54295.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-99.67946248285435,-61.58028890964683,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 3</name>
+			<description><![CDATA[dT_min = 25061s = 06h57min41s<br>(= 9 passes)<br>dT_max = 60776s = 16h52min56s<br>(= 19 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">3</SimpleData>
+					<SimpleData name="PASS1">1</SimpleData>
+					<SimpleData name="T1">1267.000</SimpleData>
+					<SimpleData name="PASS2">10</SimpleData>
+					<SimpleData name="T2">26328.000</SimpleData>
+					<SimpleData name="PASS3">30</SimpleData>
+					<SimpleData name="T3">87104.536</SimpleData>
+					<SimpleData name="DELTA_P1">9</SimpleData>
+					<SimpleData name="DELTA_T1">25061.000</SimpleData>
+					<SimpleData name="DELTA_P2">19</SimpleData>
+					<SimpleData name="DELTA_T2">60776.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-86.83436846088989,-70.19113895046219,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 4</name>
+			<description><![CDATA[dT_min = 18734s = 05h12min14s<br>(= 7 passes)<br>dT_max = 67103s = 18h38min23s<br>(= 21 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">4</SimpleData>
+					<SimpleData name="PASS1">1</SimpleData>
+					<SimpleData name="T1">1365.000</SimpleData>
+					<SimpleData name="PASS2">8</SimpleData>
+					<SimpleData name="T2">20099.000</SimpleData>
+					<SimpleData name="PASS3">30</SimpleData>
+					<SimpleData name="T3">87202.536</SimpleData>
+					<SimpleData name="DELTA_P1">7</SimpleData>
+					<SimpleData name="DELTA_T1">18734.000</SimpleData>
+					<SimpleData name="DELTA_P2">21</SimpleData>
+					<SimpleData name="DELTA_T2">67103.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-73.90084879034103,-74.20315497149373,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 5</name>
+			<description><![CDATA[dT_min = 12468s = 03h27min48s<br>(= 5 passes)<br>dT_max = 73369s = 20h22min49s<br>(= 23 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">5</SimpleData>
+					<SimpleData name="PASS1">1</SimpleData>
+					<SimpleData name="T1">1432.000</SimpleData>
+					<SimpleData name="PASS2">6</SimpleData>
+					<SimpleData name="T2">13900.000</SimpleData>
+					<SimpleData name="PASS3">30</SimpleData>
+					<SimpleData name="T3">87269.536</SimpleData>
+					<SimpleData name="DELTA_P1">5</SimpleData>
+					<SimpleData name="DELTA_T1">12468.000</SimpleData>
+					<SimpleData name="DELTA_P2">23</SimpleData>
+					<SimpleData name="DELTA_T2">73369.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-61.12695670614318,-76.27976252096993,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 6</name>
+			<description><![CDATA[dT_min = 6229s = 01h43min49s<br>(= 3 passes)<br>dT_max = 79608s = 22h06min48s<br>(= 25 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">6</SimpleData>
+					<SimpleData name="PASS1">1</SimpleData>
+					<SimpleData name="T1">1486.000</SimpleData>
+					<SimpleData name="PASS2">4</SimpleData>
+					<SimpleData name="T2">7715.000</SimpleData>
+					<SimpleData name="PASS3">30</SimpleData>
+					<SimpleData name="T3">87323.536</SimpleData>
+					<SimpleData name="DELTA_P1">3</SimpleData>
+					<SimpleData name="DELTA_T1">6229.000</SimpleData>
+					<SimpleData name="DELTA_P2">25</SimpleData>
+					<SimpleData name="DELTA_T2">79608.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-48.1312035016889,-77.32125359416638,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 7</name>
+			<description><![CDATA[dT_min = 6228s = 01h43min48s<br>(= 3 passes)<br>dT_max = 79609s = 22h06min49s<br>(= 25 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">7</SimpleData>
+					<SimpleData name="PASS1">2</SimpleData>
+					<SimpleData name="T1">1584.000</SimpleData>
+					<SimpleData name="PASS2">27</SimpleData>
+					<SimpleData name="T2">81193.000</SimpleData>
+					<SimpleData name="PASS3">31</SimpleData>
+					<SimpleData name="T3">87421.536</SimpleData>
+					<SimpleData name="DELTA_P1">25</SimpleData>
+					<SimpleData name="DELTA_T1">79609.000</SimpleData>
+					<SimpleData name="DELTA_P2">3</SimpleData>
+					<SimpleData name="DELTA_T2">6228.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-22.43419904963587,-77.32080008356472,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 8</name>
+			<description><![CDATA[dT_min = 12468s = 03h27min48s<br>(= 5 passes)<br>dT_max = 73369s = 20h22min49s<br>(= 23 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">8</SimpleData>
+					<SimpleData name="PASS1">2</SimpleData>
+					<SimpleData name="T1">1638.000</SimpleData>
+					<SimpleData name="PASS2">25</SimpleData>
+					<SimpleData name="T2">75007.000</SimpleData>
+					<SimpleData name="PASS3">31</SimpleData>
+					<SimpleData name="T3">87475.536</SimpleData>
+					<SimpleData name="DELTA_P1">23</SimpleData>
+					<SimpleData name="DELTA_T1">73369.000</SimpleData>
+					<SimpleData name="DELTA_P2">5</SimpleData>
+					<SimpleData name="DELTA_T2">12468.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-9.720624456997333,-76.28007141498918,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 9</name>
+			<description><![CDATA[dT_min = 18735s = 05h12min15s<br>(= 7 passes)<br>dT_max = 67102s = 18h38min22s<br>(= 21 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">9</SimpleData>
+					<SimpleData name="PASS1">2</SimpleData>
+					<SimpleData name="T1">1706.000</SimpleData>
+					<SimpleData name="PASS2">23</SimpleData>
+					<SimpleData name="T2">68808.000</SimpleData>
+					<SimpleData name="PASS3">31</SimpleData>
+					<SimpleData name="T3">87543.536</SimpleData>
+					<SimpleData name="DELTA_P1">21</SimpleData>
+					<SimpleData name="DELTA_T1">67102.000</SimpleData>
+					<SimpleData name="DELTA_P2">7</SimpleData>
+					<SimpleData name="DELTA_T2">18735.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>3.205726440796123,-74.19702941395485,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 10</name>
+			<description><![CDATA[dT_min = 25059s = 06h57min39s<br>(= 9 passes)<br>dT_max = 60778s = 16h52min58s<br>(= 19 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">10</SimpleData>
+					<SimpleData name="PASS1">2</SimpleData>
+					<SimpleData name="T1">1802.000</SimpleData>
+					<SimpleData name="PASS2">21</SimpleData>
+					<SimpleData name="T2">62580.000</SimpleData>
+					<SimpleData name="PASS3">31</SimpleData>
+					<SimpleData name="T3">87639.536</SimpleData>
+					<SimpleData name="DELTA_P1">19</SimpleData>
+					<SimpleData name="DELTA_T1">60778.000</SimpleData>
+					<SimpleData name="DELTA_P2">9</SimpleData>
+					<SimpleData name="DELTA_T2">25059.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>16.02227512301739,-70.21255586949204,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 11</name>
+			<description><![CDATA[dT_min = 31540s = 08h45min40s<br>(= 11 passes)<br>dT_max = 54297s = 15h04min57s<br>(= 17 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">11</SimpleData>
+					<SimpleData name="PASS1">2</SimpleData>
+					<SimpleData name="T1">1977.000</SimpleData>
+					<SimpleData name="PASS2">19</SimpleData>
+					<SimpleData name="T2">56274.000</SimpleData>
+					<SimpleData name="PASS3">31</SimpleData>
+					<SimpleData name="T3">87814.536</SimpleData>
+					<SimpleData name="DELTA_P1">17</SimpleData>
+					<SimpleData name="DELTA_T1">54297.000</SimpleData>
+					<SimpleData name="DELTA_P2">11</SimpleData>
+					<SimpleData name="DELTA_T2">31540.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>28.89211597541678,-61.5883298485738,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 12</name>
+			<description><![CDATA[dT_min = 38614s = 10h43min34s<br>(= 13 passes)<br>dT_max = 47223s = 13h07min03s<br>(= 15 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">12</SimpleData>
+					<SimpleData name="PASS1">2</SimpleData>
+					<SimpleData name="T1">2448.000</SimpleData>
+					<SimpleData name="PASS2">17</SimpleData>
+					<SimpleData name="T2">49671.000</SimpleData>
+					<SimpleData name="PASS3">31</SimpleData>
+					<SimpleData name="T3">88285.536</SimpleData>
+					<SimpleData name="DELTA_P1">15</SimpleData>
+					<SimpleData name="DELTA_T1">47223.000</SimpleData>
+					<SimpleData name="DELTA_P2">13</SimpleData>
+					<SimpleData name="DELTA_T2">38614.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>41.74543248604955,-35.64466056744426,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 13</name>
+			<description><![CDATA[dT_min = 38606s = 10h43min26s<br>(= 13 passes)<br>dT_max = 47231s = 13h07min11s<br>(= 15 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">13</SimpleData>
+					<SimpleData name="PASS1">2</SimpleData>
+					<SimpleData name="T1">3691.000</SimpleData>
+					<SimpleData name="PASS2">15</SimpleData>
+					<SimpleData name="T2">42297.000</SimpleData>
+					<SimpleData name="PASS3">31</SimpleData>
+					<SimpleData name="T3">89528.536</SimpleData>
+					<SimpleData name="DELTA_P1">13</SimpleData>
+					<SimpleData name="DELTA_T1">38606.000</SimpleData>
+					<SimpleData name="DELTA_P2">15</SimpleData>
+					<SimpleData name="DELTA_T2">47231.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>54.60253709746984,35.70470010892127,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 14</name>
+			<description><![CDATA[dT_min = 31537s = 08h45min37s<br>(= 11 passes)<br>dT_max = 54300s = 15h05min00s<br>(= 17 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">14</SimpleData>
+					<SimpleData name="PASS1">2</SimpleData>
+					<SimpleData name="T1">4160.000</SimpleData>
+					<SimpleData name="PASS2">13</SimpleData>
+					<SimpleData name="T2">35697.000</SimpleData>
+					<SimpleData name="PASS3">31</SimpleData>
+					<SimpleData name="T3">89997.536</SimpleData>
+					<SimpleData name="DELTA_P1">11</SimpleData>
+					<SimpleData name="DELTA_T1">31537.000</SimpleData>
+					<SimpleData name="DELTA_P2">17</SimpleData>
+					<SimpleData name="DELTA_T2">54300.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>67.46629235770583,61.59334403326075,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 15</name>
+			<description><![CDATA[dT_min = 25058s = 06h57min38s<br>(= 9 passes)<br>dT_max = 60779s = 16h52min59s<br>(= 19 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">15</SimpleData>
+					<SimpleData name="PASS1">2</SimpleData>
+					<SimpleData name="T1">4334.000</SimpleData>
+					<SimpleData name="PASS2">11</SimpleData>
+					<SimpleData name="T2">29392.000</SimpleData>
+					<SimpleData name="PASS3">31</SimpleData>
+					<SimpleData name="T3">90171.536</SimpleData>
+					<SimpleData name="DELTA_P1">9</SimpleData>
+					<SimpleData name="DELTA_T1">25058.000</SimpleData>
+					<SimpleData name="DELTA_P2">19</SimpleData>
+					<SimpleData name="DELTA_T2">60779.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>80.32470991825039,70.1919831693963,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 16</name>
+			<description><![CDATA[dT_min = 18733s = 05h12min13s<br>(= 7 passes)<br>dT_max = 67104s = 18h38min24s<br>(= 21 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">16</SimpleData>
+					<SimpleData name="PASS1">2</SimpleData>
+					<SimpleData name="T1">4431.000</SimpleData>
+					<SimpleData name="PASS2">9</SimpleData>
+					<SimpleData name="T2">23164.000</SimpleData>
+					<SimpleData name="PASS3">31</SimpleData>
+					<SimpleData name="T3">90268.536</SimpleData>
+					<SimpleData name="DELTA_P1">7</SimpleData>
+					<SimpleData name="DELTA_T1">18733.000</SimpleData>
+					<SimpleData name="DELTA_P2">21</SimpleData>
+					<SimpleData name="DELTA_T2">67104.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>93.20299184045526,74.2006506100396,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 17</name>
+			<description><![CDATA[dT_min = 12467s = 03h27min47s<br>(= 5 passes)<br>dT_max = 73370s = 20h22min50s<br>(= 23 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">17</SimpleData>
+					<SimpleData name="PASS1">2</SimpleData>
+					<SimpleData name="T1">4498.000</SimpleData>
+					<SimpleData name="PASS2">7</SimpleData>
+					<SimpleData name="T2">16965.000</SimpleData>
+					<SimpleData name="PASS3">31</SimpleData>
+					<SimpleData name="T3">90335.536</SimpleData>
+					<SimpleData name="DELTA_P1">5</SimpleData>
+					<SimpleData name="DELTA_T1">12467.000</SimpleData>
+					<SimpleData name="DELTA_P2">23</SimpleData>
+					<SimpleData name="DELTA_T2">73370.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>105.930095923132,76.28641608315728,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 18</name>
+			<description><![CDATA[dT_min = 6228s = 01h43min48s<br>(= 3 passes)<br>dT_max = 79609s = 22h06min49s<br>(= 25 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">18</SimpleData>
+					<SimpleData name="PASS1">2</SimpleData>
+					<SimpleData name="T1">4552.000</SimpleData>
+					<SimpleData name="PASS2">5</SimpleData>
+					<SimpleData name="T2">10780.000</SimpleData>
+					<SimpleData name="PASS3">31</SimpleData>
+					<SimpleData name="T3">90389.536</SimpleData>
+					<SimpleData name="DELTA_P1">3</SimpleData>
+					<SimpleData name="DELTA_T1">6228.000</SimpleData>
+					<SimpleData name="DELTA_P2">25</SimpleData>
+					<SimpleData name="DELTA_T2">79609.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>118.8566913182338,77.31941159049897,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 19</name>
+			<description><![CDATA[dT_min = 6228s = 01h43min48s<br>(= 3 passes)<br>dT_max = 79609s = 22h06min49s<br>(= 25 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">19</SimpleData>
+					<SimpleData name="PASS1">3</SimpleData>
+					<SimpleData name="T1">4650.000</SimpleData>
+					<SimpleData name="PASS2">28</SimpleData>
+					<SimpleData name="T2">84259.000</SimpleData>
+					<SimpleData name="PASS3">32</SimpleData>
+					<SimpleData name="T3">90487.536</SimpleData>
+					<SimpleData name="DELTA_P1">25</SimpleData>
+					<SimpleData name="DELTA_T1">79609.000</SimpleData>
+					<SimpleData name="DELTA_P2">3</SimpleData>
+					<SimpleData name="DELTA_T2">6228.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>144.8848465636682,77.33124416079946,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 20</name>
+			<description><![CDATA[dT_min = 12467s = 03h27min47s<br>(= 5 passes)<br>dT_max = 73370s = 20h22min50s<br>(= 23 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">20</SimpleData>
+					<SimpleData name="PASS1">3</SimpleData>
+					<SimpleData name="T1">4703.000</SimpleData>
+					<SimpleData name="PASS2">26</SimpleData>
+					<SimpleData name="T2">78073.000</SimpleData>
+					<SimpleData name="PASS3">32</SimpleData>
+					<SimpleData name="T3">90540.536</SimpleData>
+					<SimpleData name="DELTA_P1">23</SimpleData>
+					<SimpleData name="DELTA_T1">73370.000</SimpleData>
+					<SimpleData name="DELTA_P2">5</SimpleData>
+					<SimpleData name="DELTA_T2">12467.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>157.4999690393192,76.27986976649335,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 21</name>
+			<description><![CDATA[dT_min = 18732s = 05h12min12s<br>(= 7 passes)<br>dT_max = 67105s = 18h38min25s<br>(= 21 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">21</SimpleData>
+					<SimpleData name="PASS1">3</SimpleData>
+					<SimpleData name="T1">4770.000</SimpleData>
+					<SimpleData name="PASS2">24</SimpleData>
+					<SimpleData name="T2">71875.000</SimpleData>
+					<SimpleData name="PASS3">32</SimpleData>
+					<SimpleData name="T3">90607.536</SimpleData>
+					<SimpleData name="DELTA_P1">21</SimpleData>
+					<SimpleData name="DELTA_T1">67105.000</SimpleData>
+					<SimpleData name="DELTA_P2">7</SimpleData>
+					<SimpleData name="DELTA_T2">18732.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>170.3574845491613,74.21246477080655,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 22</name>
+			<description><![CDATA[dT_min = 25058s = 06h57min38s<br>(= 9 passes)<br>dT_max = 60779s = 16h52min59s<br>(= 19 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">22</SimpleData>
+					<SimpleData name="PASS1">3</SimpleData>
+					<SimpleData name="T1">4867.000</SimpleData>
+					<SimpleData name="PASS2">22</SimpleData>
+					<SimpleData name="T2">65646.000</SimpleData>
+					<SimpleData name="PASS3">32</SimpleData>
+					<SimpleData name="T3">90704.536</SimpleData>
+					<SimpleData name="DELTA_P1">19</SimpleData>
+					<SimpleData name="DELTA_T1">60779.000</SimpleData>
+					<SimpleData name="DELTA_P2">9</SimpleData>
+					<SimpleData name="DELTA_T2">25058.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-176.8264502334514,70.19793406120573,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 23</name>
+			<description><![CDATA[dT_min = 31537s = 08h45min37s<br>(= 11 passes)<br>dT_max = 54300s = 15h05min00s<br>(= 17 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">23</SimpleData>
+					<SimpleData name="PASS1">3</SimpleData>
+					<SimpleData name="T1">5041.000</SimpleData>
+					<SimpleData name="PASS2">20</SimpleData>
+					<SimpleData name="T2">59341.000</SimpleData>
+					<SimpleData name="PASS3">32</SimpleData>
+					<SimpleData name="T3">90878.536</SimpleData>
+					<SimpleData name="DELTA_P1">17</SimpleData>
+					<SimpleData name="DELTA_T1">54300.000</SimpleData>
+					<SimpleData name="DELTA_P2">11</SimpleData>
+					<SimpleData name="DELTA_T2">31537.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-163.9677078324043,61.60442847122043,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 24</name>
+			<description><![CDATA[dT_min = 38606s = 10h43min26s<br>(= 13 passes)<br>dT_max = 47231s = 13h07min11s<br>(= 15 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">24</SimpleData>
+					<SimpleData name="PASS1">3</SimpleData>
+					<SimpleData name="T1">5510.000</SimpleData>
+					<SimpleData name="PASS2">18</SimpleData>
+					<SimpleData name="T2">52741.000</SimpleData>
+					<SimpleData name="PASS3">32</SimpleData>
+					<SimpleData name="T3">91347.536</SimpleData>
+					<SimpleData name="DELTA_P1">15</SimpleData>
+					<SimpleData name="DELTA_T1">47231.000</SimpleData>
+					<SimpleData name="DELTA_P2">13</SimpleData>
+					<SimpleData name="DELTA_T2">38606.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-151.1126309266159,35.70139204580568,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 25</name>
+			<description><![CDATA[dT_min = 38614s = 10h43min34s<br>(= 13 passes)<br>dT_max = 47223s = 13h07min03s<br>(= 15 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">25</SimpleData>
+					<SimpleData name="PASS1">3</SimpleData>
+					<SimpleData name="T1">6753.000</SimpleData>
+					<SimpleData name="PASS2">16</SimpleData>
+					<SimpleData name="T2">45367.000</SimpleData>
+					<SimpleData name="PASS3">32</SimpleData>
+					<SimpleData name="T3">92590.536</SimpleData>
+					<SimpleData name="DELTA_P1">13</SimpleData>
+					<SimpleData name="DELTA_T1">38614.000</SimpleData>
+					<SimpleData name="DELTA_P2">15</SimpleData>
+					<SimpleData name="DELTA_T2">47223.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-138.254898184247,-35.6489427347769,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 26</name>
+			<description><![CDATA[dT_min = 31541s = 08h45min41s<br>(= 11 passes)<br>dT_max = 54296s = 15h04min56s<br>(= 17 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">26</SimpleData>
+					<SimpleData name="PASS1">3</SimpleData>
+					<SimpleData name="T1">7224.000</SimpleData>
+					<SimpleData name="PASS2">14</SimpleData>
+					<SimpleData name="T2">38765.000</SimpleData>
+					<SimpleData name="PASS3">32</SimpleData>
+					<SimpleData name="T3">93061.536</SimpleData>
+					<SimpleData name="DELTA_P1">11</SimpleData>
+					<SimpleData name="DELTA_T1">31541.000</SimpleData>
+					<SimpleData name="DELTA_P2">17</SimpleData>
+					<SimpleData name="DELTA_T2">54296.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-125.395749112156,-61.58601416682718,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 27</name>
+			<description><![CDATA[dT_min = 25061s = 06h57min41s<br>(= 9 passes)<br>dT_max = 60776s = 16h52min56s<br>(= 19 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">27</SimpleData>
+					<SimpleData name="PASS1">3</SimpleData>
+					<SimpleData name="T1">7398.000</SimpleData>
+					<SimpleData name="PASS2">12</SimpleData>
+					<SimpleData name="T2">32459.000</SimpleData>
+					<SimpleData name="PASS3">32</SimpleData>
+					<SimpleData name="T3">93235.536</SimpleData>
+					<SimpleData name="DELTA_P1">9</SimpleData>
+					<SimpleData name="DELTA_T1">25061.000</SimpleData>
+					<SimpleData name="DELTA_P2">19</SimpleData>
+					<SimpleData name="DELTA_T2">60776.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-112.5119450138863,-70.20077780240331,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 28</name>
+			<description><![CDATA[dT_min = 18734s = 05h12min14s<br>(= 7 passes)<br>dT_max = 67103s = 18h38min23s<br>(= 21 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">28</SimpleData>
+					<SimpleData name="PASS1">3</SimpleData>
+					<SimpleData name="T1">7496.000</SimpleData>
+					<SimpleData name="PASS2">10</SimpleData>
+					<SimpleData name="T2">26230.000</SimpleData>
+					<SimpleData name="PASS3">32</SimpleData>
+					<SimpleData name="T3">93333.536</SimpleData>
+					<SimpleData name="DELTA_P1">7</SimpleData>
+					<SimpleData name="DELTA_T1">18734.000</SimpleData>
+					<SimpleData name="DELTA_P2">21</SimpleData>
+					<SimpleData name="DELTA_T2">67103.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-99.7127927668966,-74.19852983841727,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 29</name>
+			<description><![CDATA[dT_min = 12468s = 03h27min48s<br>(= 5 passes)<br>dT_max = 73369s = 20h22min49s<br>(= 23 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">29</SimpleData>
+					<SimpleData name="PASS1">3</SimpleData>
+					<SimpleData name="T1">7563.000</SimpleData>
+					<SimpleData name="PASS2">8</SimpleData>
+					<SimpleData name="T2">20031.000</SimpleData>
+					<SimpleData name="PASS3">32</SimpleData>
+					<SimpleData name="T3">93400.536</SimpleData>
+					<SimpleData name="DELTA_P1">5</SimpleData>
+					<SimpleData name="DELTA_T1">12468.000</SimpleData>
+					<SimpleData name="DELTA_P2">23</SimpleData>
+					<SimpleData name="DELTA_T2">73369.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-86.89218495932083,-76.28801001863174,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 30</name>
+			<description><![CDATA[dT_min = 6229s = 01h43min49s<br>(= 3 passes)<br>dT_max = 79608s = 22h06min48s<br>(= 25 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">30</SimpleData>
+					<SimpleData name="PASS1">3</SimpleData>
+					<SimpleData name="T1">7617.000</SimpleData>
+					<SimpleData name="PASS2">6</SimpleData>
+					<SimpleData name="T2">13846.000</SimpleData>
+					<SimpleData name="PASS3">32</SimpleData>
+					<SimpleData name="T3">93454.536</SimpleData>
+					<SimpleData name="DELTA_P1">3</SimpleData>
+					<SimpleData name="DELTA_T1">6229.000</SimpleData>
+					<SimpleData name="DELTA_P2">25</SimpleData>
+					<SimpleData name="DELTA_T2">79608.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-74.15340760162708,-77.32405112520507,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 31</name>
+			<description><![CDATA[dT_min = 12467s = 03h27min47s<br>(= 5 passes)<br>dT_max = 73370s = 20h22min50s<br>(= 23 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">31</SimpleData>
+					<SimpleData name="PASS1">4</SimpleData>
+					<SimpleData name="T1">7769.000</SimpleData>
+					<SimpleData name="PASS2">27</SimpleData>
+					<SimpleData name="T2">81139.000</SimpleData>
+					<SimpleData name="PASS3">33</SimpleData>
+					<SimpleData name="T3">93606.536</SimpleData>
+					<SimpleData name="DELTA_P1">23</SimpleData>
+					<SimpleData name="DELTA_T1">73370.000</SimpleData>
+					<SimpleData name="DELTA_P2">5</SimpleData>
+					<SimpleData name="DELTA_T2">12467.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-35.27426888223855,-76.29086450808559,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 32</name>
+			<description><![CDATA[dT_min = 18734s = 05h12min14s<br>(= 7 passes)<br>dT_max = 67103s = 18h38min23s<br>(= 21 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">32</SimpleData>
+					<SimpleData name="PASS1">4</SimpleData>
+					<SimpleData name="T1">7836.000</SimpleData>
+					<SimpleData name="PASS2">25</SimpleData>
+					<SimpleData name="T2">74939.000</SimpleData>
+					<SimpleData name="PASS3">33</SimpleData>
+					<SimpleData name="T3">93673.536</SimpleData>
+					<SimpleData name="DELTA_P1">21</SimpleData>
+					<SimpleData name="DELTA_T1">67103.000</SimpleData>
+					<SimpleData name="DELTA_P2">7</SimpleData>
+					<SimpleData name="DELTA_T2">18734.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-22.58352455743764,-74.20940657445993,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 33</name>
+			<description><![CDATA[dT_min = 25060s = 06h57min40s<br>(= 9 passes)<br>dT_max = 60777s = 16h52min57s<br>(= 19 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">33</SimpleData>
+					<SimpleData name="PASS1">4</SimpleData>
+					<SimpleData name="T1">7934.000</SimpleData>
+					<SimpleData name="PASS2">23</SimpleData>
+					<SimpleData name="T2">68711.000</SimpleData>
+					<SimpleData name="PASS3">33</SimpleData>
+					<SimpleData name="T3">93771.536</SimpleData>
+					<SimpleData name="DELTA_P1">19</SimpleData>
+					<SimpleData name="DELTA_T1">60777.000</SimpleData>
+					<SimpleData name="DELTA_P2">9</SimpleData>
+					<SimpleData name="DELTA_T2">25060.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-9.685071877396069,-70.18783602303815,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 34</name>
+			<description><![CDATA[dT_min = 31541s = 08h45min41s<br>(= 11 passes)<br>dT_max = 54296s = 15h04min56s<br>(= 17 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">34</SimpleData>
+					<SimpleData name="PASS1">4</SimpleData>
+					<SimpleData name="T1">8109.000</SimpleData>
+					<SimpleData name="PASS2">21</SimpleData>
+					<SimpleData name="T2">62405.000</SimpleData>
+					<SimpleData name="PASS3">33</SimpleData>
+					<SimpleData name="T3">93946.536</SimpleData>
+					<SimpleData name="DELTA_P1">17</SimpleData>
+					<SimpleData name="DELTA_T1">54296.000</SimpleData>
+					<SimpleData name="DELTA_P2">11</SimpleData>
+					<SimpleData name="DELTA_T2">31541.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>3.17141653754095,-61.5837796974625,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 35</name>
+			<description><![CDATA[dT_min = 38613s = 10h43min33s<br>(= 13 passes)<br>dT_max = 47224s = 13h07min04s<br>(= 15 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">35</SimpleData>
+					<SimpleData name="PASS1">4</SimpleData>
+					<SimpleData name="T1">8579.000</SimpleData>
+					<SimpleData name="PASS2">19</SimpleData>
+					<SimpleData name="T2">55803.000</SimpleData>
+					<SimpleData name="PASS3">33</SimpleData>
+					<SimpleData name="T3">94416.536</SimpleData>
+					<SimpleData name="DELTA_P1">15</SimpleData>
+					<SimpleData name="DELTA_T1">47224.000</SimpleData>
+					<SimpleData name="DELTA_P2">13</SimpleData>
+					<SimpleData name="DELTA_T2">38613.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>16.03181295218648,-35.65264475536929,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 36</name>
+			<description><![CDATA[dT_min = 38606s = 10h43min26s<br>(= 13 passes)<br>dT_max = 47231s = 13h07min11s<br>(= 15 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">36</SimpleData>
+					<SimpleData name="PASS1">4</SimpleData>
+					<SimpleData name="T1">9823.000</SimpleData>
+					<SimpleData name="PASS2">17</SimpleData>
+					<SimpleData name="T2">48429.000</SimpleData>
+					<SimpleData name="PASS3">33</SimpleData>
+					<SimpleData name="T3">95660.536</SimpleData>
+					<SimpleData name="DELTA_P1">13</SimpleData>
+					<SimpleData name="DELTA_T1">38606.000</SimpleData>
+					<SimpleData name="DELTA_P2">15</SimpleData>
+					<SimpleData name="DELTA_T2">47231.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>28.88880663907127,35.69726083418298,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 37</name>
+			<description><![CDATA[dT_min = 31538s = 08h45min38s<br>(= 11 passes)<br>dT_max = 54299s = 15h04min59s<br>(= 17 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">37</SimpleData>
+					<SimpleData name="PASS1">4</SimpleData>
+					<SimpleData name="T1">10291.000</SimpleData>
+					<SimpleData name="PASS2">15</SimpleData>
+					<SimpleData name="T2">41829.000</SimpleData>
+					<SimpleData name="PASS3">33</SimpleData>
+					<SimpleData name="T3">96128.536</SimpleData>
+					<SimpleData name="DELTA_P1">11</SimpleData>
+					<SimpleData name="DELTA_T1">31538.000</SimpleData>
+					<SimpleData name="DELTA_P2">17</SimpleData>
+					<SimpleData name="DELTA_T2">54299.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>41.73824055573591,61.59642666143222,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 38</name>
+			<description><![CDATA[dT_min = 25058s = 06h57min38s<br>(= 9 passes)<br>dT_max = 60779s = 16h52min59s<br>(= 19 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">38</SimpleData>
+					<SimpleData name="PASS1">4</SimpleData>
+					<SimpleData name="T1">10465.000</SimpleData>
+					<SimpleData name="PASS2">13</SimpleData>
+					<SimpleData name="T2">35523.000</SimpleData>
+					<SimpleData name="PASS3">33</SimpleData>
+					<SimpleData name="T3">96302.536</SimpleData>
+					<SimpleData name="DELTA_P1">9</SimpleData>
+					<SimpleData name="DELTA_T1">25058.000</SimpleData>
+					<SimpleData name="DELTA_P2">19</SimpleData>
+					<SimpleData name="DELTA_T2">60779.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>54.60780591911264,70.20562738339568,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 39</name>
+			<description><![CDATA[dT_min = 18733s = 05h12min13s<br>(= 7 passes)<br>dT_max = 67104s = 18h38min24s<br>(= 21 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">39</SimpleData>
+					<SimpleData name="PASS1">4</SimpleData>
+					<SimpleData name="T1">10562.000</SimpleData>
+					<SimpleData name="PASS2">11</SimpleData>
+					<SimpleData name="T2">29295.000</SimpleData>
+					<SimpleData name="PASS3">33</SimpleData>
+					<SimpleData name="T3">96399.536</SimpleData>
+					<SimpleData name="DELTA_P1">7</SimpleData>
+					<SimpleData name="DELTA_T1">18733.000</SimpleData>
+					<SimpleData name="DELTA_P2">21</SimpleData>
+					<SimpleData name="DELTA_T2">67104.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>67.40215182592456,74.20151483874778,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 40</name>
+			<description><![CDATA[dT_min = 12468s = 03h27min48s<br>(= 5 passes)<br>dT_max = 73369s = 20h22min49s<br>(= 23 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">40</SimpleData>
+					<SimpleData name="PASS1">4</SimpleData>
+					<SimpleData name="T1">10629.000</SimpleData>
+					<SimpleData name="PASS2">9</SimpleData>
+					<SimpleData name="T2">23097.000</SimpleData>
+					<SimpleData name="PASS3">33</SimpleData>
+					<SimpleData name="T3">96466.536</SimpleData>
+					<SimpleData name="DELTA_P1">5</SimpleData>
+					<SimpleData name="DELTA_T1">12468.000</SimpleData>
+					<SimpleData name="DELTA_P2">23</SimpleData>
+					<SimpleData name="DELTA_T2">73369.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>80.38960423404484,76.28741498663462,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 41</name>
+			<description><![CDATA[dT_min = 6228s = 01h43min48s<br>(= 3 passes)<br>dT_max = 79609s = 22h06min49s<br>(= 25 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">41</SimpleData>
+					<SimpleData name="PASS1">4</SimpleData>
+					<SimpleData name="T1">10683.000</SimpleData>
+					<SimpleData name="PASS2">7</SimpleData>
+					<SimpleData name="T2">16911.000</SimpleData>
+					<SimpleData name="PASS3">33</SimpleData>
+					<SimpleData name="T3">96520.536</SimpleData>
+					<SimpleData name="DELTA_P1">3</SimpleData>
+					<SimpleData name="DELTA_T1">6228.000</SimpleData>
+					<SimpleData name="DELTA_P2">25</SimpleData>
+					<SimpleData name="DELTA_T2">79609.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>93.00945027220993,77.32790751674551,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 42</name>
+			<description><![CDATA[dT_min = 12467s = 03h27min47s<br>(= 5 passes)<br>dT_max = 73370s = 20h22min50s<br>(= 23 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">42</SimpleData>
+					<SimpleData name="PASS1">5</SimpleData>
+					<SimpleData name="T1">10834.000</SimpleData>
+					<SimpleData name="PASS2">28</SimpleData>
+					<SimpleData name="T2">84204.000</SimpleData>
+					<SimpleData name="PASS3">34</SimpleData>
+					<SimpleData name="T3">96671.536</SimpleData>
+					<SimpleData name="DELTA_P1">23</SimpleData>
+					<SimpleData name="DELTA_T1">73370.000</SimpleData>
+					<SimpleData name="DELTA_P2">5</SimpleData>
+					<SimpleData name="DELTA_T2">12467.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>131.7628589813206,76.28966317073838,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 43</name>
+			<description><![CDATA[dT_min = 18733s = 05h12min13s<br>(= 7 passes)<br>dT_max = 67104s = 18h38min24s<br>(= 21 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">43</SimpleData>
+					<SimpleData name="PASS1">5</SimpleData>
+					<SimpleData name="T1">10902.000</SimpleData>
+					<SimpleData name="PASS2">26</SimpleData>
+					<SimpleData name="T2">78006.000</SimpleData>
+					<SimpleData name="PASS3">34</SimpleData>
+					<SimpleData name="T3">96739.536</SimpleData>
+					<SimpleData name="DELTA_P1">21</SimpleData>
+					<SimpleData name="DELTA_T1">67104.000</SimpleData>
+					<SimpleData name="DELTA_P2">7</SimpleData>
+					<SimpleData name="DELTA_T2">18733.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>144.5793608524693,74.19613221803168,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 44</name>
+			<description><![CDATA[dT_min = 25059s = 06h57min39s<br>(= 9 passes)<br>dT_max = 60778s = 16h52min58s<br>(= 19 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">44</SimpleData>
+					<SimpleData name="PASS1">5</SimpleData>
+					<SimpleData name="T1">10999.000</SimpleData>
+					<SimpleData name="PASS2">24</SimpleData>
+					<SimpleData name="T2">71777.000</SimpleData>
+					<SimpleData name="PASS3">34</SimpleData>
+					<SimpleData name="T3">96836.536</SimpleData>
+					<SimpleData name="DELTA_P1">19</SimpleData>
+					<SimpleData name="DELTA_T1">60778.000</SimpleData>
+					<SimpleData name="DELTA_P2">9</SimpleData>
+					<SimpleData name="DELTA_T2">25059.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>157.4602503405508,70.18984255172337,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 45</name>
+			<description><![CDATA[dT_min = 31537s = 08h45min37s<br>(= 11 passes)<br>dT_max = 54300s = 15h05min00s<br>(= 17 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">45</SimpleData>
+					<SimpleData name="PASS1">5</SimpleData>
+					<SimpleData name="T1">11172.000</SimpleData>
+					<SimpleData name="PASS2">22</SimpleData>
+					<SimpleData name="T2">65472.000</SimpleData>
+					<SimpleData name="PASS3">34</SimpleData>
+					<SimpleData name="T3">97009.536</SimpleData>
+					<SimpleData name="DELTA_P1">17</SimpleData>
+					<SimpleData name="DELTA_T1">54300.000</SimpleData>
+					<SimpleData name="DELTA_P2">11</SimpleData>
+					<SimpleData name="DELTA_T2">31537.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>170.3172597720724,61.58462937330511,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 46</name>
+			<description><![CDATA[dT_min = 38605s = 10h43min25s<br>(= 13 passes)<br>dT_max = 47232s = 13h07min12s<br>(= 15 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">46</SimpleData>
+					<SimpleData name="PASS1">5</SimpleData>
+					<SimpleData name="T1">11641.000</SimpleData>
+					<SimpleData name="PASS2">20</SimpleData>
+					<SimpleData name="T2">58873.000</SimpleData>
+					<SimpleData name="PASS3">34</SimpleData>
+					<SimpleData name="T3">97478.536</SimpleData>
+					<SimpleData name="DELTA_P1">15</SimpleData>
+					<SimpleData name="DELTA_T1">47232.000</SimpleData>
+					<SimpleData name="DELTA_P2">13</SimpleData>
+					<SimpleData name="DELTA_T2">38605.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-176.8243988299775,35.70135874781327,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 47</name>
+			<description><![CDATA[dT_min = 38614s = 10h43min34s<br>(= 13 passes)<br>dT_max = 47223s = 13h07min03s<br>(= 15 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">47</SimpleData>
+					<SimpleData name="PASS1">5</SimpleData>
+					<SimpleData name="T1">12884.000</SimpleData>
+					<SimpleData name="PASS2">18</SimpleData>
+					<SimpleData name="T2">51498.000</SimpleData>
+					<SimpleData name="PASS3">34</SimpleData>
+					<SimpleData name="T3">98721.536</SimpleData>
+					<SimpleData name="DELTA_P1">13</SimpleData>
+					<SimpleData name="DELTA_T1">38614.000</SimpleData>
+					<SimpleData name="DELTA_P2">15</SimpleData>
+					<SimpleData name="DELTA_T2">47223.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-163.9685525162496,-35.64352289337443,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 48</name>
+			<description><![CDATA[dT_min = 31541s = 08h45min41s<br>(= 11 passes)<br>dT_max = 54296s = 15h04min56s<br>(= 17 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">48</SimpleData>
+					<SimpleData name="PASS1">5</SimpleData>
+					<SimpleData name="T1">13355.000</SimpleData>
+					<SimpleData name="PASS2">16</SimpleData>
+					<SimpleData name="T2">44896.000</SimpleData>
+					<SimpleData name="PASS3">34</SimpleData>
+					<SimpleData name="T3">99192.536</SimpleData>
+					<SimpleData name="DELTA_P1">11</SimpleData>
+					<SimpleData name="DELTA_T1">31541.000</SimpleData>
+					<SimpleData name="DELTA_P2">17</SimpleData>
+					<SimpleData name="DELTA_T2">54296.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-151.1166279178388,-61.58152978815572,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 49</name>
+			<description><![CDATA[dT_min = 25060s = 06h57min40s<br>(= 9 passes)<br>dT_max = 60777s = 16h52min57s<br>(= 19 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">49</SimpleData>
+					<SimpleData name="PASS1">5</SimpleData>
+					<SimpleData name="T1">13530.000</SimpleData>
+					<SimpleData name="PASS2">14</SimpleData>
+					<SimpleData name="T2">38590.000</SimpleData>
+					<SimpleData name="PASS3">34</SimpleData>
+					<SimpleData name="T3">99367.536</SimpleData>
+					<SimpleData name="DELTA_P1">9</SimpleData>
+					<SimpleData name="DELTA_T1">25060.000</SimpleData>
+					<SimpleData name="DELTA_P2">19</SimpleData>
+					<SimpleData name="DELTA_T2">60777.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-138.2833822302872,-70.20307370431334,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 50</name>
+			<description><![CDATA[dT_min = 18735s = 05h12min15s<br>(= 7 passes)<br>dT_max = 67102s = 18h38min22s<br>(= 21 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">50</SimpleData>
+					<SimpleData name="PASS1">5</SimpleData>
+					<SimpleData name="T1">13627.000</SimpleData>
+					<SimpleData name="PASS2">12</SimpleData>
+					<SimpleData name="T2">32362.000</SimpleData>
+					<SimpleData name="PASS3">34</SimpleData>
+					<SimpleData name="T3">99464.536</SimpleData>
+					<SimpleData name="DELTA_P1">7</SimpleData>
+					<SimpleData name="DELTA_T1">18735.000</SimpleData>
+					<SimpleData name="DELTA_P2">21</SimpleData>
+					<SimpleData name="DELTA_T2">67102.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-125.4047511881734,-74.19595604035851,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 51</name>
+			<description><![CDATA[dT_min = 12468s = 03h27min48s<br>(= 5 passes)<br>dT_max = 73369s = 20h22min49s<br>(= 23 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">51</SimpleData>
+					<SimpleData name="PASS1">5</SimpleData>
+					<SimpleData name="T1">13695.000</SimpleData>
+					<SimpleData name="PASS2">10</SimpleData>
+					<SimpleData name="T2">26163.000</SimpleData>
+					<SimpleData name="PASS3">34</SimpleData>
+					<SimpleData name="T3">99532.536</SimpleData>
+					<SimpleData name="DELTA_P1">5</SimpleData>
+					<SimpleData name="DELTA_T1">12468.000</SimpleData>
+					<SimpleData name="DELTA_P2">23</SimpleData>
+					<SimpleData name="DELTA_T2">73369.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-112.4514882482981,-76.28489079236401,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 52</name>
+			<description><![CDATA[dT_min = 6229s = 01h43min49s<br>(= 3 passes)<br>dT_max = 79608s = 22h06min48s<br>(= 25 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">52</SimpleData>
+					<SimpleData name="PASS1">5</SimpleData>
+					<SimpleData name="T1">13749.000</SimpleData>
+					<SimpleData name="PASS2">8</SimpleData>
+					<SimpleData name="T2">19978.000</SimpleData>
+					<SimpleData name="PASS3">34</SimpleData>
+					<SimpleData name="T3">99586.536</SimpleData>
+					<SimpleData name="DELTA_P1">3</SimpleData>
+					<SimpleData name="DELTA_T1">6229.000</SimpleData>
+					<SimpleData name="DELTA_P2">25</SimpleData>
+					<SimpleData name="DELTA_T2">79608.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-99.49151039080093,-77.32884585877264,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 53</name>
+			<description><![CDATA[dT_min = 18735s = 05h12min15s<br>(= 7 passes)<br>dT_max = 67102s = 18h38min22s<br>(= 21 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">53</SimpleData>
+					<SimpleData name="PASS1">6</SimpleData>
+					<SimpleData name="T1">13968.000</SimpleData>
+					<SimpleData name="PASS2">27</SimpleData>
+					<SimpleData name="T2">81070.000</SimpleData>
+					<SimpleData name="PASS3">35</SimpleData>
+					<SimpleData name="T3">99805.536</SimpleData>
+					<SimpleData name="DELTA_P1">21</SimpleData>
+					<SimpleData name="DELTA_T1">67102.000</SimpleData>
+					<SimpleData name="DELTA_P2">7</SimpleData>
+					<SimpleData name="DELTA_T2">18735.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-48.25781077085483,-74.19012116238751,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 54</name>
+			<description><![CDATA[dT_min = 25060s = 06h57min40s<br>(= 9 passes)<br>dT_max = 60777s = 16h52min57s<br>(= 19 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">54</SimpleData>
+					<SimpleData name="PASS1">6</SimpleData>
+					<SimpleData name="T1">14065.000</SimpleData>
+					<SimpleData name="PASS2">25</SimpleData>
+					<SimpleData name="T2">74842.000</SimpleData>
+					<SimpleData name="PASS3">35</SimpleData>
+					<SimpleData name="T3">99902.536</SimpleData>
+					<SimpleData name="DELTA_P1">19</SimpleData>
+					<SimpleData name="DELTA_T1">60777.000</SimpleData>
+					<SimpleData name="DELTA_P2">9</SimpleData>
+					<SimpleData name="DELTA_T2">25060.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-35.39016950993518,-70.19716123057695,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 55</name>
+			<description><![CDATA[dT_min = 31541s = 08h45min41s<br>(= 11 passes)<br>dT_max = 54296s = 15h04min56s<br>(= 17 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">55</SimpleData>
+					<SimpleData name="PASS1">6</SimpleData>
+					<SimpleData name="T1">14240.000</SimpleData>
+					<SimpleData name="PASS2">23</SimpleData>
+					<SimpleData name="T2">68536.000</SimpleData>
+					<SimpleData name="PASS3">35</SimpleData>
+					<SimpleData name="T3">100077.536</SimpleData>
+					<SimpleData name="DELTA_P1">17</SimpleData>
+					<SimpleData name="DELTA_T1">54296.000</SimpleData>
+					<SimpleData name="DELTA_P2">11</SimpleData>
+					<SimpleData name="DELTA_T2">31541.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-22.53900929879583,-61.5774463251184,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 56</name>
+			<description><![CDATA[dT_min = 38614s = 10h43min34s<br>(= 13 passes)<br>dT_max = 47223s = 13h07min03s<br>(= 15 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">56</SimpleData>
+					<SimpleData name="PASS1">6</SimpleData>
+					<SimpleData name="T1">14711.000</SimpleData>
+					<SimpleData name="PASS2">21</SimpleData>
+					<SimpleData name="T2">61934.000</SimpleData>
+					<SimpleData name="PASS3">35</SimpleData>
+					<SimpleData name="T3">100548.536</SimpleData>
+					<SimpleData name="DELTA_P1">15</SimpleData>
+					<SimpleData name="DELTA_T1">47223.000</SimpleData>
+					<SimpleData name="DELTA_P2">13</SimpleData>
+					<SimpleData name="DELTA_T2">38614.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-9.682772942461737,-35.64377134177343,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 57</name>
+			<description><![CDATA[dT_min = 38606s = 10h43min26s<br>(= 13 passes)<br>dT_max = 47231s = 13h07min11s<br>(= 15 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">57</SimpleData>
+					<SimpleData name="PASS1">6</SimpleData>
+					<SimpleData name="T1">15954.000</SimpleData>
+					<SimpleData name="PASS2">19</SimpleData>
+					<SimpleData name="T2">54560.000</SimpleData>
+					<SimpleData name="PASS3">35</SimpleData>
+					<SimpleData name="T3">101791.536</SimpleData>
+					<SimpleData name="DELTA_P1">13</SimpleData>
+					<SimpleData name="DELTA_T1">38606.000</SimpleData>
+					<SimpleData name="DELTA_P2">15</SimpleData>
+					<SimpleData name="DELTA_T2">47231.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>3.173823571681756,35.69860031724256,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 58</name>
+			<description><![CDATA[dT_min = 31538s = 08h45min38s<br>(= 11 passes)<br>dT_max = 54299s = 15h04min59s<br>(= 17 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">58</SimpleData>
+					<SimpleData name="PASS1">6</SimpleData>
+					<SimpleData name="T1">16422.000</SimpleData>
+					<SimpleData name="PASS2">17</SimpleData>
+					<SimpleData name="T2">47960.000</SimpleData>
+					<SimpleData name="PASS3">35</SimpleData>
+					<SimpleData name="T3">102259.536</SimpleData>
+					<SimpleData name="DELTA_P1">11</SimpleData>
+					<SimpleData name="DELTA_T1">31538.000</SimpleData>
+					<SimpleData name="DELTA_P2">17</SimpleData>
+					<SimpleData name="DELTA_T2">54299.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>16.03221635048033,61.58531816817418,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 59</name>
+			<description><![CDATA[dT_min = 25059s = 06h57min39s<br>(= 9 passes)<br>dT_max = 60778s = 16h52min58s<br>(= 19 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">59</SimpleData>
+					<SimpleData name="PASS1">6</SimpleData>
+					<SimpleData name="T1">16596.000</SimpleData>
+					<SimpleData name="PASS2">15</SimpleData>
+					<SimpleData name="T2">41655.000</SimpleData>
+					<SimpleData name="PASS3">35</SimpleData>
+					<SimpleData name="T3">102433.536</SimpleData>
+					<SimpleData name="DELTA_P1">9</SimpleData>
+					<SimpleData name="DELTA_T1">25059.000</SimpleData>
+					<SimpleData name="DELTA_P2">19</SimpleData>
+					<SimpleData name="DELTA_T2">60778.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>28.87712602594852,70.19358358528734,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 60</name>
+			<description><![CDATA[dT_min = 18734s = 05h12min14s<br>(= 7 passes)<br>dT_max = 67103s = 18h38min23s<br>(= 21 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">60</SimpleData>
+					<SimpleData name="PASS1">6</SimpleData>
+					<SimpleData name="T1">16693.000</SimpleData>
+					<SimpleData name="PASS2">13</SimpleData>
+					<SimpleData name="T2">35427.000</SimpleData>
+					<SimpleData name="PASS3">35</SimpleData>
+					<SimpleData name="T3">102530.536</SimpleData>
+					<SimpleData name="DELTA_P1">7</SimpleData>
+					<SimpleData name="DELTA_T1">18734.000</SimpleData>
+					<SimpleData name="DELTA_P2">21</SimpleData>
+					<SimpleData name="DELTA_T2">67103.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>41.78998541936363,74.19881540579499,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 61</name>
+			<description><![CDATA[dT_min = 12468s = 03h27min48s<br>(= 5 passes)<br>dT_max = 73369s = 20h22min49s<br>(= 23 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">61</SimpleData>
+					<SimpleData name="PASS1">6</SimpleData>
+					<SimpleData name="T1">16760.000</SimpleData>
+					<SimpleData name="PASS2">11</SimpleData>
+					<SimpleData name="T2">29228.000</SimpleData>
+					<SimpleData name="PASS3">35</SimpleData>
+					<SimpleData name="T3">102597.536</SimpleData>
+					<SimpleData name="DELTA_P1">5</SimpleData>
+					<SimpleData name="DELTA_T1">12468.000</SimpleData>
+					<SimpleData name="DELTA_P2">23</SimpleData>
+					<SimpleData name="DELTA_T2">73369.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>54.61400431204089,76.28056671033311,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 62</name>
+			<description><![CDATA[dT_min = 6229s = 01h43min49s<br>(= 3 passes)<br>dT_max = 79608s = 22h06min48s<br>(= 25 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">62</SimpleData>
+					<SimpleData name="PASS1">6</SimpleData>
+					<SimpleData name="T1">16815.000</SimpleData>
+					<SimpleData name="PASS2">9</SimpleData>
+					<SimpleData name="T2">23044.000</SimpleData>
+					<SimpleData name="PASS3">35</SimpleData>
+					<SimpleData name="T3">102652.536</SimpleData>
+					<SimpleData name="DELTA_P1">3</SimpleData>
+					<SimpleData name="DELTA_T1">6229.000</SimpleData>
+					<SimpleData name="DELTA_P2">25</SimpleData>
+					<SimpleData name="DELTA_T2">79608.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>67.6418417081227,77.32378209757977,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 63</name>
+			<description><![CDATA[dT_min = 18733s = 05h12min13s<br>(= 7 passes)<br>dT_max = 67104s = 18h38min24s<br>(= 21 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">63</SimpleData>
+					<SimpleData name="PASS1">7</SimpleData>
+					<SimpleData name="T1">17033.000</SimpleData>
+					<SimpleData name="PASS2">28</SimpleData>
+					<SimpleData name="T2">84137.000</SimpleData>
+					<SimpleData name="PASS3">36</SimpleData>
+					<SimpleData name="T3">102870.536</SimpleData>
+					<SimpleData name="DELTA_P1">21</SimpleData>
+					<SimpleData name="DELTA_T1">67104.000</SimpleData>
+					<SimpleData name="DELTA_P2">7</SimpleData>
+					<SimpleData name="DELTA_T2">18733.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>118.9066095261164,74.19358316431698,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 64</name>
+			<description><![CDATA[dT_min = 25057s = 06h57min37s<br>(= 9 passes)<br>dT_max = 60780s = 16h53min00s<br>(= 19 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">64</SimpleData>
+					<SimpleData name="PASS1">7</SimpleData>
+					<SimpleData name="T1">17129.000</SimpleData>
+					<SimpleData name="PASS2">26</SimpleData>
+					<SimpleData name="T2">77909.000</SimpleData>
+					<SimpleData name="PASS3">36</SimpleData>
+					<SimpleData name="T3">102966.536</SimpleData>
+					<SimpleData name="DELTA_P1">19</SimpleData>
+					<SimpleData name="DELTA_T1">60780.000</SimpleData>
+					<SimpleData name="DELTA_P2">9</SimpleData>
+					<SimpleData name="DELTA_T2">25057.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>131.7464189086186,70.21650456851204,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 65</name>
+			<description><![CDATA[dT_min = 31537s = 08h45min37s<br>(= 11 passes)<br>dT_max = 54300s = 15h05min00s<br>(= 17 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">65</SimpleData>
+					<SimpleData name="PASS1">7</SimpleData>
+					<SimpleData name="T1">17304.000</SimpleData>
+					<SimpleData name="PASS2">24</SimpleData>
+					<SimpleData name="T2">71604.000</SimpleData>
+					<SimpleData name="PASS3">36</SimpleData>
+					<SimpleData name="T3">103141.536</SimpleData>
+					<SimpleData name="DELTA_P1">17</SimpleData>
+					<SimpleData name="DELTA_T1">54300.000</SimpleData>
+					<SimpleData name="DELTA_P2">11</SimpleData>
+					<SimpleData name="DELTA_T2">31537.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>144.6022703876541,61.5918538795094,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 66</name>
+			<description><![CDATA[dT_min = 38605s = 10h43min25s<br>(= 13 passes)<br>dT_max = 47232s = 13h07min12s<br>(= 15 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">66</SimpleData>
+					<SimpleData name="PASS1">7</SimpleData>
+					<SimpleData name="T1">17772.000</SimpleData>
+					<SimpleData name="PASS2">22</SimpleData>
+					<SimpleData name="T2">65004.000</SimpleData>
+					<SimpleData name="PASS3">36</SimpleData>
+					<SimpleData name="T3">103609.536</SimpleData>
+					<SimpleData name="DELTA_P1">15</SimpleData>
+					<SimpleData name="DELTA_T1">47232.000</SimpleData>
+					<SimpleData name="DELTA_P2">13</SimpleData>
+					<SimpleData name="DELTA_T2">38605.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>157.4594589834321,35.698311926516,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 67</name>
+			<description><![CDATA[dT_min = 38614s = 10h43min34s<br>(= 13 passes)<br>dT_max = 47223s = 13h07min03s<br>(= 15 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">67</SimpleData>
+					<SimpleData name="PASS1">7</SimpleData>
+					<SimpleData name="T1">19015.000</SimpleData>
+					<SimpleData name="PASS2">20</SimpleData>
+					<SimpleData name="T2">57629.000</SimpleData>
+					<SimpleData name="PASS3">36</SimpleData>
+					<SimpleData name="T3">104852.536</SimpleData>
+					<SimpleData name="DELTA_P1">13</SimpleData>
+					<SimpleData name="DELTA_T1">38614.000</SimpleData>
+					<SimpleData name="DELTA_P2">15</SimpleData>
+					<SimpleData name="DELTA_T2">47223.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>170.3177982810808,-35.65166513423316,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 68</name>
+			<description><![CDATA[dT_min = 31541s = 08h45min41s<br>(= 11 passes)<br>dT_max = 54296s = 15h04min56s<br>(= 17 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">68</SimpleData>
+					<SimpleData name="PASS1">7</SimpleData>
+					<SimpleData name="T1">19486.000</SimpleData>
+					<SimpleData name="PASS2">18</SimpleData>
+					<SimpleData name="T2">51027.000</SimpleData>
+					<SimpleData name="PASS3">36</SimpleData>
+					<SimpleData name="T3">105323.536</SimpleData>
+					<SimpleData name="DELTA_P1">11</SimpleData>
+					<SimpleData name="DELTA_T1">31541.000</SimpleData>
+					<SimpleData name="DELTA_P2">17</SimpleData>
+					<SimpleData name="DELTA_T2">54296.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-176.8180181036508,-61.58433853118138,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 69</name>
+			<description><![CDATA[dT_min = 25061s = 06h57min41s<br>(= 9 passes)<br>dT_max = 60776s = 16h52min56s<br>(= 19 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">69</SimpleData>
+					<SimpleData name="PASS1">7</SimpleData>
+					<SimpleData name="T1">19661.000</SimpleData>
+					<SimpleData name="PASS2">16</SimpleData>
+					<SimpleData name="T2">44722.000</SimpleData>
+					<SimpleData name="PASS3">36</SimpleData>
+					<SimpleData name="T3">105498.536</SimpleData>
+					<SimpleData name="DELTA_P1">9</SimpleData>
+					<SimpleData name="DELTA_T1">25061.000</SimpleData>
+					<SimpleData name="DELTA_P2">19</SimpleData>
+					<SimpleData name="DELTA_T2">60776.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-163.9649127407182,-70.19033433846326,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 70</name>
+			<description><![CDATA[dT_min = 18735s = 05h12min15s<br>(= 7 passes)<br>dT_max = 67102s = 18h38min22s<br>(= 21 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">70</SimpleData>
+					<SimpleData name="PASS1">7</SimpleData>
+					<SimpleData name="T1">19758.000</SimpleData>
+					<SimpleData name="PASS2">14</SimpleData>
+					<SimpleData name="T2">38493.000</SimpleData>
+					<SimpleData name="PASS3">36</SimpleData>
+					<SimpleData name="T3">105595.536</SimpleData>
+					<SimpleData name="DELTA_P1">7</SimpleData>
+					<SimpleData name="DELTA_T1">18735.000</SimpleData>
+					<SimpleData name="DELTA_P2">21</SimpleData>
+					<SimpleData name="DELTA_T2">67102.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-151.0666117649732,-74.200024535559,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 71</name>
+			<description><![CDATA[dT_min = 12469s = 03h27min49s<br>(= 5 passes)<br>dT_max = 73368s = 20h22min48s<br>(= 23 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">71</SimpleData>
+					<SimpleData name="PASS1">7</SimpleData>
+					<SimpleData name="T1">19825.000</SimpleData>
+					<SimpleData name="PASS2">12</SimpleData>
+					<SimpleData name="T2">32294.000</SimpleData>
+					<SimpleData name="PASS3">36</SimpleData>
+					<SimpleData name="T3">105662.536</SimpleData>
+					<SimpleData name="DELTA_P1">5</SimpleData>
+					<SimpleData name="DELTA_T1">12469.000</SimpleData>
+					<SimpleData name="DELTA_P2">23</SimpleData>
+					<SimpleData name="DELTA_T2">73368.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-138.3219365901236,-76.28269652131598,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 72</name>
+			<description><![CDATA[dT_min = 6229s = 01h43min49s<br>(= 3 passes)<br>dT_max = 79608s = 22h06min48s<br>(= 25 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">72</SimpleData>
+					<SimpleData name="PASS1">7</SimpleData>
+					<SimpleData name="T1">19880.000</SimpleData>
+					<SimpleData name="PASS2">10</SimpleData>
+					<SimpleData name="T2">26109.000</SimpleData>
+					<SimpleData name="PASS3">36</SimpleData>
+					<SimpleData name="T3">105717.536</SimpleData>
+					<SimpleData name="DELTA_P1">3</SimpleData>
+					<SimpleData name="DELTA_T1">6229.000</SimpleData>
+					<SimpleData name="DELTA_P2">25</SimpleData>
+					<SimpleData name="DELTA_T2">79608.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-125.3767549472166,-77.31906008733034,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 73</name>
+			<description><![CDATA[dT_min = 25060s = 06h57min40s<br>(= 9 passes)<br>dT_max = 60777s = 16h52min57s<br>(= 19 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">73</SimpleData>
+					<SimpleData name="PASS1">8</SimpleData>
+					<SimpleData name="T1">20196.000</SimpleData>
+					<SimpleData name="PASS2">27</SimpleData>
+					<SimpleData name="T2">80973.000</SimpleData>
+					<SimpleData name="PASS3">37</SimpleData>
+					<SimpleData name="T3">106033.536</SimpleData>
+					<SimpleData name="DELTA_P1">19</SimpleData>
+					<SimpleData name="DELTA_T1">60777.000</SimpleData>
+					<SimpleData name="DELTA_P2">9</SimpleData>
+					<SimpleData name="DELTA_T2">25060.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-61.11962432233228,-70.20098054931559,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 74</name>
+			<description><![CDATA[dT_min = 31540s = 08h45min40s<br>(= 11 passes)<br>dT_max = 54297s = 15h04min57s<br>(= 17 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">74</SimpleData>
+					<SimpleData name="PASS1">8</SimpleData>
+					<SimpleData name="T1">20371.000</SimpleData>
+					<SimpleData name="PASS2">25</SimpleData>
+					<SimpleData name="T2">74668.000</SimpleData>
+					<SimpleData name="PASS3">37</SimpleData>
+					<SimpleData name="T3">106208.536</SimpleData>
+					<SimpleData name="DELTA_P1">17</SimpleData>
+					<SimpleData name="DELTA_T1">54297.000</SimpleData>
+					<SimpleData name="DELTA_P2">11</SimpleData>
+					<SimpleData name="DELTA_T2">31540.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-48.25237885649756,-61.59521548419959,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 75</name>
+			<description><![CDATA[dT_min = 38614s = 10h43min34s<br>(= 13 passes)<br>dT_max = 47223s = 13h07min03s<br>(= 15 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">75</SimpleData>
+					<SimpleData name="PASS1">8</SimpleData>
+					<SimpleData name="T1">20842.000</SimpleData>
+					<SimpleData name="PASS2">23</SimpleData>
+					<SimpleData name="T2">68065.000</SimpleData>
+					<SimpleData name="PASS3">37</SimpleData>
+					<SimpleData name="T3">106679.536</SimpleData>
+					<SimpleData name="DELTA_P1">15</SimpleData>
+					<SimpleData name="DELTA_T1">47223.000</SimpleData>
+					<SimpleData name="DELTA_P2">13</SimpleData>
+					<SimpleData name="DELTA_T2">38614.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-35.39760527757974,-35.6473257428248,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 76</name>
+			<description><![CDATA[dT_min = 38606s = 10h43min26s<br>(= 13 passes)<br>dT_max = 47231s = 13h07min11s<br>(= 15 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">76</SimpleData>
+					<SimpleData name="PASS1">8</SimpleData>
+					<SimpleData name="T1">22085.000</SimpleData>
+					<SimpleData name="PASS2">21</SimpleData>
+					<SimpleData name="T2">60691.000</SimpleData>
+					<SimpleData name="PASS3">37</SimpleData>
+					<SimpleData name="T3">107922.536</SimpleData>
+					<SimpleData name="DELTA_P1">13</SimpleData>
+					<SimpleData name="DELTA_T1">38606.000</SimpleData>
+					<SimpleData name="DELTA_P2">15</SimpleData>
+					<SimpleData name="DELTA_T2">47231.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-22.5393096996621,35.7037764861501,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 77</name>
+			<description><![CDATA[dT_min = 31537s = 08h45min37s<br>(= 11 passes)<br>dT_max = 54300s = 15h05min00s<br>(= 17 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">77</SimpleData>
+					<SimpleData name="PASS1">8</SimpleData>
+					<SimpleData name="T1">22554.000</SimpleData>
+					<SimpleData name="PASS2">19</SimpleData>
+					<SimpleData name="T2">54091.000</SimpleData>
+					<SimpleData name="PASS3">37</SimpleData>
+					<SimpleData name="T3">108391.536</SimpleData>
+					<SimpleData name="DELTA_P1">11</SimpleData>
+					<SimpleData name="DELTA_T1">31537.000</SimpleData>
+					<SimpleData name="DELTA_P2">17</SimpleData>
+					<SimpleData name="DELTA_T2">54300.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-9.676850112335698,61.59880566335776,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 78</name>
+			<description><![CDATA[dT_min = 25058s = 06h57min38s<br>(= 9 passes)<br>dT_max = 60779s = 16h52min59s<br>(= 19 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">78</SimpleData>
+					<SimpleData name="PASS1">8</SimpleData>
+					<SimpleData name="T1">22728.000</SimpleData>
+					<SimpleData name="PASS2">17</SimpleData>
+					<SimpleData name="T2">47786.000</SimpleData>
+					<SimpleData name="PASS3">37</SimpleData>
+					<SimpleData name="T3">108565.536</SimpleData>
+					<SimpleData name="DELTA_P1">9</SimpleData>
+					<SimpleData name="DELTA_T1">25058.000</SimpleData>
+					<SimpleData name="DELTA_P2">19</SimpleData>
+					<SimpleData name="DELTA_T2">60779.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>3.191323860611511,70.19720385890797,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 79</name>
+			<description><![CDATA[dT_min = 18734s = 05h12min14s<br>(= 7 passes)<br>dT_max = 67103s = 18h38min23s<br>(= 21 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">79</SimpleData>
+					<SimpleData name="PASS1">8</SimpleData>
+					<SimpleData name="T1">22824.000</SimpleData>
+					<SimpleData name="PASS2">15</SimpleData>
+					<SimpleData name="T2">41558.000</SimpleData>
+					<SimpleData name="PASS3">37</SimpleData>
+					<SimpleData name="T3">108661.536</SimpleData>
+					<SimpleData name="DELTA_P1">7</SimpleData>
+					<SimpleData name="DELTA_T1">18734.000</SimpleData>
+					<SimpleData name="DELTA_P2">21</SimpleData>
+					<SimpleData name="DELTA_T2">67103.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>16.01903259501186,74.19990241793524,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 80</name>
+			<description><![CDATA[dT_min = 12468s = 03h27min48s<br>(= 5 passes)<br>dT_max = 73369s = 20h22min49s<br>(= 23 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">80</SimpleData>
+					<SimpleData name="PASS1">8</SimpleData>
+					<SimpleData name="T1">22891.000</SimpleData>
+					<SimpleData name="PASS2">13</SimpleData>
+					<SimpleData name="T2">35359.000</SimpleData>
+					<SimpleData name="PASS3">37</SimpleData>
+					<SimpleData name="T3">108728.536</SimpleData>
+					<SimpleData name="DELTA_P1">5</SimpleData>
+					<SimpleData name="DELTA_T1">12468.000</SimpleData>
+					<SimpleData name="DELTA_P2">23</SimpleData>
+					<SimpleData name="DELTA_T2">73369.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>28.77993708436255,76.28933257869569,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 81</name>
+			<description><![CDATA[dT_min = 6229s = 01h43min49s<br>(= 3 passes)<br>dT_max = 79608s = 22h06min48s<br>(= 25 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">81</SimpleData>
+					<SimpleData name="PASS1">8</SimpleData>
+					<SimpleData name="T1">22945.000</SimpleData>
+					<SimpleData name="PASS2">11</SimpleData>
+					<SimpleData name="T2">29174.000</SimpleData>
+					<SimpleData name="PASS3">37</SimpleData>
+					<SimpleData name="T3">108782.536</SimpleData>
+					<SimpleData name="DELTA_P1">3</SimpleData>
+					<SimpleData name="DELTA_T1">6229.000</SimpleData>
+					<SimpleData name="DELTA_P2">25</SimpleData>
+					<SimpleData name="DELTA_T2">79608.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>41.60675197919625,77.32191253572623,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 82</name>
+			<description><![CDATA[dT_min = 25058s = 06h57min38s<br>(= 9 passes)<br>dT_max = 60779s = 16h52min59s<br>(= 19 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">82</SimpleData>
+					<SimpleData name="PASS1">9</SimpleData>
+					<SimpleData name="T1">23261.000</SimpleData>
+					<SimpleData name="PASS2">28</SimpleData>
+					<SimpleData name="T2">84040.000</SimpleData>
+					<SimpleData name="PASS3">38</SimpleData>
+					<SimpleData name="T3">109098.536</SimpleData>
+					<SimpleData name="DELTA_P1">19</SimpleData>
+					<SimpleData name="DELTA_T1">60779.000</SimpleData>
+					<SimpleData name="DELTA_P2">9</SimpleData>
+					<SimpleData name="DELTA_T2">25058.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>106.0309576430518,70.19136577563843,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 83</name>
+			<description><![CDATA[dT_min = 31537s = 08h45min37s<br>(= 11 passes)<br>dT_max = 54300s = 15h05min00s<br>(= 17 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">83</SimpleData>
+					<SimpleData name="PASS1">9</SimpleData>
+					<SimpleData name="T1">23435.000</SimpleData>
+					<SimpleData name="PASS2">26</SimpleData>
+					<SimpleData name="T2">77735.000</SimpleData>
+					<SimpleData name="PASS3">38</SimpleData>
+					<SimpleData name="T3">109272.536</SimpleData>
+					<SimpleData name="DELTA_P1">17</SimpleData>
+					<SimpleData name="DELTA_T1">54300.000</SimpleData>
+					<SimpleData name="DELTA_P2">11</SimpleData>
+					<SimpleData name="DELTA_T2">31537.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>118.889169463343,61.59481402827367,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 84</name>
+			<description><![CDATA[dT_min = 38605s = 10h43min25s<br>(= 13 passes)<br>dT_max = 47232s = 13h07min12s<br>(= 15 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">84</SimpleData>
+					<SimpleData name="PASS1">9</SimpleData>
+					<SimpleData name="T1">23903.000</SimpleData>
+					<SimpleData name="PASS2">24</SimpleData>
+					<SimpleData name="T2">71135.000</SimpleData>
+					<SimpleData name="PASS3">38</SimpleData>
+					<SimpleData name="T3">109740.536</SimpleData>
+					<SimpleData name="DELTA_P1">15</SimpleData>
+					<SimpleData name="DELTA_T1">47232.000</SimpleData>
+					<SimpleData name="DELTA_P2">13</SimpleData>
+					<SimpleData name="DELTA_T2">38605.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>131.7454796447514,35.70029285472066,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 85</name>
+			<description><![CDATA[dT_min = 38615s = 10h43min35s<br>(= 13 passes)<br>dT_max = 47222s = 13h07min02s<br>(= 15 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">85</SimpleData>
+					<SimpleData name="PASS1">9</SimpleData>
+					<SimpleData name="T1">25146.000</SimpleData>
+					<SimpleData name="PASS2">22</SimpleData>
+					<SimpleData name="T2">63761.000</SimpleData>
+					<SimpleData name="PASS3">38</SimpleData>
+					<SimpleData name="T3">110983.536</SimpleData>
+					<SimpleData name="DELTA_P1">13</SimpleData>
+					<SimpleData name="DELTA_T1">38615.000</SimpleData>
+					<SimpleData name="DELTA_P2">15</SimpleData>
+					<SimpleData name="DELTA_T2">47222.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>144.6024583254571,-35.64562500966618,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 86</name>
+			<description><![CDATA[dT_min = 31542s = 08h45min42s<br>(= 11 passes)<br>dT_max = 54295s = 15h04min55s<br>(= 17 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">86</SimpleData>
+					<SimpleData name="PASS1">9</SimpleData>
+					<SimpleData name="T1">25617.000</SimpleData>
+					<SimpleData name="PASS2">20</SimpleData>
+					<SimpleData name="T2">57159.000</SimpleData>
+					<SimpleData name="PASS3">38</SimpleData>
+					<SimpleData name="T3">111454.536</SimpleData>
+					<SimpleData name="DELTA_P1">11</SimpleData>
+					<SimpleData name="DELTA_T1">31542.000</SimpleData>
+					<SimpleData name="DELTA_P2">17</SimpleData>
+					<SimpleData name="DELTA_T2">54295.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>157.4541818838502,-61.58685121835718,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 87</name>
+			<description><![CDATA[dT_min = 25061s = 06h57min41s<br>(= 9 passes)<br>dT_max = 60776s = 16h52min56s<br>(= 19 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">87</SimpleData>
+					<SimpleData name="PASS1">9</SimpleData>
+					<SimpleData name="T1">25792.000</SimpleData>
+					<SimpleData name="PASS2">18</SimpleData>
+					<SimpleData name="T2">50853.000</SimpleData>
+					<SimpleData name="PASS3">38</SimpleData>
+					<SimpleData name="T3">111629.536</SimpleData>
+					<SimpleData name="DELTA_P1">9</SimpleData>
+					<SimpleData name="DELTA_T1">25061.000</SimpleData>
+					<SimpleData name="DELTA_P2">19</SimpleData>
+					<SimpleData name="DELTA_T2">60776.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>170.3326898372224,-70.20099341035589,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 88</name>
+			<description><![CDATA[dT_min = 12468s = 03h27min48s<br>(= 5 passes)<br>dT_max = 73369s = 20h22min49s<br>(= 23 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">88</SimpleData>
+					<SimpleData name="PASS1">9</SimpleData>
+					<SimpleData name="T1">25957.000</SimpleData>
+					<SimpleData name="PASS2">14</SimpleData>
+					<SimpleData name="T2">38425.000</SimpleData>
+					<SimpleData name="PASS3">38</SimpleData>
+					<SimpleData name="T3">111794.536</SimpleData>
+					<SimpleData name="DELTA_P1">5</SimpleData>
+					<SimpleData name="DELTA_T1">12468.000</SimpleData>
+					<SimpleData name="DELTA_P2">23</SimpleData>
+					<SimpleData name="DELTA_T2">73369.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-163.9400480409498,-76.28704944013485,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 89</name>
+			<description><![CDATA[dT_min = 6229s = 01h43min49s<br>(= 3 passes)<br>dT_max = 79608s = 22h06min48s<br>(= 25 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">89</SimpleData>
+					<SimpleData name="PASS1">9</SimpleData>
+					<SimpleData name="T1">26010.000</SimpleData>
+					<SimpleData name="PASS2">12</SimpleData>
+					<SimpleData name="T2">32239.000</SimpleData>
+					<SimpleData name="PASS3">38</SimpleData>
+					<SimpleData name="T3">111847.536</SimpleData>
+					<SimpleData name="DELTA_P1">3</SimpleData>
+					<SimpleData name="DELTA_T1">6229.000</SimpleData>
+					<SimpleData name="DELTA_P2">25</SimpleData>
+					<SimpleData name="DELTA_T2">79608.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-151.3982483752351,-77.33110901618703,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 90</name>
+			<description><![CDATA[dT_min = 31541s = 08h45min41s<br>(= 11 passes)<br>dT_max = 54296s = 15h04min56s<br>(= 17 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">90</SimpleData>
+					<SimpleData name="PASS1">10</SimpleData>
+					<SimpleData name="T1">26503.000</SimpleData>
+					<SimpleData name="PASS2">27</SimpleData>
+					<SimpleData name="T2">80799.000</SimpleData>
+					<SimpleData name="PASS3">39</SimpleData>
+					<SimpleData name="T3">112340.536</SimpleData>
+					<SimpleData name="DELTA_P1">17</SimpleData>
+					<SimpleData name="DELTA_T1">54296.000</SimpleData>
+					<SimpleData name="DELTA_P2">11</SimpleData>
+					<SimpleData name="DELTA_T2">31541.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-73.97015818503036,-61.57863842609994,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 91</name>
+			<description><![CDATA[dT_min = 38614s = 10h43min34s<br>(= 13 passes)<br>dT_max = 47223s = 13h07min03s<br>(= 15 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">91</SimpleData>
+					<SimpleData name="PASS1">10</SimpleData>
+					<SimpleData name="T1">26973.000</SimpleData>
+					<SimpleData name="PASS2">25</SimpleData>
+					<SimpleData name="T2">74196.000</SimpleData>
+					<SimpleData name="PASS3">39</SimpleData>
+					<SimpleData name="T3">112810.536</SimpleData>
+					<SimpleData name="DELTA_P1">15</SimpleData>
+					<SimpleData name="DELTA_T1">47223.000</SimpleData>
+					<SimpleData name="DELTA_P2">13</SimpleData>
+					<SimpleData name="DELTA_T2">38614.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-61.11098412813149,-35.64878219047297,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 92</name>
+			<description><![CDATA[dT_min = 38606s = 10h43min26s<br>(= 13 passes)<br>dT_max = 47231s = 13h07min11s<br>(= 15 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">92</SimpleData>
+					<SimpleData name="PASS1">10</SimpleData>
+					<SimpleData name="T1">28216.000</SimpleData>
+					<SimpleData name="PASS2">23</SimpleData>
+					<SimpleData name="T2">66822.000</SimpleData>
+					<SimpleData name="PASS3">39</SimpleData>
+					<SimpleData name="T3">114053.536</SimpleData>
+					<SimpleData name="DELTA_P1">13</SimpleData>
+					<SimpleData name="DELTA_T1">38606.000</SimpleData>
+					<SimpleData name="DELTA_P2">15</SimpleData>
+					<SimpleData name="DELTA_T2">47231.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-48.25428379362484,35.6962235311002,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 93</name>
+			<description><![CDATA[dT_min = 31537s = 08h45min37s<br>(= 11 passes)<br>dT_max = 54300s = 15h05min00s<br>(= 17 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">93</SimpleData>
+					<SimpleData name="PASS1">10</SimpleData>
+					<SimpleData name="T1">28685.000</SimpleData>
+					<SimpleData name="PASS2">21</SimpleData>
+					<SimpleData name="T2">60222.000</SimpleData>
+					<SimpleData name="PASS3">39</SimpleData>
+					<SimpleData name="T3">114522.536</SimpleData>
+					<SimpleData name="DELTA_P1">11</SimpleData>
+					<SimpleData name="DELTA_T1">31537.000</SimpleData>
+					<SimpleData name="DELTA_P2">17</SimpleData>
+					<SimpleData name="DELTA_T2">54300.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-35.40186931798187,61.58962714084739,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 94</name>
+			<description><![CDATA[dT_min = 25058s = 06h57min38s<br>(= 9 passes)<br>dT_max = 60779s = 16h52min59s<br>(= 19 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">94</SimpleData>
+					<SimpleData name="PASS1">10</SimpleData>
+					<SimpleData name="T1">28859.000</SimpleData>
+					<SimpleData name="PASS2">19</SimpleData>
+					<SimpleData name="T2">53917.000</SimpleData>
+					<SimpleData name="PASS3">39</SimpleData>
+					<SimpleData name="T3">114696.536</SimpleData>
+					<SimpleData name="DELTA_P1">9</SimpleData>
+					<SimpleData name="DELTA_T1">25058.000</SimpleData>
+					<SimpleData name="DELTA_P2">19</SimpleData>
+					<SimpleData name="DELTA_T2">60779.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-22.56009065856636,70.20666543997069,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 95</name>
+			<description><![CDATA[dT_min = 18733s = 05h12min13s<br>(= 7 passes)<br>dT_max = 67104s = 18h38min24s<br>(= 21 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">95</SimpleData>
+					<SimpleData name="PASS1">10</SimpleData>
+					<SimpleData name="T1">28956.000</SimpleData>
+					<SimpleData name="PASS2">17</SimpleData>
+					<SimpleData name="T2">47689.000</SimpleData>
+					<SimpleData name="PASS3">39</SimpleData>
+					<SimpleData name="T3">114793.536</SimpleData>
+					<SimpleData name="DELTA_P1">7</SimpleData>
+					<SimpleData name="DELTA_T1">18733.000</SimpleData>
+					<SimpleData name="DELTA_P2">21</SimpleData>
+					<SimpleData name="DELTA_T2">67104.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-9.706741887551038,74.19610354215914,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 96</name>
+			<description><![CDATA[dT_min = 12468s = 03h27min48s<br>(= 5 passes)<br>dT_max = 73369s = 20h22min49s<br>(= 23 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">96</SimpleData>
+					<SimpleData name="PASS1">10</SimpleData>
+					<SimpleData name="T1">29023.000</SimpleData>
+					<SimpleData name="PASS2">15</SimpleData>
+					<SimpleData name="T2">41491.000</SimpleData>
+					<SimpleData name="PASS3">39</SimpleData>
+					<SimpleData name="T3">114860.536</SimpleData>
+					<SimpleData name="DELTA_P1">5</SimpleData>
+					<SimpleData name="DELTA_T1">12468.000</SimpleData>
+					<SimpleData name="DELTA_P2">23</SimpleData>
+					<SimpleData name="DELTA_T2">73369.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>3.298336023352261,76.28933552406619,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 97</name>
+			<description><![CDATA[dT_min = 6229s = 01h43min49s<br>(= 3 passes)<br>dT_max = 79608s = 22h06min48s<br>(= 25 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">97</SimpleData>
+					<SimpleData name="PASS1">10</SimpleData>
+					<SimpleData name="T1">29077.000</SimpleData>
+					<SimpleData name="PASS2">13</SimpleData>
+					<SimpleData name="T2">35306.000</SimpleData>
+					<SimpleData name="PASS3">39</SimpleData>
+					<SimpleData name="T3">114914.536</SimpleData>
+					<SimpleData name="DELTA_P1">3</SimpleData>
+					<SimpleData name="DELTA_T1">6229.000</SimpleData>
+					<SimpleData name="DELTA_P2">25</SimpleData>
+					<SimpleData name="DELTA_T2">79608.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>16.10224410529274,77.32677088011222,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 98</name>
+			<description><![CDATA[dT_min = 31537s = 08h45min37s<br>(= 11 passes)<br>dT_max = 54300s = 15h05min00s<br>(= 17 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">98</SimpleData>
+					<SimpleData name="PASS1">11</SimpleData>
+					<SimpleData name="T1">29566.000</SimpleData>
+					<SimpleData name="PASS2">28</SimpleData>
+					<SimpleData name="T2">83866.000</SimpleData>
+					<SimpleData name="PASS3">40</SimpleData>
+					<SimpleData name="T3">115403.536</SimpleData>
+					<SimpleData name="DELTA_P1">17</SimpleData>
+					<SimpleData name="DELTA_T1">54300.000</SimpleData>
+					<SimpleData name="DELTA_P2">11</SimpleData>
+					<SimpleData name="DELTA_T2">31537.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>93.1741715340163,61.5840356606808,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 99</name>
+			<description><![CDATA[dT_min = 38606s = 10h43min26s<br>(= 13 passes)<br>dT_max = 47231s = 13h07min11s<br>(= 15 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">99</SimpleData>
+					<SimpleData name="PASS1">11</SimpleData>
+					<SimpleData name="T1">30035.000</SimpleData>
+					<SimpleData name="PASS2">26</SimpleData>
+					<SimpleData name="T2">77266.000</SimpleData>
+					<SimpleData name="PASS3">40</SimpleData>
+					<SimpleData name="T3">115872.536</SimpleData>
+					<SimpleData name="DELTA_P1">15</SimpleData>
+					<SimpleData name="DELTA_T1">47231.000</SimpleData>
+					<SimpleData name="DELTA_P2">13</SimpleData>
+					<SimpleData name="DELTA_T2">38606.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>106.0321256568067,35.6988868694107,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 100</name>
+			<description><![CDATA[dT_min = 38614s = 10h43min34s<br>(= 13 passes)<br>dT_max = 47223s = 13h07min03s<br>(= 15 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">100</SimpleData>
+					<SimpleData name="PASS1">11</SimpleData>
+					<SimpleData name="T1">31278.000</SimpleData>
+					<SimpleData name="PASS2">24</SimpleData>
+					<SimpleData name="T2">69892.000</SimpleData>
+					<SimpleData name="PASS3">40</SimpleData>
+					<SimpleData name="T3">117115.536</SimpleData>
+					<SimpleData name="DELTA_P1">13</SimpleData>
+					<SimpleData name="DELTA_T1">38614.000</SimpleData>
+					<SimpleData name="DELTA_P2">15</SimpleData>
+					<SimpleData name="DELTA_T2">47223.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>118.8887994858046,-35.64473393045055,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 101</name>
+			<description><![CDATA[dT_min = 31541s = 08h45min41s<br>(= 11 passes)<br>dT_max = 54296s = 15h04min56s<br>(= 17 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">101</SimpleData>
+					<SimpleData name="PASS1">11</SimpleData>
+					<SimpleData name="T1">31749.000</SimpleData>
+					<SimpleData name="PASS2">22</SimpleData>
+					<SimpleData name="T2">63290.000</SimpleData>
+					<SimpleData name="PASS3">40</SimpleData>
+					<SimpleData name="T3">117586.536</SimpleData>
+					<SimpleData name="DELTA_P1">11</SimpleData>
+					<SimpleData name="DELTA_T1">31541.000</SimpleData>
+					<SimpleData name="DELTA_P2">17</SimpleData>
+					<SimpleData name="DELTA_T2">54296.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>131.7448215487316,-61.57935499804747,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 102</name>
+			<description><![CDATA[dT_min = 25061s = 06h57min41s<br>(= 9 passes)<br>dT_max = 60776s = 16h52min56s<br>(= 19 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">102</SimpleData>
+					<SimpleData name="PASS1">11</SimpleData>
+					<SimpleData name="T1">31923.000</SimpleData>
+					<SimpleData name="PASS2">20</SimpleData>
+					<SimpleData name="T2">56984.000</SimpleData>
+					<SimpleData name="PASS3">40</SimpleData>
+					<SimpleData name="T3">117760.536</SimpleData>
+					<SimpleData name="DELTA_P1">9</SimpleData>
+					<SimpleData name="DELTA_T1">25061.000</SimpleData>
+					<SimpleData name="DELTA_P2">19</SimpleData>
+					<SimpleData name="DELTA_T2">60776.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>144.5820133379957,-70.19594171182433,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 103</name>
+			<description><![CDATA[dT_min = 18735s = 05h12min15s<br>(= 7 passes)<br>dT_max = 67102s = 18h38min22s<br>(= 21 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">103</SimpleData>
+					<SimpleData name="PASS1">11</SimpleData>
+					<SimpleData name="T1">32021.000</SimpleData>
+					<SimpleData name="PASS2">18</SimpleData>
+					<SimpleData name="T2">50756.000</SimpleData>
+					<SimpleData name="PASS3">40</SimpleData>
+					<SimpleData name="T3">117858.536</SimpleData>
+					<SimpleData name="DELTA_P1">7</SimpleData>
+					<SimpleData name="DELTA_T1">18735.000</SimpleData>
+					<SimpleData name="DELTA_P2">21</SimpleData>
+					<SimpleData name="DELTA_T2">67102.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>157.4902963511793,-74.19731567091962,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 104</name>
+			<description><![CDATA[dT_min = 12469s = 03h27min49s<br>(= 5 passes)<br>dT_max = 73368s = 20h22min48s<br>(= 23 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">104</SimpleData>
+					<SimpleData name="PASS1">11</SimpleData>
+					<SimpleData name="T1">32088.000</SimpleData>
+					<SimpleData name="PASS2">16</SimpleData>
+					<SimpleData name="T2">44557.000</SimpleData>
+					<SimpleData name="PASS3">40</SimpleData>
+					<SimpleData name="T3">117925.536</SimpleData>
+					<SimpleData name="DELTA_P1">5</SimpleData>
+					<SimpleData name="DELTA_T1">12469.000</SimpleData>
+					<SimpleData name="DELTA_P2">23</SimpleData>
+					<SimpleData name="DELTA_T2">73368.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>170.3533185693063,-76.28049242931523,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 105</name>
+			<description><![CDATA[dT_min = 6229s = 01h43min49s<br>(= 3 passes)<br>dT_max = 79608s = 22h06min48s<br>(= 25 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">105</SimpleData>
+					<SimpleData name="PASS1">11</SimpleData>
+					<SimpleData name="T1">32143.000</SimpleData>
+					<SimpleData name="PASS2">14</SimpleData>
+					<SimpleData name="T2">38372.000</SimpleData>
+					<SimpleData name="PASS3">40</SimpleData>
+					<SimpleData name="T3">117980.536</SimpleData>
+					<SimpleData name="DELTA_P1">3</SimpleData>
+					<SimpleData name="DELTA_T1">6229.000</SimpleData>
+					<SimpleData name="DELTA_P2">25</SimpleData>
+					<SimpleData name="DELTA_T2">79608.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-176.5994421160687,-77.326541650271,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 106</name>
+			<description><![CDATA[dT_min = 38614s = 10h43min34s<br>(= 13 passes)<br>dT_max = 47223s = 13h07min03s<br>(= 15 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">106</SimpleData>
+					<SimpleData name="PASS1">12</SimpleData>
+					<SimpleData name="T1">33105.000</SimpleData>
+					<SimpleData name="PASS2">27</SimpleData>
+					<SimpleData name="T2">80328.000</SimpleData>
+					<SimpleData name="PASS3">41</SimpleData>
+					<SimpleData name="T3">118942.536</SimpleData>
+					<SimpleData name="DELTA_P1">15</SimpleData>
+					<SimpleData name="DELTA_T1">47223.000</SimpleData>
+					<SimpleData name="DELTA_P2">13</SimpleData>
+					<SimpleData name="DELTA_T2">38614.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-86.82581409035878,-35.64347985104245,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 107</name>
+			<description><![CDATA[dT_min = 38605s = 10h43min25s<br>(= 13 passes)<br>dT_max = 47232s = 13h07min12s<br>(= 15 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">107</SimpleData>
+					<SimpleData name="PASS1">12</SimpleData>
+					<SimpleData name="T1">34348.000</SimpleData>
+					<SimpleData name="PASS2">25</SimpleData>
+					<SimpleData name="T2">72953.000</SimpleData>
+					<SimpleData name="PASS3">41</SimpleData>
+					<SimpleData name="T3">120185.536</SimpleData>
+					<SimpleData name="DELTA_P1">13</SimpleData>
+					<SimpleData name="DELTA_T1">38605.000</SimpleData>
+					<SimpleData name="DELTA_P2">15</SimpleData>
+					<SimpleData name="DELTA_T2">47232.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-73.96926160123338,35.70202117793816,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 108</name>
+			<description><![CDATA[dT_min = 31538s = 08h45min38s<br>(= 11 passes)<br>dT_max = 54299s = 15h04min59s<br>(= 17 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">108</SimpleData>
+					<SimpleData name="PASS1">12</SimpleData>
+					<SimpleData name="T1">34816.000</SimpleData>
+					<SimpleData name="PASS2">23</SimpleData>
+					<SimpleData name="T2">66354.000</SimpleData>
+					<SimpleData name="PASS3">41</SimpleData>
+					<SimpleData name="T3">120653.536</SimpleData>
+					<SimpleData name="DELTA_P1">11</SimpleData>
+					<SimpleData name="DELTA_T1">31538.000</SimpleData>
+					<SimpleData name="DELTA_P2">17</SimpleData>
+					<SimpleData name="DELTA_T2">54299.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-61.10787604333359,61.58779942932039,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 109</name>
+			<description><![CDATA[dT_min = 25059s = 06h57min39s<br>(= 9 passes)<br>dT_max = 60778s = 16h52min58s<br>(= 19 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">109</SimpleData>
+					<SimpleData name="PASS1">12</SimpleData>
+					<SimpleData name="T1">34990.000</SimpleData>
+					<SimpleData name="PASS2">21</SimpleData>
+					<SimpleData name="T2">60049.000</SimpleData>
+					<SimpleData name="PASS3">41</SimpleData>
+					<SimpleData name="T3">120827.536</SimpleData>
+					<SimpleData name="DELTA_P1">9</SimpleData>
+					<SimpleData name="DELTA_T1">25059.000</SimpleData>
+					<SimpleData name="DELTA_P2">19</SimpleData>
+					<SimpleData name="DELTA_T2">60778.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-48.25620961666212,70.19077961740076,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 110</name>
+			<description><![CDATA[dT_min = 18733s = 05h12min13s<br>(= 7 passes)<br>dT_max = 67104s = 18h38min24s<br>(= 21 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">110</SimpleData>
+					<SimpleData name="PASS1">12</SimpleData>
+					<SimpleData name="T1">35087.000</SimpleData>
+					<SimpleData name="PASS2">19</SimpleData>
+					<SimpleData name="T2">53820.000</SimpleData>
+					<SimpleData name="PASS3">41</SimpleData>
+					<SimpleData name="T3">120924.536</SimpleData>
+					<SimpleData name="DELTA_P1">7</SimpleData>
+					<SimpleData name="DELTA_T1">18733.000</SimpleData>
+					<SimpleData name="DELTA_P2">21</SimpleData>
+					<SimpleData name="DELTA_T2">67104.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-35.32739745977243,74.20511729588355,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 111</name>
+			<description><![CDATA[dT_min = 12468s = 03h27min48s<br>(= 5 passes)<br>dT_max = 73369s = 20h22min49s<br>(= 23 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">111</SimpleData>
+					<SimpleData name="PASS1">12</SimpleData>
+					<SimpleData name="T1">35154.000</SimpleData>
+					<SimpleData name="PASS2">17</SimpleData>
+					<SimpleData name="T2">47622.000</SimpleData>
+					<SimpleData name="PASS3">41</SimpleData>
+					<SimpleData name="T3">120991.536</SimpleData>
+					<SimpleData name="DELTA_P1">5</SimpleData>
+					<SimpleData name="DELTA_T1">12468.000</SimpleData>
+					<SimpleData name="DELTA_P2">23</SimpleData>
+					<SimpleData name="DELTA_T2">73369.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-22.585021134982,76.28167156458213,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 112</name>
+			<description><![CDATA[dT_min = 6229s = 01h43min49s<br>(= 3 passes)<br>dT_max = 79608s = 22h06min48s<br>(= 25 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">112</SimpleData>
+					<SimpleData name="PASS1">12</SimpleData>
+					<SimpleData name="T1">35208.000</SimpleData>
+					<SimpleData name="PASS2">15</SimpleData>
+					<SimpleData name="T2">41437.000</SimpleData>
+					<SimpleData name="PASS3">41</SimpleData>
+					<SimpleData name="T3">121045.536</SimpleData>
+					<SimpleData name="DELTA_P1">3</SimpleData>
+					<SimpleData name="DELTA_T1">6229.000</SimpleData>
+					<SimpleData name="DELTA_P2">25</SimpleData>
+					<SimpleData name="DELTA_T2">79608.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-9.608437358717374,77.32003341246255,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 113</name>
+			<description><![CDATA[dT_min = 38605s = 10h43min25s<br>(= 13 passes)<br>dT_max = 47232s = 13h07min12s<br>(= 15 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">113</SimpleData>
+					<SimpleData name="PASS1">13</SimpleData>
+					<SimpleData name="T1">36166.000</SimpleData>
+					<SimpleData name="PASS2">28</SimpleData>
+					<SimpleData name="T2">83398.000</SimpleData>
+					<SimpleData name="PASS3">42</SimpleData>
+					<SimpleData name="T3">122003.536</SimpleData>
+					<SimpleData name="DELTA_P1">15</SimpleData>
+					<SimpleData name="DELTA_T1">47232.000</SimpleData>
+					<SimpleData name="DELTA_P2">13</SimpleData>
+					<SimpleData name="DELTA_T2">38605.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>80.31598248732894,35.70021079454142,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 114</name>
+			<description><![CDATA[dT_min = 38614s = 10h43min34s<br>(= 13 passes)<br>dT_max = 47223s = 13h07min03s<br>(= 15 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">114</SimpleData>
+					<SimpleData name="PASS1">13</SimpleData>
+					<SimpleData name="T1">37409.000</SimpleData>
+					<SimpleData name="PASS2">26</SimpleData>
+					<SimpleData name="T2">76023.000</SimpleData>
+					<SimpleData name="PASS3">42</SimpleData>
+					<SimpleData name="T3">123246.536</SimpleData>
+					<SimpleData name="DELTA_P1">13</SimpleData>
+					<SimpleData name="DELTA_T1">38614.000</SimpleData>
+					<SimpleData name="DELTA_P2">15</SimpleData>
+					<SimpleData name="DELTA_T2">47223.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>93.17384465622682,-35.65222005146082,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 115</name>
+			<description><![CDATA[dT_min = 31541s = 08h45min41s<br>(= 11 passes)<br>dT_max = 54296s = 15h04min56s<br>(= 17 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">115</SimpleData>
+					<SimpleData name="PASS1">13</SimpleData>
+					<SimpleData name="T1">37880.000</SimpleData>
+					<SimpleData name="PASS2">24</SimpleData>
+					<SimpleData name="T2">69421.000</SimpleData>
+					<SimpleData name="PASS3">42</SimpleData>
+					<SimpleData name="T3">123717.536</SimpleData>
+					<SimpleData name="DELTA_P1">11</SimpleData>
+					<SimpleData name="DELTA_T1">31541.000</SimpleData>
+					<SimpleData name="DELTA_P2">17</SimpleData>
+					<SimpleData name="DELTA_T2">54296.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>106.0399997002973,-61.58794517060187,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 116</name>
+			<description><![CDATA[dT_min = 25060s = 06h57min40s<br>(= 9 passes)<br>dT_max = 60777s = 16h52min57s<br>(= 19 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">116</SimpleData>
+					<SimpleData name="PASS1">13</SimpleData>
+					<SimpleData name="T1">38055.000</SimpleData>
+					<SimpleData name="PASS2">22</SimpleData>
+					<SimpleData name="T2">63115.000</SimpleData>
+					<SimpleData name="PASS3">42</SimpleData>
+					<SimpleData name="T3">123892.536</SimpleData>
+					<SimpleData name="DELTA_P1">9</SimpleData>
+					<SimpleData name="DELTA_T1">25060.000</SimpleData>
+					<SimpleData name="DELTA_P2">19</SimpleData>
+					<SimpleData name="DELTA_T2">60777.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>118.9045160269373,-70.19356377294635,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 117</name>
+			<description><![CDATA[dT_min = 18735s = 05h12min15s<br>(= 7 passes)<br>dT_max = 67102s = 18h38min22s<br>(= 21 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">117</SimpleData>
+					<SimpleData name="PASS1">13</SimpleData>
+					<SimpleData name="T1">38152.000</SimpleData>
+					<SimpleData name="PASS2">20</SimpleData>
+					<SimpleData name="T2">56887.000</SimpleData>
+					<SimpleData name="PASS3">42</SimpleData>
+					<SimpleData name="T3">123989.536</SimpleData>
+					<SimpleData name="DELTA_P1">7</SimpleData>
+					<SimpleData name="DELTA_T1">18735.000</SimpleData>
+					<SimpleData name="DELTA_P2">21</SimpleData>
+					<SimpleData name="DELTA_T2">67102.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>131.7530405576607,-74.19740525383539,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 118</name>
+			<description><![CDATA[dT_min = 12469s = 03h27min49s<br>(= 5 passes)<br>dT_max = 73368s = 20h22min48s<br>(= 23 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">118</SimpleData>
+					<SimpleData name="PASS1">13</SimpleData>
+					<SimpleData name="T1">38219.000</SimpleData>
+					<SimpleData name="PASS2">18</SimpleData>
+					<SimpleData name="T2">50688.000</SimpleData>
+					<SimpleData name="PASS3">42</SimpleData>
+					<SimpleData name="T3">124056.536</SimpleData>
+					<SimpleData name="DELTA_P1">5</SimpleData>
+					<SimpleData name="DELTA_T1">12469.000</SimpleData>
+					<SimpleData name="DELTA_P2">23</SimpleData>
+					<SimpleData name="DELTA_T2">73368.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>144.4823818152879,-76.28929949648084,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 119</name>
+			<description><![CDATA[dT_min = 6229s = 01h43min49s<br>(= 3 passes)<br>dT_max = 79608s = 22h06min48s<br>(= 25 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">119</SimpleData>
+					<SimpleData name="PASS1">13</SimpleData>
+					<SimpleData name="T1">38273.000</SimpleData>
+					<SimpleData name="PASS2">16</SimpleData>
+					<SimpleData name="T2">44502.000</SimpleData>
+					<SimpleData name="PASS3">42</SimpleData>
+					<SimpleData name="T3">124110.536</SimpleData>
+					<SimpleData name="DELTA_P1">3</SimpleData>
+					<SimpleData name="DELTA_T1">6229.000</SimpleData>
+					<SimpleData name="DELTA_P2">25</SimpleData>
+					<SimpleData name="DELTA_T2">79608.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>157.3778587902007,-77.32000300003014,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 120</name>
+			<description><![CDATA[dT_min = 38606s = 10h43min26s<br>(= 13 passes)<br>dT_max = 47231s = 13h07min11s<br>(= 15 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">120</SimpleData>
+					<SimpleData name="PASS1">14</SimpleData>
+					<SimpleData name="T1">40479.000</SimpleData>
+					<SimpleData name="PASS2">27</SimpleData>
+					<SimpleData name="T2">79085.000</SimpleData>
+					<SimpleData name="PASS3">43</SimpleData>
+					<SimpleData name="T3">126316.536</SimpleData>
+					<SimpleData name="DELTA_P1">13</SimpleData>
+					<SimpleData name="DELTA_T1">38606.000</SimpleData>
+					<SimpleData name="DELTA_P2">15</SimpleData>
+					<SimpleData name="DELTA_T2">47231.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-99.68239245332046,35.69977057810362,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 121</name>
+			<description><![CDATA[dT_min = 31537s = 08h45min37s<br>(= 11 passes)<br>dT_max = 54300s = 15h05min00s<br>(= 17 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">121</SimpleData>
+					<SimpleData name="PASS1">14</SimpleData>
+					<SimpleData name="T1">40948.000</SimpleData>
+					<SimpleData name="PASS2">25</SimpleData>
+					<SimpleData name="T2">72485.000</SimpleData>
+					<SimpleData name="PASS3">43</SimpleData>
+					<SimpleData name="T3">126785.536</SimpleData>
+					<SimpleData name="DELTA_P1">11</SimpleData>
+					<SimpleData name="DELTA_T1">31537.000</SimpleData>
+					<SimpleData name="DELTA_P2">17</SimpleData>
+					<SimpleData name="DELTA_T2">54300.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-86.82838998376329,61.59826129419457,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 122</name>
+			<description><![CDATA[dT_min = 25058s = 06h57min38s<br>(= 9 passes)<br>dT_max = 60779s = 16h52min59s<br>(= 19 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">122</SimpleData>
+					<SimpleData name="PASS1">14</SimpleData>
+					<SimpleData name="T1">41122.000</SimpleData>
+					<SimpleData name="PASS2">23</SimpleData>
+					<SimpleData name="T2">66180.000</SimpleData>
+					<SimpleData name="PASS3">43</SimpleData>
+					<SimpleData name="T3">126959.536</SimpleData>
+					<SimpleData name="DELTA_P1">9</SimpleData>
+					<SimpleData name="DELTA_T1">25058.000</SimpleData>
+					<SimpleData name="DELTA_P2">19</SimpleData>
+					<SimpleData name="DELTA_T2">60779.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-73.94221667760182,70.2064415694428,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 123</name>
+			<description><![CDATA[dT_min = 18733s = 05h12min13s<br>(= 7 passes)<br>dT_max = 67104s = 18h38min24s<br>(= 21 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">123</SimpleData>
+					<SimpleData name="PASS1">14</SimpleData>
+					<SimpleData name="T1">41218.000</SimpleData>
+					<SimpleData name="PASS2">21</SimpleData>
+					<SimpleData name="T2">59951.000</SimpleData>
+					<SimpleData name="PASS3">43</SimpleData>
+					<SimpleData name="T3">127055.536</SimpleData>
+					<SimpleData name="DELTA_P1">7</SimpleData>
+					<SimpleData name="DELTA_T1">18733.000</SimpleData>
+					<SimpleData name="DELTA_P2">21</SimpleData>
+					<SimpleData name="DELTA_T2">67104.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-61.16499048972734,74.20290615645698,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 124</name>
+			<description><![CDATA[dT_min = 12468s = 03h27min48s<br>(= 5 passes)<br>dT_max = 73369s = 20h22min49s<br>(= 23 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">124</SimpleData>
+					<SimpleData name="PASS1">14</SimpleData>
+					<SimpleData name="T1">41285.000</SimpleData>
+					<SimpleData name="PASS2">19</SimpleData>
+					<SimpleData name="T2">53753.000</SimpleData>
+					<SimpleData name="PASS3">43</SimpleData>
+					<SimpleData name="T3">127122.536</SimpleData>
+					<SimpleData name="DELTA_P1">5</SimpleData>
+					<SimpleData name="DELTA_T1">12468.000</SimpleData>
+					<SimpleData name="DELTA_P2">23</SimpleData>
+					<SimpleData name="DELTA_T2">73369.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-48.27223654419978,76.28597203742773,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 125</name>
+			<description><![CDATA[dT_min = 6229s = 01h43min49s<br>(= 3 passes)<br>dT_max = 79608s = 22h06min48s<br>(= 25 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">125</SimpleData>
+					<SimpleData name="PASS1">14</SimpleData>
+					<SimpleData name="T1">41338.000</SimpleData>
+					<SimpleData name="PASS2">17</SimpleData>
+					<SimpleData name="T2">47567.000</SimpleData>
+					<SimpleData name="PASS3">43</SimpleData>
+					<SimpleData name="T3">127175.536</SimpleData>
+					<SimpleData name="DELTA_P1">3</SimpleData>
+					<SimpleData name="DELTA_T1">6229.000</SimpleData>
+					<SimpleData name="DELTA_P2">25</SimpleData>
+					<SimpleData name="DELTA_T2">79608.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-35.64429141818317,77.3275379638153,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 126</name>
+			<description><![CDATA[dT_min = 38615s = 10h43min35s<br>(= 13 passes)<br>dT_max = 47222s = 13h07min02s<br>(= 15 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">126</SimpleData>
+					<SimpleData name="PASS1">15</SimpleData>
+					<SimpleData name="T1">43540.000</SimpleData>
+					<SimpleData name="PASS2">28</SimpleData>
+					<SimpleData name="T2">82155.000</SimpleData>
+					<SimpleData name="PASS3">44</SimpleData>
+					<SimpleData name="T3">129377.536</SimpleData>
+					<SimpleData name="DELTA_P1">13</SimpleData>
+					<SimpleData name="DELTA_T1">38615.000</SimpleData>
+					<SimpleData name="DELTA_P2">15</SimpleData>
+					<SimpleData name="DELTA_T2">47222.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>67.4598110597282,-35.64382073388911,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 127</name>
+			<description><![CDATA[dT_min = 31541s = 08h45min41s<br>(= 11 passes)<br>dT_max = 54296s = 15h04min56s<br>(= 17 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">127</SimpleData>
+					<SimpleData name="PASS1">15</SimpleData>
+					<SimpleData name="T1">44011.000</SimpleData>
+					<SimpleData name="PASS2">26</SimpleData>
+					<SimpleData name="T2">75552.000</SimpleData>
+					<SimpleData name="PASS3">44</SimpleData>
+					<SimpleData name="T3">129848.536</SimpleData>
+					<SimpleData name="DELTA_P1">11</SimpleData>
+					<SimpleData name="DELTA_T1">31541.000</SimpleData>
+					<SimpleData name="DELTA_P2">17</SimpleData>
+					<SimpleData name="DELTA_T2">54296.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>80.30766899251593,-61.58678926694165,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 128</name>
+			<description><![CDATA[dT_min = 25060s = 06h57min40s<br>(= 9 passes)<br>dT_max = 60777s = 16h52min57s<br>(= 19 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">128</SimpleData>
+					<SimpleData name="PASS1">15</SimpleData>
+					<SimpleData name="T1">44186.000</SimpleData>
+					<SimpleData name="PASS2">24</SimpleData>
+					<SimpleData name="T2">69246.000</SimpleData>
+					<SimpleData name="PASS3">44</SimpleData>
+					<SimpleData name="T3">130023.536</SimpleData>
+					<SimpleData name="DELTA_P1">9</SimpleData>
+					<SimpleData name="DELTA_T1">25060.000</SimpleData>
+					<SimpleData name="DELTA_P2">19</SimpleData>
+					<SimpleData name="DELTA_T2">60777.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>93.16746231583224,-70.20030978411528,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 129</name>
+			<description><![CDATA[dT_min = 18735s = 05h12min15s<br>(= 7 passes)<br>dT_max = 67102s = 18h38min22s<br>(= 21 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">129</SimpleData>
+					<SimpleData name="PASS1">15</SimpleData>
+					<SimpleData name="T1">44283.000</SimpleData>
+					<SimpleData name="PASS2">22</SimpleData>
+					<SimpleData name="T2">63018.000</SimpleData>
+					<SimpleData name="PASS3">44</SimpleData>
+					<SimpleData name="T3">130120.536</SimpleData>
+					<SimpleData name="DELTA_P1">7</SimpleData>
+					<SimpleData name="DELTA_T1">18735.000</SimpleData>
+					<SimpleData name="DELTA_P2">21</SimpleData>
+					<SimpleData name="DELTA_T2">67102.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>105.9861765710298,-74.19909224671888,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 130</name>
+			<description><![CDATA[dT_min = 12469s = 03h27min49s<br>(= 5 passes)<br>dT_max = 73368s = 20h22min48s<br>(= 23 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">130</SimpleData>
+					<SimpleData name="PASS1">15</SimpleData>
+					<SimpleData name="T1">44351.000</SimpleData>
+					<SimpleData name="PASS2">20</SimpleData>
+					<SimpleData name="T2">56820.000</SimpleData>
+					<SimpleData name="PASS3">44</SimpleData>
+					<SimpleData name="T3">130188.536</SimpleData>
+					<SimpleData name="DELTA_P1">5</SimpleData>
+					<SimpleData name="DELTA_T1">12469.000</SimpleData>
+					<SimpleData name="DELTA_P2">23</SimpleData>
+					<SimpleData name="DELTA_T2">73368.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>119.0118203691609,-76.29090576342898,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 131</name>
+			<description><![CDATA[dT_min = 6229s = 01h43min49s<br>(= 3 passes)<br>dT_max = 79608s = 22h06min48s<br>(= 25 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">131</SimpleData>
+					<SimpleData name="PASS1">15</SimpleData>
+					<SimpleData name="T1">44405.000</SimpleData>
+					<SimpleData name="PASS2">18</SimpleData>
+					<SimpleData name="T2">50634.000</SimpleData>
+					<SimpleData name="PASS3">44</SimpleData>
+					<SimpleData name="T3">130242.536</SimpleData>
+					<SimpleData name="DELTA_P1">3</SimpleData>
+					<SimpleData name="DELTA_T1">6229.000</SimpleData>
+					<SimpleData name="DELTA_P2">25</SimpleData>
+					<SimpleData name="DELTA_T2">79608.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>131.6984286781895,-77.32714388290547,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 132</name>
+			<description><![CDATA[dT_min = 38606s = 10h43min26s<br>(= 13 passes)<br>dT_max = 47231s = 13h07min11s<br>(= 15 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">132</SimpleData>
+					<SimpleData name="PASS1">16</SimpleData>
+					<SimpleData name="T1">46610.000</SimpleData>
+					<SimpleData name="PASS2">29</SimpleData>
+					<SimpleData name="T2">85216.000</SimpleData>
+					<SimpleData name="PASS3">45</SimpleData>
+					<SimpleData name="T3">132447.536</SimpleData>
+					<SimpleData name="DELTA_P1">13</SimpleData>
+					<SimpleData name="DELTA_T1">38606.000</SimpleData>
+					<SimpleData name="DELTA_P2">15</SimpleData>
+					<SimpleData name="DELTA_T2">47231.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-125.3973744467266,35.69667413420861,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 133</name>
+			<description><![CDATA[dT_min = 31537s = 08h45min37s<br>(= 11 passes)<br>dT_max = 54300s = 15h05min00s<br>(= 17 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">133</SimpleData>
+					<SimpleData name="PASS1">16</SimpleData>
+					<SimpleData name="T1">47079.000</SimpleData>
+					<SimpleData name="PASS2">27</SimpleData>
+					<SimpleData name="T2">78616.000</SimpleData>
+					<SimpleData name="PASS3">45</SimpleData>
+					<SimpleData name="T3">132916.536</SimpleData>
+					<SimpleData name="DELTA_P1">11</SimpleData>
+					<SimpleData name="DELTA_T1">31537.000</SimpleData>
+					<SimpleData name="DELTA_P2">17</SimpleData>
+					<SimpleData name="DELTA_T2">54300.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-112.5419652458804,61.58592533612008,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 134</name>
+			<description><![CDATA[dT_min = 25058s = 06h57min38s<br>(= 9 passes)<br>dT_max = 60779s = 16h52min59s<br>(= 19 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">134</SimpleData>
+					<SimpleData name="PASS1">16</SimpleData>
+					<SimpleData name="T1">47253.000</SimpleData>
+					<SimpleData name="PASS2">25</SimpleData>
+					<SimpleData name="T2">72311.000</SimpleData>
+					<SimpleData name="PASS3">45</SimpleData>
+					<SimpleData name="T3">133090.536</SimpleData>
+					<SimpleData name="DELTA_P1">9</SimpleData>
+					<SimpleData name="DELTA_T1">25058.000</SimpleData>
+					<SimpleData name="DELTA_P2">19</SimpleData>
+					<SimpleData name="DELTA_T2">60779.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-99.70367446150351,70.20036268086609,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 135</name>
+			<description><![CDATA[dT_min = 18734s = 05h12min14s<br>(= 7 passes)<br>dT_max = 67103s = 18h38min23s<br>(= 21 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">135</SimpleData>
+					<SimpleData name="PASS1">16</SimpleData>
+					<SimpleData name="T1">47349.000</SimpleData>
+					<SimpleData name="PASS2">23</SimpleData>
+					<SimpleData name="T2">66083.000</SimpleData>
+					<SimpleData name="PASS3">45</SimpleData>
+					<SimpleData name="T3">133186.536</SimpleData>
+					<SimpleData name="DELTA_P1">7</SimpleData>
+					<SimpleData name="DELTA_T1">18734.000</SimpleData>
+					<SimpleData name="DELTA_P2">21</SimpleData>
+					<SimpleData name="DELTA_T2">67103.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-86.81538199906613,74.19521221338208,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 136</name>
+			<description><![CDATA[dT_min = 12468s = 03h27min48s<br>(= 5 passes)<br>dT_max = 73369s = 20h22min49s<br>(= 23 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">136</SimpleData>
+					<SimpleData name="PASS1">16</SimpleData>
+					<SimpleData name="T1">47417.000</SimpleData>
+					<SimpleData name="PASS2">21</SimpleData>
+					<SimpleData name="T2">59885.000</SimpleData>
+					<SimpleData name="PASS3">45</SimpleData>
+					<SimpleData name="T3">133254.536</SimpleData>
+					<SimpleData name="DELTA_P1">5</SimpleData>
+					<SimpleData name="DELTA_T1">12468.000</SimpleData>
+					<SimpleData name="DELTA_P2">23</SimpleData>
+					<SimpleData name="DELTA_T2">73369.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-73.9014320105636,76.28311487117776,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 137</name>
+			<description><![CDATA[dT_min = 6228s = 01h43min48s<br>(= 3 passes)<br>dT_max = 79609s = 22h06min49s<br>(= 25 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">137</SimpleData>
+					<SimpleData name="PASS1">16</SimpleData>
+					<SimpleData name="T1">47472.000</SimpleData>
+					<SimpleData name="PASS2">19</SimpleData>
+					<SimpleData name="T2">53700.000</SimpleData>
+					<SimpleData name="PASS3">45</SimpleData>
+					<SimpleData name="T3">133309.536</SimpleData>
+					<SimpleData name="DELTA_P1">3</SimpleData>
+					<SimpleData name="DELTA_T1">6228.000</SimpleData>
+					<SimpleData name="DELTA_P2">25</SimpleData>
+					<SimpleData name="DELTA_T2">79609.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-60.82127374496459,77.33060805538841,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 138</name>
+			<description><![CDATA[dT_min = 31542s = 08h45min42s<br>(= 11 passes)<br>dT_max = 54295s = 15h04min55s<br>(= 17 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">138</SimpleData>
+					<SimpleData name="PASS1">17</SimpleData>
+					<SimpleData name="T1">50142.000</SimpleData>
+					<SimpleData name="PASS2">28</SimpleData>
+					<SimpleData name="T2">81684.000</SimpleData>
+					<SimpleData name="PASS3">46</SimpleData>
+					<SimpleData name="T3">135979.536</SimpleData>
+					<SimpleData name="DELTA_P1">11</SimpleData>
+					<SimpleData name="DELTA_T1">31542.000</SimpleData>
+					<SimpleData name="DELTA_P2">17</SimpleData>
+					<SimpleData name="DELTA_T2">54295.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>54.60627316174644,-61.58030125400628,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 139</name>
+			<description><![CDATA[dT_min = 25061s = 06h57min41s<br>(= 9 passes)<br>dT_max = 60776s = 16h52min56s<br>(= 19 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">139</SimpleData>
+					<SimpleData name="PASS1">17</SimpleData>
+					<SimpleData name="T1">50317.000</SimpleData>
+					<SimpleData name="PASS2">26</SimpleData>
+					<SimpleData name="T2">75378.000</SimpleData>
+					<SimpleData name="PASS3">46</SimpleData>
+					<SimpleData name="T3">136154.536</SimpleData>
+					<SimpleData name="DELTA_P1">9</SimpleData>
+					<SimpleData name="DELTA_T1">25061.000</SimpleData>
+					<SimpleData name="DELTA_P2">19</SimpleData>
+					<SimpleData name="DELTA_T2">60776.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>67.45140692788421,-70.19112454238126,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 140</name>
+			<description><![CDATA[dT_min = 18734s = 05h12min14s<br>(= 7 passes)<br>dT_max = 67103s = 18h38min23s<br>(= 21 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">140</SimpleData>
+					<SimpleData name="PASS1">17</SimpleData>
+					<SimpleData name="T1">50415.000</SimpleData>
+					<SimpleData name="PASS2">24</SimpleData>
+					<SimpleData name="T2">69149.000</SimpleData>
+					<SimpleData name="PASS3">46</SimpleData>
+					<SimpleData name="T3">136252.536</SimpleData>
+					<SimpleData name="DELTA_P1">7</SimpleData>
+					<SimpleData name="DELTA_T1">18734.000</SimpleData>
+					<SimpleData name="DELTA_P2">21</SimpleData>
+					<SimpleData name="DELTA_T2">67103.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>80.38505011430478,-74.20319525179119,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 141</name>
+			<description><![CDATA[dT_min = 12468s = 03h27min48s<br>(= 5 passes)<br>dT_max = 73369s = 20h22min49s<br>(= 23 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">141</SimpleData>
+					<SimpleData name="PASS1">17</SimpleData>
+					<SimpleData name="T1">50482.000</SimpleData>
+					<SimpleData name="PASS2">22</SimpleData>
+					<SimpleData name="T2">62950.000</SimpleData>
+					<SimpleData name="PASS3">46</SimpleData>
+					<SimpleData name="T3">136319.536</SimpleData>
+					<SimpleData name="DELTA_P1">5</SimpleData>
+					<SimpleData name="DELTA_T1">12468.000</SimpleData>
+					<SimpleData name="DELTA_P2">23</SimpleData>
+					<SimpleData name="DELTA_T2">73369.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>93.15850199388929,-76.27976802259768,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 142</name>
+			<description><![CDATA[dT_min = 6229s = 01h43min49s<br>(= 3 passes)<br>dT_max = 79608s = 22h06min48s<br>(= 25 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">142</SimpleData>
+					<SimpleData name="PASS1">17</SimpleData>
+					<SimpleData name="T1">50536.000</SimpleData>
+					<SimpleData name="PASS2">20</SimpleData>
+					<SimpleData name="T2">56765.000</SimpleData>
+					<SimpleData name="PASS3">46</SimpleData>
+					<SimpleData name="T3">136373.536</SimpleData>
+					<SimpleData name="DELTA_P1">3</SimpleData>
+					<SimpleData name="DELTA_T1">6229.000</SimpleData>
+					<SimpleData name="DELTA_P2">25</SimpleData>
+					<SimpleData name="DELTA_T2">79608.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>106.1539953803724,-77.32123471626572,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 143</name>
+			<description><![CDATA[dT_min = 31537s = 08h45min37s<br>(= 11 passes)<br>dT_max = 54300s = 15h05min00s<br>(= 17 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">143</SimpleData>
+					<SimpleData name="PASS1">18</SimpleData>
+					<SimpleData name="T1">53210.000</SimpleData>
+					<SimpleData name="PASS2">29</SimpleData>
+					<SimpleData name="T2">84747.000</SimpleData>
+					<SimpleData name="PASS3">47</SimpleData>
+					<SimpleData name="T3">139047.536</SimpleData>
+					<SimpleData name="DELTA_P1">11</SimpleData>
+					<SimpleData name="DELTA_T1">31537.000</SimpleData>
+					<SimpleData name="DELTA_P2">17</SimpleData>
+					<SimpleData name="DELTA_T2">54300.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-138.2479794192605,61.59337979452887,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 144</name>
+			<description><![CDATA[dT_min = 25058s = 06h57min38s<br>(= 9 passes)<br>dT_max = 60779s = 16h52min59s<br>(= 19 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">144</SimpleData>
+					<SimpleData name="PASS1">18</SimpleData>
+					<SimpleData name="T1">53384.000</SimpleData>
+					<SimpleData name="PASS2">27</SimpleData>
+					<SimpleData name="T2">78442.000</SimpleData>
+					<SimpleData name="PASS3">47</SimpleData>
+					<SimpleData name="T3">139221.536</SimpleData>
+					<SimpleData name="DELTA_P1">9</SimpleData>
+					<SimpleData name="DELTA_T1">25058.000</SimpleData>
+					<SimpleData name="DELTA_P2">19</SimpleData>
+					<SimpleData name="DELTA_T2">60779.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-125.3895275399173,70.1919989494881,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 145</name>
+			<description><![CDATA[dT_min = 18733s = 05h12min13s<br>(= 7 passes)<br>dT_max = 67104s = 18h38min24s<br>(= 21 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">145</SimpleData>
+					<SimpleData name="PASS1">18</SimpleData>
+					<SimpleData name="T1">53481.000</SimpleData>
+					<SimpleData name="PASS2">25</SimpleData>
+					<SimpleData name="T2">72214.000</SimpleData>
+					<SimpleData name="PASS3">47</SimpleData>
+					<SimpleData name="T3">139318.536</SimpleData>
+					<SimpleData name="DELTA_P1">7</SimpleData>
+					<SimpleData name="DELTA_T1">18733.000</SimpleData>
+					<SimpleData name="DELTA_P2">21</SimpleData>
+					<SimpleData name="DELTA_T2">67104.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-112.511499524641,74.20063747533706,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 146</name>
+			<description><![CDATA[dT_min = 12467s = 03h27min47s<br>(= 5 passes)<br>dT_max = 73370s = 20h22min50s<br>(= 23 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">146</SimpleData>
+					<SimpleData name="PASS1">18</SimpleData>
+					<SimpleData name="T1">53548.000</SimpleData>
+					<SimpleData name="PASS2">23</SimpleData>
+					<SimpleData name="T2">66015.000</SimpleData>
+					<SimpleData name="PASS3">47</SimpleData>
+					<SimpleData name="T3">139385.536</SimpleData>
+					<SimpleData name="DELTA_P1">5</SimpleData>
+					<SimpleData name="DELTA_T1">12467.000</SimpleData>
+					<SimpleData name="DELTA_P2">23</SimpleData>
+					<SimpleData name="DELTA_T2">73370.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-99.78447480349996,76.2864490742367,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 147</name>
+			<description><![CDATA[dT_min = 6228s = 01h43min48s<br>(= 3 passes)<br>dT_max = 79609s = 22h06min49s<br>(= 25 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">147</SimpleData>
+					<SimpleData name="PASS1">18</SimpleData>
+					<SimpleData name="T1">53602.000</SimpleData>
+					<SimpleData name="PASS2">21</SimpleData>
+					<SimpleData name="T2">59830.000</SimpleData>
+					<SimpleData name="PASS3">47</SimpleData>
+					<SimpleData name="T3">139439.536</SimpleData>
+					<SimpleData name="DELTA_P1">3</SimpleData>
+					<SimpleData name="DELTA_T1">6228.000</SimpleData>
+					<SimpleData name="DELTA_P2">25</SimpleData>
+					<SimpleData name="DELTA_T2">79609.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-86.85812444959963,77.31941642180809,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 148</name>
+			<description><![CDATA[dT_min = 25061s = 06h57min41s<br>(= 9 passes)<br>dT_max = 60776s = 16h52min56s<br>(= 19 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">148</SimpleData>
+					<SimpleData name="PASS1">19</SimpleData>
+					<SimpleData name="T1">56448.000</SimpleData>
+					<SimpleData name="PASS2">28</SimpleData>
+					<SimpleData name="T2">81509.000</SimpleData>
+					<SimpleData name="PASS3">48</SimpleData>
+					<SimpleData name="T3">142285.536</SimpleData>
+					<SimpleData name="DELTA_P1">9</SimpleData>
+					<SimpleData name="DELTA_T1">25061.000</SimpleData>
+					<SimpleData name="DELTA_P2">19</SimpleData>
+					<SimpleData name="DELTA_T2">60776.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>41.77382887595998,-70.2008241609515,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 149</name>
+			<description><![CDATA[dT_min = 18734s = 05h12min14s<br>(= 7 passes)<br>dT_max = 67103s = 18h38min23s<br>(= 21 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">149</SimpleData>
+					<SimpleData name="PASS1">19</SimpleData>
+					<SimpleData name="T1">56546.000</SimpleData>
+					<SimpleData name="PASS2">26</SimpleData>
+					<SimpleData name="T2">75280.000</SimpleData>
+					<SimpleData name="PASS3">48</SimpleData>
+					<SimpleData name="T3">142383.536</SimpleData>
+					<SimpleData name="DELTA_P1">7</SimpleData>
+					<SimpleData name="DELTA_T1">18734.000</SimpleData>
+					<SimpleData name="DELTA_P2">21</SimpleData>
+					<SimpleData name="DELTA_T2">67103.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>54.5727356403297,-74.19854487924593,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 150</name>
+			<description><![CDATA[dT_min = 12468s = 03h27min48s<br>(= 5 passes)<br>dT_max = 73369s = 20h22min49s<br>(= 23 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">150</SimpleData>
+					<SimpleData name="PASS1">19</SimpleData>
+					<SimpleData name="T1">56613.000</SimpleData>
+					<SimpleData name="PASS2">24</SimpleData>
+					<SimpleData name="T2">69081.000</SimpleData>
+					<SimpleData name="PASS3">48</SimpleData>
+					<SimpleData name="T3">142450.536</SimpleData>
+					<SimpleData name="DELTA_P1">5</SimpleData>
+					<SimpleData name="DELTA_T1">12468.000</SimpleData>
+					<SimpleData name="DELTA_P2">23</SimpleData>
+					<SimpleData name="DELTA_T2">73369.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>67.39400259678155,-76.28799369429721,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 151</name>
+			<description><![CDATA[dT_min = 6229s = 01h43min49s<br>(= 3 passes)<br>dT_max = 79608s = 22h06min48s<br>(= 25 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">151</SimpleData>
+					<SimpleData name="PASS1">19</SimpleData>
+					<SimpleData name="T1">56667.000</SimpleData>
+					<SimpleData name="PASS2">22</SimpleData>
+					<SimpleData name="T2">62896.000</SimpleData>
+					<SimpleData name="PASS3">48</SimpleData>
+					<SimpleData name="T3">142504.536</SimpleData>
+					<SimpleData name="DELTA_P1">3</SimpleData>
+					<SimpleData name="DELTA_T1">6229.000</SimpleData>
+					<SimpleData name="DELTA_P2">25</SimpleData>
+					<SimpleData name="DELTA_T2">79608.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>80.13179045602973,-77.32407926850969,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 152</name>
+			<description><![CDATA[dT_min = 25058s = 06h57min38s<br>(= 9 passes)<br>dT_max = 60779s = 16h52min59s<br>(= 19 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">152</SimpleData>
+					<SimpleData name="PASS1">20</SimpleData>
+					<SimpleData name="T1">59515.000</SimpleData>
+					<SimpleData name="PASS2">29</SimpleData>
+					<SimpleData name="T2">84573.000</SimpleData>
+					<SimpleData name="PASS3">49</SimpleData>
+					<SimpleData name="T3">145352.536</SimpleData>
+					<SimpleData name="DELTA_P1">9</SimpleData>
+					<SimpleData name="DELTA_T1">25058.000</SimpleData>
+					<SimpleData name="DELTA_P2">19</SimpleData>
+					<SimpleData name="DELTA_T2">60779.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-151.1066058165564,70.2056240677269,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 153</name>
+			<description><![CDATA[dT_min = 18733s = 05h12min13s<br>(= 7 passes)<br>dT_max = 67104s = 18h38min24s<br>(= 21 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">153</SimpleData>
+					<SimpleData name="PASS1">20</SimpleData>
+					<SimpleData name="T1">59612.000</SimpleData>
+					<SimpleData name="PASS2">27</SimpleData>
+					<SimpleData name="T2">78345.000</SimpleData>
+					<SimpleData name="PASS3">49</SimpleData>
+					<SimpleData name="T3">145449.536</SimpleData>
+					<SimpleData name="DELTA_P1">7</SimpleData>
+					<SimpleData name="DELTA_T1">18733.000</SimpleData>
+					<SimpleData name="DELTA_P2">21</SimpleData>
+					<SimpleData name="DELTA_T2">67104.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-138.311966242582,74.20147649993271,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 154</name>
+			<description><![CDATA[dT_min = 12468s = 03h27min48s<br>(= 5 passes)<br>dT_max = 73369s = 20h22min49s<br>(= 23 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">154</SimpleData>
+					<SimpleData name="PASS1">20</SimpleData>
+					<SimpleData name="T1">59679.000</SimpleData>
+					<SimpleData name="PASS2">25</SimpleData>
+					<SimpleData name="T2">72147.000</SimpleData>
+					<SimpleData name="PASS3">49</SimpleData>
+					<SimpleData name="T3">145516.536</SimpleData>
+					<SimpleData name="DELTA_P1">5</SimpleData>
+					<SimpleData name="DELTA_T1">12468.000</SimpleData>
+					<SimpleData name="DELTA_P2">23</SimpleData>
+					<SimpleData name="DELTA_T2">73369.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-125.3242273830982,76.28743428609191,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 155</name>
+			<description><![CDATA[dT_min = 6228s = 01h43min48s<br>(= 3 passes)<br>dT_max = 79609s = 22h06min49s<br>(= 25 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">155</SimpleData>
+					<SimpleData name="PASS1">20</SimpleData>
+					<SimpleData name="T1">59733.000</SimpleData>
+					<SimpleData name="PASS2">23</SimpleData>
+					<SimpleData name="T2">65961.000</SimpleData>
+					<SimpleData name="PASS3">49</SimpleData>
+					<SimpleData name="T3">145570.536</SimpleData>
+					<SimpleData name="DELTA_P1">3</SimpleData>
+					<SimpleData name="DELTA_T1">6228.000</SimpleData>
+					<SimpleData name="DELTA_P2">25</SimpleData>
+					<SimpleData name="DELTA_T2">79609.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-112.7036644901141,77.32788795284995,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 156</name>
+			<description><![CDATA[dT_min = 18735s = 05h12min15s<br>(= 7 passes)<br>dT_max = 67102s = 18h38min22s<br>(= 21 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">156</SimpleData>
+					<SimpleData name="PASS1">21</SimpleData>
+					<SimpleData name="T1">62677.000</SimpleData>
+					<SimpleData name="PASS2">28</SimpleData>
+					<SimpleData name="T2">81412.000</SimpleData>
+					<SimpleData name="PASS3">50</SimpleData>
+					<SimpleData name="T3">148514.536</SimpleData>
+					<SimpleData name="DELTA_P1">7</SimpleData>
+					<SimpleData name="DELTA_T1">18735.000</SimpleData>
+					<SimpleData name="DELTA_P2">21</SimpleData>
+					<SimpleData name="DELTA_T2">67102.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>28.88115333545834,-74.19595185650867,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 157</name>
+			<description><![CDATA[dT_min = 12468s = 03h27min48s<br>(= 5 passes)<br>dT_max = 73369s = 20h22min49s<br>(= 23 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">157</SimpleData>
+					<SimpleData name="PASS1">21</SimpleData>
+					<SimpleData name="T1">62745.000</SimpleData>
+					<SimpleData name="PASS2">26</SimpleData>
+					<SimpleData name="T2">75213.000</SimpleData>
+					<SimpleData name="PASS3">50</SimpleData>
+					<SimpleData name="T3">148582.536</SimpleData>
+					<SimpleData name="DELTA_P1">5</SimpleData>
+					<SimpleData name="DELTA_T1">12468.000</SimpleData>
+					<SimpleData name="DELTA_P2">23</SimpleData>
+					<SimpleData name="DELTA_T2">73369.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>41.83396619385622,-76.28485995780706,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 158</name>
+			<description><![CDATA[dT_min = 6229s = 01h43min49s<br>(= 3 passes)<br>dT_max = 79608s = 22h06min48s<br>(= 25 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">158</SimpleData>
+					<SimpleData name="PASS1">21</SimpleData>
+					<SimpleData name="T1">62799.000</SimpleData>
+					<SimpleData name="PASS2">24</SimpleData>
+					<SimpleData name="T2">69028.000</SimpleData>
+					<SimpleData name="PASS3">50</SimpleData>
+					<SimpleData name="T3">148636.536</SimpleData>
+					<SimpleData name="DELTA_P1">3</SimpleData>
+					<SimpleData name="DELTA_T1">6229.000</SimpleData>
+					<SimpleData name="DELTA_P2">25</SimpleData>
+					<SimpleData name="DELTA_T2">79608.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>54.79540176419624,-77.32886892417095,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 159</name>
+			<description><![CDATA[dT_min = 18734s = 05h12min14s<br>(= 7 passes)<br>dT_max = 67103s = 18h38min23s<br>(= 21 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">159</SimpleData>
+					<SimpleData name="PASS1">22</SimpleData>
+					<SimpleData name="T1">65743.000</SimpleData>
+					<SimpleData name="PASS2">29</SimpleData>
+					<SimpleData name="T2">84477.000</SimpleData>
+					<SimpleData name="PASS3">51</SimpleData>
+					<SimpleData name="T3">151580.536</SimpleData>
+					<SimpleData name="DELTA_P1">7</SimpleData>
+					<SimpleData name="DELTA_T1">18734.000</SimpleData>
+					<SimpleData name="DELTA_P2">21</SimpleData>
+					<SimpleData name="DELTA_T2">67103.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-163.9241326140658,74.19884442219754,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 160</name>
+			<description><![CDATA[dT_min = 12468s = 03h27min48s<br>(= 5 passes)<br>dT_max = 73369s = 20h22min49s<br>(= 23 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">160</SimpleData>
+					<SimpleData name="PASS1">22</SimpleData>
+					<SimpleData name="T1">65810.000</SimpleData>
+					<SimpleData name="PASS2">27</SimpleData>
+					<SimpleData name="T2">78278.000</SimpleData>
+					<SimpleData name="PASS3">51</SimpleData>
+					<SimpleData name="T3">151647.536</SimpleData>
+					<SimpleData name="DELTA_P1">5</SimpleData>
+					<SimpleData name="DELTA_T1">12468.000</SimpleData>
+					<SimpleData name="DELTA_P2">23</SimpleData>
+					<SimpleData name="DELTA_T2">73369.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-151.1005598554456,76.28056279208234,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 161</name>
+			<description><![CDATA[dT_min = 6229s = 01h43min49s<br>(= 3 passes)<br>dT_max = 79608s = 22h06min48s<br>(= 25 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">161</SimpleData>
+					<SimpleData name="PASS1">22</SimpleData>
+					<SimpleData name="T1">65865.000</SimpleData>
+					<SimpleData name="PASS2">25</SimpleData>
+					<SimpleData name="T2">72094.000</SimpleData>
+					<SimpleData name="PASS3">51</SimpleData>
+					<SimpleData name="T3">151702.536</SimpleData>
+					<SimpleData name="DELTA_P1">3</SimpleData>
+					<SimpleData name="DELTA_T1">6229.000</SimpleData>
+					<SimpleData name="DELTA_P2">25</SimpleData>
+					<SimpleData name="DELTA_T2">79608.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-138.072987457868,77.32375504035399,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 162</name>
+			<description><![CDATA[dT_min = 12469s = 03h27min49s<br>(= 5 passes)<br>dT_max = 73368s = 20h22min48s<br>(= 23 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">162</SimpleData>
+					<SimpleData name="PASS1">23</SimpleData>
+					<SimpleData name="T1">68875.000</SimpleData>
+					<SimpleData name="PASS2">28</SimpleData>
+					<SimpleData name="T2">81344.000</SimpleData>
+					<SimpleData name="PASS3">52</SimpleData>
+					<SimpleData name="T3">154712.536</SimpleData>
+					<SimpleData name="DELTA_P1">5</SimpleData>
+					<SimpleData name="DELTA_T1">12469.000</SimpleData>
+					<SimpleData name="DELTA_P2">23</SimpleData>
+					<SimpleData name="DELTA_T2">73368.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>15.96351969165855,-76.28272059974307,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 163</name>
+			<description><![CDATA[dT_min = 6229s = 01h43min49s<br>(= 3 passes)<br>dT_max = 79608s = 22h06min48s<br>(= 25 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">163</SimpleData>
+					<SimpleData name="PASS1">23</SimpleData>
+					<SimpleData name="T1">68930.000</SimpleData>
+					<SimpleData name="PASS2">26</SimpleData>
+					<SimpleData name="T2">75159.000</SimpleData>
+					<SimpleData name="PASS3">52</SimpleData>
+					<SimpleData name="T3">154767.536</SimpleData>
+					<SimpleData name="DELTA_P1">3</SimpleData>
+					<SimpleData name="DELTA_T1">6229.000</SimpleData>
+					<SimpleData name="DELTA_P2">25</SimpleData>
+					<SimpleData name="DELTA_T2">79608.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>28.90844735098865,-77.31905687495853,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 164</name>
+			<description><![CDATA[dT_min = 6229s = 01h43min49s<br>(= 3 passes)<br>dT_max = 79608s = 22h06min48s<br>(= 25 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">164</SimpleData>
+					<SimpleData name="PASS1">24</SimpleData>
+					<SimpleData name="T1">71995.000</SimpleData>
+					<SimpleData name="PASS2">27</SimpleData>
+					<SimpleData name="T2">78224.000</SimpleData>
+					<SimpleData name="PASS3">53</SimpleData>
+					<SimpleData name="T3">157832.536</SimpleData>
+					<SimpleData name="DELTA_P1">3</SimpleData>
+					<SimpleData name="DELTA_T1">6229.000</SimpleData>
+					<SimpleData name="DELTA_P2">25</SimpleData>
+					<SimpleData name="DELTA_T2">79608.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-164.1080697088476,77.3219327309513,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 165</name>
+			<description><![CDATA[dT_min = 6229s = 01h43min49s<br>(= 3 passes)<br>dT_max = 79608s = 22h06min48s<br>(= 25 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">165</SimpleData>
+					<SimpleData name="PASS1">25</SimpleData>
+					<SimpleData name="T1">75060.000</SimpleData>
+					<SimpleData name="PASS2">28</SimpleData>
+					<SimpleData name="T2">81289.000</SimpleData>
+					<SimpleData name="PASS3">54</SimpleData>
+					<SimpleData name="T3">160897.536</SimpleData>
+					<SimpleData name="DELTA_P1">3</SimpleData>
+					<SimpleData name="DELTA_T1">6229.000</SimpleData>
+					<SimpleData name="DELTA_P2">25</SimpleData>
+					<SimpleData name="DELTA_T2">79608.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>2.888661418245263,-77.33107483175466,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>ID = 166</name>
+			<description><![CDATA[dT_min = 6229s = 01h43min49s<br>(= 3 passes)<br>dT_max = 79608s = 22h06min48s<br>(= 25 passes)]]></description>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<ExtendedData>
+				<SchemaData schemaUrl="#calval_orbite_xover">
+					<SimpleData name="ID">166</SimpleData>
+					<SimpleData name="PASS1">26</SimpleData>
+					<SimpleData name="T1">78127.000</SimpleData>
+					<SimpleData name="PASS2">29</SimpleData>
+					<SimpleData name="T2">84356.000</SimpleData>
+					<SimpleData name="PASS3">55</SimpleData>
+					<SimpleData name="T3">163964.536</SimpleData>
+					<SimpleData name="DELTA_P1">3</SimpleData>
+					<SimpleData name="DELTA_T1">6229.000</SimpleData>
+					<SimpleData name="DELTA_P2">25</SimpleData>
+					<SimpleData name="DELTA_T2">79608.536</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>170.3891417801227,77.3267797022676,0</coordinates>
+			</Point>
+		</Placemark>
+	</Folder>
+</Document>
+</kml>
