@@ -14,7 +14,9 @@ def plot_ops_area_IOP2(ax,**kwargs):
    - matplotlib.pyplot.plot kwargs
 
    Return
-   - exit code (True if OK)
+   - xs,ys,ax
+   xs = lon coordinates of polygon
+   ys = lat coordinates of polygon
    """
     # Add S-MODE IOP1 operations area
    '''
@@ -34,11 +36,11 @@ def plot_ops_area_IOP2(ax,**kwargs):
       37.75° -123.354°
       37.00° -122.92°
       36.337° -124.36°
-      35.00° -123.50°
-      35.00° -125.353°    
+      36.00° -124.16°
+      35.60° -125.515°    
     '''
     
-   coord = [[38.342, -126.25], [37.707, -123.99], [37.75, -123.354], [37.00, -122.92], [36.337, -124.36], [35.00, -123.50],[35.00, -125.353]]
+   coord = [[38.342, -126.25], [37.707, -123.99], [37.75, -123.354], [37.00, -122.92], [36.337, -124.36], [36.00, -124.16],[35.60, -125.515]]
    coord.append(coord[0]) #repeat the first point to create a 'closed loop'
 
    ys, xs = zip(*coord) #create lists of x and y values
@@ -59,7 +61,7 @@ def plot_ops_area_IOP2(ax,**kwargs):
    print(kwargs)
    '''
 
-   return(xs,ys,ax)
+   return(xs,ys)
 
 
 def plot_ops_area(ax,**kwargs):
