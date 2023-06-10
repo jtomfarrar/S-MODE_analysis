@@ -694,6 +694,48 @@ fig.autofmt_xdate()
 if savefig:
     plt.savefig(__figdir__+'WG_triangle_fit_'+str(-z0)+'m_triangle_'+str(triangle_ind)+'.'+plotfiletype,**savefig_args)
 
+# +
+zeta=vx-uy
+sig_zeta=np.sqrt(sig_vx**2 + sig_uy**2)
+strain = np.sqrt((ux-vy)**2+(vx+uy)**2)
+sig_strain=np.sqrt(sig_vx**2 + sig_uy**2 + sig_ux**2 + sig_vy**2) # Note that "sig" refers to error estimate here
+div = ux+vy
+sig_div=np.sqrt(sig_ux**2 + sig_vy**2)
+feff_f=np.sqrt(1+zeta/f)
+
+plt.figure(figsize=(5,6))
+capsize = 3
+skip = 4
+
+ax = plt.subplot(3,1,1)
+plt.errorbar(t,u0,yerr=sig_u0,capsize=capsize,errorevery=skip)
+plt.errorbar(t,v0,yerr=sig_v0,capsize=capsize,errorevery=skip)
+plt.ylabel('u,v')
+plt.title('Triangle \"' + str(triangle_ind) +'\", depth =' + str(-z0))
+
+ax2 = plt.subplot(3,1,2,sharex=ax)
+# plt.plot(t,(div)/f)
+plt.errorbar(t,div/f,yerr=sig_div/f,capsize=capsize,errorevery=skip)
+plt.plot(t,0*div,'--',color='k')
+plt.ylabel('$\delta$/f')
+plt.ylim(-2, 2)
+
+ax3 = plt.subplot(3,1,3,sharex=ax)
+# plt.plot(t,(zeta)/f)
+hz = plt.errorbar(t,zeta/f,yerr=sig_zeta/f,capsize=capsize,errorevery=skip)
+# hfeff, = plt.plot(t,feff_f)
+plt.plot(t,0*div,'--',color='k')
+# plt.plot(t,1+0*div,'--',color='grey')
+plt.ylabel('$\zeta$/f')
+plt.ylim(-2, 2)
+# ax3.legend([hz, hfeff],['$\zeta$/f', '$f_{effective}$'])
+
+fig = plt.gcf()
+fig.autofmt_xdate()
+
+if savefig:
+    plt.savefig(__figdir__+'WG_triangle_fit_simple_'+str(-z0)+'m_triangle_'+str(triangle_ind)+'.'+plotfiletype,**savefig_args)
+
 
 # -
 
