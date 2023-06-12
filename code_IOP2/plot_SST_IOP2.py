@@ -37,8 +37,8 @@ plt.rcParams['figure.dpi'] = 150
 plt.rcParams['savefig.dpi'] = 600
 #plt.close('all')
 
-%matplotlib inline
-%matplotlib widget
+# %matplotlib inline
+# %matplotlib widget
 # %matplotlib qt5
 
 __figdir__ = '../plots/' 
@@ -166,13 +166,10 @@ skip = 10
 # scale = 10
 
 
-# %%
-
 width = Qgeo.width
 headwidth = Qgeo.headwidth
 headlength = Qgeo.headlength
 headaxislength = Qgeo.headaxislength
-
 
 # %%
 # Function to plot WG position and vel at time of SST image
@@ -206,9 +203,6 @@ def plot_WG_vel_vectors(ax,tmin,tmax,scale,skip, **kwargs):
     
 
 # %%
-
-
-# %%
 plt.show()
 
 # %%
@@ -233,7 +227,6 @@ if plot_SWOT:
     if savefig:
         plt.savefig(__figdir__+'SST_UV_SWOT_swath_zoom_level_' + str(zoom) + '_' + day_str + '.' + plotfiletype,**savefig_args)
 
-# %%
 
 
 

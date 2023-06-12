@@ -307,8 +307,7 @@ def sst_map_SMODE(url,zoom,V,time_window):
     return(ax,day_str)
 
 def sst_map_SMODE(url,zoom,V,time_window):
-    """
-    Plot map of SST for S-MODE region.
+    """Plot map of SST for S-MODE region.
 
     Parameters
     ----------
@@ -611,3 +610,121 @@ def run_avg1d(f, N):
    
 
     return fz / sumwin
+
+
+## THREDDS tools
+# Adapted from a script was obtained from an OOI webpage:
+# https://oceanobservatories.org/knowledgebase/how-can-i-download-all-files-at-once-from-a-data-request/
+# Written by Sage 4/5/2016, revised 5/31/2018
+
+# url for the data (use xml extension instead of html)
+# Everything before "catalog/"
+# server_url = 'http://smode.whoi.edu:8080/thredds/'
+# Everything from "catalog/" on:
+# request_url = 'catalog/IOP2_2023/satellite/VIIRS_NPP/catalog.xml'
+# url = server_url + request_url
+
+def get_elements(url, tag_name, attribute_name):
+    """Get elements from an XML file"""
+    from xml.dom import minidom
+    from urllib.request import urlopen
+    from urllib.request import urlretrieve
+
+    # usock = urllib2.urlopen(url)
+    usock = urlopen(url)
+    xmldoc = minidom.parse(usock)
+    usock.close()
+    tags = xmldoc.getElementsByTagName(tag_name)
+    attributes=[]
+    for tag in tags:
+        attribute = tag.getAttribute(attribute_name)
+        attributes.append(attribute)
+    return attributes
+ 
+def download_THREDDS(server_url, request_url):
+    '''Download all the netcdf files from a given THREDDS catalog.
+
+    TODO: It would be nice to specify the directory where the files should be written.
+
+    Parameters
+    ----------
+    server_url : str
+        Everything before "catalog/" in THREDDS catalog address, e.g.,
+        server_url = 'http://smode.whoi.edu:8080/thredds/'
+    request_url : str
+        Everything after (and including) "catalog/"
+
+    Returns
+    -------
+    None
+
+    Example
+    -------
+    URL for the data (use xml extension instead of html)
+    For 'http://smode.whoi.edu:8080/thredds/catalog/IOP2_2023/satellite/VIIRS_NPP/catalog.xml',
+    Everything before "catalog/"
+    server_url = 'http://smode.whoi.edu:8080/thredds/'
+    Everything from "catalog/" on:
+    request_url = 'catalog/IOP2_2023/satellite/VIIRS_NPP/catalog.xml'
+    '''
+    url = server_url + request_url
+    print(url)
+    catalog = get_elements(url,'dataset','urlPath')
+    files=[]
+    for citem in catalog:
+        if (citem[-3:]=='.nc'):
+            files.append(citem)
+    count = 0
+    for f in files:
+        count +=1
+        file_url = server_url + 'fileServer/' + f
+        file_prefix = file_url.split('/')[-1][:-3]
+        file_name = file_prefix  + '.nc'
+        print('Downloaing file %d of %d' % (count,len(files)))
+        print(file_url)
+        a = urlretrieve(file_url,file_name)
+        print(a)
+
+def list_THREDDS(server_url, request_url):
+    '''Return a list of OPeNDAP links for all the netcdf files from a given THREDDS catalog.
+
+    Parameters
+    ----------
+    server_url : str
+        Everything before "catalog/" in THREDDS catalog address, e.g.,
+        server_url = 'http://smode.whoi.edu:8080/thredds/'
+    request_url : str
+        Everything after (and including) "catalog/"
+
+    Returns
+    -------
+    file_list : list of strings
+        list of OPeNDAP/DODS links that can be used to access the data
+
+    Example
+    -------
+    URL for the data (use xml extension instead of html)
+    For 'http://smode.whoi.edu:8080/thredds/catalog/IOP2_2023/satellite/VIIRS_NPP/catalog.xml',
+    Everything before "catalog/"
+    server_url = 'http://smode.whoi.edu:8080/thredds/'
+    Everything from "catalog/" on:
+    request_url = 'catalog/IOP2_2023/satellite/VIIRS_NPP/catalog.xml'
+    '''
+    url = server_url + request_url
+    file_list=[]
+    print(url)
+    catalog = get_elements(url,'dataset','urlPath')
+    files=[]
+    for citem in catalog:
+        if (citem[-3:]=='.nc'):
+            files.append(citem)
+    count = 0
+    for f in files:
+        file_url = server_url + 'dodsC/' + f
+        file_prefix = file_url.split('/')[-1][:-3]
+        file_name = file_prefix  + '.nc'
+        file_list.append(file_url)
+        print(file_url)
+    return file_list
+
+
