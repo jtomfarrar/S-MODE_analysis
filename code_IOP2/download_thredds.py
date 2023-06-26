@@ -43,7 +43,7 @@ def main():
     count +=1
     file_url = server_url + 'fileServer/' + f
     file_prefix = file_url.split('/')[-1][:-3]
-    file_name = file_prefix + '_' + str(count) + '.nc'
+    file_name = file_prefix  + '.nc'
     print('Downloaing file %d of %d' % (count,len(files)))
     print(file_name)
     a = urlretrieve(file_url,file_name)

@@ -24,7 +24,6 @@ import cartopy
 import gsw
 import functions  # requires functions.py from this repository
 import datetime
-
 import sys
 sys.path.insert(0,'../../NASA_SMODE/DataSynthesis/tools') #github repo in NASA_SMODE organization
 sys.path.insert(0,'../../NASA_SMODE/DataSynthesis/data-synthesis/')
@@ -99,7 +98,6 @@ savefig = True
 (ax, day_str) = functions.sst_map_SMODE(url,zoom,V,time_window)
 
 
-# %%
 
 # Add a 10 km scale bar
 km_per_deg_lat=gsw.geostrophy.distance((125,125), (37,38))/1000
