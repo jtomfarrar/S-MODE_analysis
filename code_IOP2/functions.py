@@ -163,7 +163,7 @@ def get_current_position(platform_str,**kwargs):
     
     return(platform)
 
-def sst_map_SMODE(url,zoom,V,time_window):
+def sst_map_SMODE_old(url,zoom,V,time_window):
     """
     Plot map of SST for S-MODE region.
 
