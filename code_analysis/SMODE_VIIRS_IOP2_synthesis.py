@@ -14,6 +14,7 @@ http://smode.whoi.edu:8080/thredds/dodsC/IOP2_2023/satellite/VIIRS_NPP/VIIRS_NPP
 '''
 # %%
 import os
+os.system('cd ~/Python/S-MODE_analysis/code_analysis')
 import xarray as xr
 import functions
 import numpy as np
