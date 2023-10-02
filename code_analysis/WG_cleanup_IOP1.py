@@ -105,6 +105,10 @@ eval('met_'+WG_list[0])
 # First, let's look at the variables in each file.  We can use the xarray dataset method .data_vars to 
 # list all the variables in the dataset.  We can also use .variables to list all the variables and their attributes.  Let's try that for the first file.
 #
+# We can also use the xarray dataset method .info() to get a summary of the dataset.  
+#
+# Note that I went through a lot of the necessary steps to regrid data in code/WG_L2_look.ipynb,  
+# code/WG_L2b_look.ipynb, code/WG_L3_processing.ipynb, code/WG_L3a_processing.ipynb, and code/WG_L3_bprocessing.ipynb, 
 
 # %%
 # make a list of all data variables in the xarray dataset
