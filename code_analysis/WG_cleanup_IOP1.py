@@ -20,23 +20,24 @@ import gsw
 import functions  # requires functions.py from this directory
 
 # %%
-# %matplotlib inline
-%matplotlib qt5
+# Set up plotting parameters
 plt.rcParams['figure.figsize'] = (7,4)
 plt.rcParams['figure.dpi'] = 200
 plt.rcParams['savefig.dpi'] = 400
 plt.close('all')
 
+savefig = True # set to true to save plots as file
+# directory for saving figures:
 __figdir__ = '../plots/WG_IOP1' 
 savefig_args = {'bbox_inches':'tight', 'pad_inches':0.2}
 plotfiletype='png'
 
+# make figure directory if it doesn't exist
 is_path = os.path.exists(__figdir__)
 if not is_path:
     os.makedirs(__figdir__)
 
 # %%
-savefig = True
 zoom = True
 if zoom:
     xmin, xmax = (-127,-121)
@@ -108,7 +109,15 @@ eval('met_'+WG_list[0])
 # We can also use the xarray dataset method .info() to get a summary of the dataset.  
 #
 # Note that I went through a lot of the necessary steps to regrid data in code/WG_L2_look.ipynb,  
-# code/WG_L2b_look.ipynb, code/WG_L3_processing.ipynb, code/WG_L3a_processing.ipynb, and code/WG_L3_bprocessing.ipynb, 
+# code/WG_L2b_look.ipynb, code/WG_L3_processing.ipynb, code/WG_L3a_processing.ipynb, and code/WG_L3b_processing.ipynb, 
+#
+# Maybe this is the latest best example:
+# Python/S-MODE_analysis/code_IOP2/WG_realtime_met.ipynb
+#
+# There are definitely soem relevant steps and functions in Python/S-MODE_analysis/code/WG_L3b_processing.ipynb, 
+# especially make_var_list(ds_in,time_coord) (which makes a list of all variables with a given time coord),
+#  remove_nan(), subset(var_list, ds_in), and add_vars(var_list, ds_in, ds_out)
+
 
 # %%
 # make a list of all data variables in the xarray dataset
@@ -178,7 +187,7 @@ for WG in WG_list:
 
 
 # %%
-%whos
+
 
 # %%
 ds_adcp
