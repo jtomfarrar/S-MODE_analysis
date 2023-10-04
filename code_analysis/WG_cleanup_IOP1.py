@@ -120,10 +120,38 @@ eval('met_'+WG_list[0])
 
 
 # %%
-# make a list of all data variables in the xarray dataset
-ds_WHOI22.data_vars
+def make_var_list(ds_in,time_coord):
+    """
+    Find all the variables with a given time coord
+ 
+    Parameters
+    ----------
+    ds_in : xarray.dataset
+    time_coord : str
 
-#ds_WHOI22.variables
+    Returns
+    -------
+    result : list of str
+        list of vars meeting criterion
+    """
+    
+    var_list = []  
+    not_used = []  
+    for var in ds_in.data_vars:
+        try:
+            if ds_in.data_vars.get(var).dims[0]==time_coord:
+                var_list.append(var)
+                print(var)
+        except Exception: # I think it will never enter this exception
+            print('There was an exception in make_var_list()')
+            not_used.append(var)
+
+    return var_list
+
+# %%
+
+safdaf
+
 
 
 # %%
