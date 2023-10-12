@@ -95,7 +95,7 @@ eval('ds_'+WG)
 # eval('adcp_'+WG_list[7])
 
 # %%
-eval('met_'+WG_list[0])
+# eval('met_'+WG_list[0])
 
 # %% [markdown]
 # OK, we have many different variables on many different time bases. Let's assess. 
@@ -104,9 +104,10 @@ eval('met_'+WG_list[0])
 # all variables on a 5 minute time base.
 #
 # First, let's look at the variables in each file.  We can use the xarray dataset method .data_vars to 
-# list all the variables in the dataset.  We can also use .variables to list all the variables and their attributes.  Let's try that for the first file.
-#
-# We can also use the xarray dataset method .info() to get a summary of the dataset.  
+# list all the variables in the dataset.  We can use the xarray dataset method .dims to list all the
+# dimensions in the dataset.  We can use the xarray dataset method .coords to list all the coordinates
+# in the dataset.  We can use the xarray dataset method .attrs to list all the attributes in the dataset.
+#  
 #
 # Note that I went through a lot of the necessary steps to regrid data in code/WG_L2_look.ipynb,  
 # code/WG_L2b_look.ipynb, code/WG_L3_processing.ipynb, code/WG_L3a_processing.ipynb, and code/WG_L3b_processing.ipynb, 
@@ -114,13 +115,13 @@ eval('met_'+WG_list[0])
 # Maybe this is the latest best example:
 # Python/S-MODE_analysis/code_IOP2/WG_realtime_met.ipynb
 #
-# There are definitely soem relevant steps and functions in Python/S-MODE_analysis/code/WG_L3b_processing.ipynb, 
+# There are definitely some relevant steps and functions in Python/S-MODE_analysis/code/WG_L3b_processing.ipynb, 
 # especially make_var_list(ds_in,time_coord) (which makes a list of all variables with a given time coord),
 #  remove_nan(), subset(var_list, ds_in), and add_vars(var_list, ds_in, ds_out)
 
 
 # %%
-def make_var_list(ds_in,time_coord):
+def make_var_list_old(ds_in,time_coord):
     """
     Find all the variables with a given time coord
  
@@ -147,6 +148,68 @@ def make_var_list(ds_in,time_coord):
             not_used.append(var)
 
     return var_list
+
+# %%
+def make_var_list(ds_in,time_coord):
+    """
+    Find all the variables with a given time coord
+ 
+    Parameters
+    ----------
+    ds_in : xarray.dataset
+    time_coord : str
+
+    Returns
+    -------
+    result : list of str
+        list of vars meeting criterion
+    """
+    
+    var_list = []  
+    not_used = []  
+    for var in ds_in.data_vars:
+        if ds_in.data_vars.get(var).dims[0]==time_coord:
+            var_list.append(var)
+            print(var)
+        else:
+            print(f'Variable {var} not included because it does not have time coord {time_coord}')
+            not_used.append(var)
+
+    return var_list
+# %%
+# We have time_1Hz, time_10Hz, time_20Hz, time_15min, Workhorse_time (1 Hz)
+
+# Raw met plot from WG:
+fig, axs = plt.subplots(5, 1, sharex=True)
+fig.autofmt_xdate()
+plt.subplot(5,1,1)
+h1, = plt.plot(ds.time_1Hz, ds.WXT_air_temperature)
+h2, = plt.plot(ds.time_1Hz, ds.UCTD_sea_water_temperature)
+plt.legend([h1, h2],['Air temp.','SST'])
+plt.ylabel('T [$^\circ$C]')
+plt.title(WG+': raw 1 Hz WXT measurements')
+
+plt.subplot(5,1,2)
+plt.plot(ds.time_1Hz, ds.WXT_relative_humidity)
+plt.ylabel('[%]')
+plt.legend(['Rel. Humidity'])
+
+plt.subplot(5,1,3)
+plt.plot(ds.time_15min, ds.wave_significant_height)
+plt.ylabel('[m]')
+plt.legend(['Sig. wave height'],loc='upper right')
+
+plt.subplot(5,1,4)
+plt.plot(ds.time_20Hz, ds.wind_speed)
+plt.plot(ds.time_1Hz, ds.WXT_wind_speed)
+plt.ylabel('[m/s]')
+plt.legend(['Gill Wind speed','WXT wind speed'],loc='upper right')
+
+plt.subplot(5,1,5)
+plt.plot(ds.Workhorse_time, ds.Workhorse_altitude)
+plt.ylabel('[m]')
+plt.legend(['Workhorse altitude (from IMU/GPS)'],loc='upper right')
+
 
 # %%
 
