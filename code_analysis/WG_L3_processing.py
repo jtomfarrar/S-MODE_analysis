@@ -61,6 +61,91 @@ __figdir__ = '../plots/WG_timeseries/'
 savefig_args = {'bbox_inches':'tight', 'pad_inches':0.2}
 plotfiletype='png'
 
+# %% Some functions
+# Some functions
+def make_var_list(ds_in,time_coord):
+    """
+    Find all the variables with a given time coord
+ 
+    Parameters
+    ----------
+    ds_in : xarray.dataset
+    time_coord : str 
+    (time_coord = None will return all variables that do not have a time coord)
+
+    Returns
+    -------
+    result : list of str
+        list of vars meeting criterion
+    """
+    
+    var_list = []  
+    not_used = []  
+    for var in ds_in.data_vars:
+        try:
+            if ds_in.data_vars.get(var).dims[0]==time_coord:
+                var_list.append(var)
+                print(var)
+        except Exception: # if there is no time coord, just skip it
+            not_used.append(var)
+
+    if time_coord is None:
+        var_list = not_used
+
+    return var_list
+
+def interp_nans(var_list, ds_in, gaps):
+
+    for var in var_list:
+        var_raw = ds_in.data_vars.get(var).copy()
+        if naninterp=='True': # Interpolate NaNs
+            ff = np.flatnonzero(np.isnan(var_raw)==0)
+            t = ds_in[ds_in.data_vars.get(var).coords.dims[0]]
+            t_noninterp = t[ff]
+            var_noninterp = var_raw[ff]
+            var_value = np.interp(t, t_noninterp, var_noninterp)
+        else: #just provide raw data as input to smoothing
+            var_value = var_raw
+
+        numnans = np.size(np.flatnonzero(np.isnan(var_raw)))
+        var_value[gaps[0][:]]= np.nan # insert 1 nan to make gaps evident in plots
+        locals()[var] = var_raw.rename(var) #locals()['string'] makes a variable with the name string
+        print(var+' created, '+str(np.round(100*(1-numnans)/np.size(t),3))+'% of values are NaN'+', number of nans=' + str(numnans))
+        locals()[var].values = var_value
+        ds_new[var] = locals()[var]
+    return ds_new
+
+# Make a function that will use the xr.resample method to resample a single variable
+# This function will determine the time base from the input variable
+# I am writing it to work on a single variable so that it can be parallelized in a loop using tqdm
+def resample_var_1Hz(var, ds_in):
+    '''
+    Resample a single variable to a uniform time base
+    '''
+    var_raw = ds_in.data_vars.get(var).copy()
+    var_resampled = var_raw.resample(time_1Hz = '1 min',skipna = True).mean()
+    return var_resampled
+
+
+def subset(var_list, ds_in):
+
+    ds_new = ds_in[var_list]
+    return ds_new
+
+
+def add_vars(var_list, ds_in, ds_out):
+    '''
+    Copies variables in var_list from ds_in to ds_out.  
+    '''
+    var_existing = []
+    for var in ds_in.data_vars:
+        var_existing.append(var)
+
+    #ds_out = ds_out[var_existing]
+    ds_out[var_list] = ds_in[var_list].copy()
+    return ds_out
+
+
 # %%
 # path = '/mnt/e/SMODE_data/pilot/WG/L2/'
 path = '/mnt/d/tom_data/S-MODE/S-MODE_data/final/PFC/Wavegliders/'
@@ -83,7 +168,6 @@ naninterp='True' # Interpolate NaNs
 # Because the time increment is so small, we get 'out of range' when starting from the standard datetime64 epoch of 1970
 # matplotlib.dates.set_epoch('2000-01-01T00:00:00') 
 
-
 # %%
 ds = xr.open_dataset(path+file, engine = 'netcdf4', decode_times = True) #decode_times = False, 
 
@@ -100,7 +184,35 @@ print('Center of time interval is shifted by '+str(np.round(time_diff.values/np.
 # This would work fine, but it requires a 291 GB array
 # ds_1min = ds.resample(time_1Hz = '1 min',skipna = True).mean()
 # This one crashes the kernel on my laptop
-ds_1min = ds.resample(Workhorse_time = '1 min',skipna = True).mean()
+#ds_1min = ds.resample(Workhorse_time = '1 min',skipna = True).mean()
+
+# xr.resample is a powerful tool, but it is not designed to handle the large number of variables in this dataset
+
+# %%
+# Alternate plan: make a list of variables that have a time coord, 
+# and then resample each one individually
+ds_new = xr.Dataset().assign_attrs(ds.attrs)  # make empty xr.Dataset but copy attributes from original file
+var_list = make_var_list(ds, 'time_1Hz')
+#ds_new = interp_nans(var_list, ds, gaps_1Hz)
+
+# loop through variables in var_list and resample each one
+# Also, keep the variable name the same, but remove the suffix '_1Hz'
+for var in var_list:
+    print(var)
+    var_resampled = resample_var_1Hz(var, ds)
+    locals()[var] = var_resampled.rename(var) #locals()['string'] makes a variable with the name string
+    ds_new[var] = locals()[var]
+    ds_new[var].attrs = ds[var].attrs # copy attributes from original variable
+
+# Change the name of the associated coordinate to 'time'
+ds_new = ds_new.rename({'time_1Hz':'time'})
+
+
+
+
+
+
+
 
 # %%
 # Raw met plot from WG:
@@ -282,79 +394,6 @@ for n in range(np.size(gaps_1Hz[0][:])):
 print('There are ' + str(np.size(gaps_1Hz[0][:])) + ' 1 Hz gaps exceeding '+str(gapsize))
 print('There are ' + str(np.size(gaps_20Hz[0][:])) + ' 20 Hz gaps exceeding '+str(gapsize))
 print('There are ' + str(np.size(gaps_WH[0][:])) + ' Workhorse gaps exceeding '+str(gapsize))
-
-# %%
-def make_var_list(ds_in,time_coord):
-    """
-    Find all the variables with a given time coord
- 
-    Parameters
-    ----------
-    ds_in : xarray.dataset
-    time_coord : str 
-    (time_coord = None will return all variables that do not have a time coord)
-
-    Returns
-    -------
-    result : list of str
-        list of vars meeting criterion
-    """
-    
-    var_list = []  
-    not_used = []  
-    for var in ds_in.data_vars:
-        try:
-            if ds_in.data_vars.get(var).dims[0]==time_coord:
-                var_list.append(var)
-                print(var)
-        except Exception: # if there is no time coord, just skip it
-            not_used.append(var)
-
-    if time_coord is None:
-        var_list = not_used
-
-    return var_list
-
-# %%
-def interp_nans(var_list, ds_in, gaps):
-
-    for var in var_list:
-        var_raw = ds_in.data_vars.get(var).copy()
-        if naninterp=='True': # Interpolate NaNs
-            ff = np.flatnonzero(np.isnan(var_raw)==0)
-            t = ds_in[ds_in.data_vars.get(var).coords.dims[0]]
-            t_noninterp = t[ff]
-            var_noninterp = var_raw[ff]
-            var_value = np.interp(t, t_noninterp, var_noninterp)
-        else: #just provide raw data as input to smoothing
-            var_value = var_raw
-
-        numnans = np.size(np.flatnonzero(np.isnan(var_raw)))
-        var_value[gaps[0][:]]= np.nan # insert 1 nan to make gaps evident in plots
-        locals()[var] = var_raw.rename(var) #locals()['string'] makes a variable with the name string
-        print(var+' created, '+str(np.round(100*(1-numnans)/np.size(t),3))+'% of values are NaN'+', number of nans=' + str(numnans))
-        locals()[var].values = var_value
-        ds_new[var] = locals()[var]
-    return ds_new
-
-# %%
-def subset(var_list, ds_in):
-
-    ds_new = ds_in[var_list]
-    return ds_new
-
-# %%
-def add_vars(var_list, ds_in, ds_out):
-    '''
-    Copies variables in var_list from ds_in to ds_out.  
-    '''
-    var_existing = []
-    for var in ds_in.data_vars:
-        var_existing.append(var)
-
-    #ds_out = ds_out[var_existing]
-    ds_out[var_list] = ds_in[var_list].copy()
-    return ds_out
 
 # %%
 ds_new = xr.Dataset().assign_attrs(ds.attrs)  # make empty xr.Dataset but copy attributes from original file
