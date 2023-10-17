@@ -6,11 +6,14 @@
 # %% [markdown]
 # ## About Level 3a and Level 3b data
 # 
+# The new thing with this processing file (compared to the ones by similar names with L3a and L3b)
+# is that I am using xr.resample to average the data to a uniform time base.
+# 
 # Level 3a data:
 # - The only difference from Level 2 is that NaNs are removed by interpolation
 # - This is a "wave resolving" data set with modest QC (removal/interpolation of gaps<1 sec)
 # 
-# Level 3b met data:
+# Level 3b data:
 # - Same as Level 3a but variables are averaged to 1 min
 # - subsample all variables to 1-min time base
 # 
@@ -75,16 +78,29 @@ file = 'SMODE_PFC_Wavegliders_'+WG+'.nc'
 naninterp='True' # Interpolate NaNs
 
 # %%
-# This needs to be set before any dates are encoded as datetime64
+# With the preliminary data, it was the case that this needed to be set before 
+# any dates are encoded as datetime64-- not sure if it is still needed
 # Because the time increment is so small, we get 'out of range' when starting from the standard datetime64 epoch of 1970
-matplotlib.dates.set_epoch('2000-01-01T00:00:00') 
+# matplotlib.dates.set_epoch('2000-01-01T00:00:00') 
+
 
 # %%
-# %%time
 ds = xr.open_dataset(path+file, engine = 'netcdf4', decode_times = True) #decode_times = False, 
 
 # %%
-#ds
+# xr.resample returns time labels that are the beginning of the averaging period
+# To verify this, look at the time labels for the 1 Hz data
+foo = ds.time_1Hz.resample(time_1Hz = '1 min').mean()
+time_diff = foo[0]-foo[0].time_1Hz
+#express time_diff in seconds with 3 significant figures
+print('Center of time interval is shifted by '+str(np.round(time_diff.values/np.timedelta64(1,'s'),7))+' seconds')
+
+
+# %%
+# This would work fine, but it requires a 291 GB array
+# ds_1min = ds.resample(time_1Hz = '1 min',skipna = True).mean()
+# This one crashes the kernel on my laptop
+ds_1min = ds.resample(Workhorse_time = '1 min',skipna = True).mean()
 
 # %%
 # Raw met plot from WG:
@@ -226,8 +242,6 @@ try:
     ds.time_1Hz[gaps[0][1]]
 except:
     print('There appear to be no gaps')
-
-# I guess what I need to do is interpolate and then go back and set gaps to nans
 
 # %%
 # There is also a limited number of NaNs in Gill wind speed
@@ -417,4 +431,23 @@ ds_new.close()
 print ('finished saving')
 
 # %%
+# Make a function that will interpolate the time dimension to a uniform time base
+def interp_time(ds_in, time_coord, time_base, var_list):
+    '''
+    Interpolate all variables in var_list to a uniform time base
+    '''
+    ds_out = ds_in[var_list].copy()
+    for var in var_list:
+        var_raw = ds_in.data_vars.get(var).copy()
+        var_value = np.interp(time_base, time_coord, var_raw)
+        locals()[var] = var_raw.rename(var) #locals()['string'] makes a variable with the name string
+        locals()[var].values = var_value
+        ds_out[var] = locals()[var]
+    return ds_out
 
+# %%
+# Make a uniform 1 Hz time base
+
+np.diff(ds.time_1Hz).min()
+
+# %%
