@@ -21,18 +21,9 @@ import xarray as xr
 import numpy as np
 import matplotlib
 import datetime as dt
-################
-# This allows us to import Tom_tools
-'''import sys
-sys.path.append('../../Tom_tools/') # you may need to adjust this path
-import Tom_tools_v1 as tt
-'''
 import os
-################
 
 # %%
-# %matplotlib inline
-# %matplotlib qt 
 savefig = False # set to true to save plots as file
 plt.rcParams['figure.figsize'] = (8,7)
 plt.rcParams['figure.dpi'] = 100
@@ -47,6 +38,20 @@ plotfiletype='png'
 # make __figdir__ if it doesn't exist
 if not os.path.exists(__figdir__):
     os.makedirs(__figdir__)
+
+# %%
+# Set paths and filenames
+WG = 'WHOI43'#'Stokes'#'Kelvin'#
+campaign = 'IOP1' # 'PFC' # 
+path = '/mnt/d/tom_data/S-MODE/S-MODE_data/final/' + campaign + '/Wavegliders/'
+path_out = '../data/processed/Waveglider_L3/' + campaign + '/' 
+#path_out = '/mnt/d/tom_data/S-MODE/S-MODE_data/final/' + campaign + '/Wavegliders/L3a/'
+# make directory if it doesn't exist
+if not os.path.exists(path_out):
+    os.makedirs(path_out)
+
+file = 'SMODE_' + campaign + '_Wavegliders_'+WG+'.nc'
+
 
 
 # %% Some functions
@@ -123,18 +128,6 @@ def add_vars(var_list, ds_in, ds_out):
     return ds_out
 
 
-# %%
-# Set paths and filenames
-WG = 'Stokes'#'Kelvin'#'WHOI43'#
-campaign = 'PFC'
-path = '/mnt/d/tom_data/S-MODE/S-MODE_data/final/' + campaign + '/Wavegliders/'
-path_out = '/mnt/d/tom_data/S-MODE/S-MODE_data/final/' + campaign + '/Wavegliders/L3a/'
-# make directory if it doesn't exist
-if not os.path.exists(path_out):
-    os.makedirs(path_out)
-
-file = 'SMODE_' + campaign + '_Wavegliders_'+WG+'.nc'
-
 
 # %%
 # With the preliminary data, it was the case that this needed to be set before 
@@ -154,6 +147,16 @@ time_diff = foo[0]-foo[0].time_1Hz
 print('Center of time interval is shifted by '+str(np.round(time_diff.values/np.timedelta64(1,'s'),7))+' seconds')
 
 # %%
+# The 20 Hz variables from WHOI43 for the pilot campaign has a 20 year time offset
+# This is a kludge to fix it
+if WG == 'WHOI43':
+    # note that ds.time_20Hz is datetime64[ns]
+    new_time = ds.time_20Hz.values - np.timedelta64(20,'Y').astype('timedelta64[ns]')
+    # replace the time variable with the new one
+    ds = ds.assign_coords(time_20Hz = new_time)
+
+
+# %%
 # Make wind vector before smoothing, for both Gill Sonic anemometer and WXT
 ds['WXT_wind_east'] = ds.WXT_wind_speed*np.cos(ds.WXT_wind_direction*np.pi/180)
 ds['WXT_wind_north'] = ds.WXT_wind_speed*np.sin(ds.WXT_wind_direction*np.pi/180)
@@ -161,12 +164,47 @@ ds['wind_east']=ds.wind_speed*np.cos(ds.wind_direction*np.pi/180)
 ds['wind_north']=ds.wind_speed*np.sin(ds.wind_direction*np.pi/180)
 
 # %%
-# This would work fine, but it requires a 291 GB array
-# ds_1min = ds.resample(time_1Hz = '1 min',skipna = True).mean()
-# This one crashes the kernel on my laptop
-#ds_1min = ds.resample(Workhorse_time = '1 min',skipna = True).mean()
+# add metadata for new variables
+ds['WXT_wind_east'].attrs = ds.WXT_wind_speed.attrs
+ds['WXT_wind_east'].attrs['long_name'] = 'WXT wind zonal component (positive to the east)'
+ds['WXT_wind_east'].attrs['standard_name'] = 'eastward_wind'
+ds['WXT_wind_east'].attrs['units'] = 'm s-1'
+ds['WXT_wind_east'].attrs['comment'] = 'WXT wind speed and direction are measured at 1 Hz.  This variable is the eastward component of the wind vector, calculated from the WXT wind speed and direction.'
+ds['WXT_wind_north'].attrs['instrument'] = 'INST_WXT'
+ds['WXT_wind_north'].attrs['valid_min'] = -50
+ds['WXT_wind_north'].attrs['valid_max'] = 50
+
+ds['WXT_wind_north'].attrs = ds.WXT_wind_speed.attrs
+ds['WXT_wind_north'].attrs['long_name'] = 'WXT wind meridional component (positive to the north))'
+ds['WXT_wind_north'].attrs['standard_name'] = 'northward_wind'
+ds['WXT_wind_north'].attrs['units'] = 'm s-1'
+ds['WXT_wind_north'].attrs['comment'] = 'WXT wind speed and direction are measured at 1 Hz.  This variable is the northward component of the wind vector, calculated from the WXT wind speed and direction.'
+ds['WXT_wind_north'].attrs['instrument'] = 'INST_WXT'
+ds['WXT_wind_north'].attrs['valid_min'] = -50
+ds['WXT_wind_north'].attrs['valid_max'] = 50
+
+ds['wind_east'].attrs = ds.wind_speed.attrs
+ds['wind_east'].attrs['long_name'] = 'Gill wind east component (positive to the east)'
+ds['wind_east'].attrs['standard_name'] = 'eastward_wind'
+ds['wind_east'].attrs['units'] = 'm s-1'
+ds['wind_east'].attrs['comment'] = 'Gill wind speed and direction are measured at 20 Hz.  This variable is the eastward component of the wind vector, calculated from the Gill wind speed and direction.'
+ds['wind_east'].attrs['instrument'] = 'INST_GILL'
+ds['wind_east'].attrs['valid_min'] = -50
+ds['wind_east'].attrs['valid_max'] = 50
+
+ds['wind_north'].attrs = ds.wind_speed.attrs
+ds['wind_north'].attrs['long_name'] = 'Gill wind north component (positive to the north)'
+ds['wind_north'].attrs['standard_name'] = 'northward_wind'
+ds['wind_north'].attrs['units'] = 'm s-1'
+ds['wind_north'].attrs['comment'] = 'Gill wind speed and direction are measured at 20 Hz.  This variable is the northward component of the wind vector, calculated from the Gill wind speed and direction.'
+ds['wind_north'].attrs['instrument'] = 'INST_GILL'
+ds['wind_north'].attrs['valid_min'] = -50
+ds['wind_north'].attrs['valid_max'] = 50
+
 
 # %%
+# # This would work fine, but it requires a 291 GB array
+# ds_1min = ds.resample(time_1Hz = '1 min',skipna = True).mean()
 # Alternate plan: make a list of variables that have a time coord, 
 # and then resample each one individually
 ds_new = xr.Dataset().assign_attrs(ds.attrs)  # make empty xr.Dataset but copy attributes from original file
@@ -193,6 +231,7 @@ for var in var_list:
     locals()[var] = var_resampled.rename(var) #locals()['string'] makes a variable with the name string
     ds_new[var] = locals()[var]
     ds_new[var].attrs = ds[var].attrs # copy attributes from original variable
+
 
 # %%
 # Do the same for Workhorse variables
