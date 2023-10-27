@@ -25,7 +25,7 @@ import datetime as dt
 import os
 
 # %%
-def WG_L3_processor_function(campaign, WG, savefig , figdir = '../plots/WG_L3/'):
+def WG_L3_processor_function(input_tuple):
     """
     This function takes the raw L2 Wave Glider data and outputs a netcdf file with
     the data averaged to a uniform time base. The time base is 1 minute 
@@ -35,18 +35,24 @@ def WG_L3_processor_function(campaign, WG, savefig , figdir = '../plots/WG_L3/')
 
     Inputs
     ------
+    input_tuple : tuple
+        (campaign, WG, savefig, figdir)
     campaign : str
         'PFC' or 'IOP1'
     WG : str
         'WHOI43' or 'Kelvin'
     savefig : bool
         True to save figures, False to not save figures
+    figdir : str
+        path to save figures
     
     Outputs
     -------
     None (but saves a netcdf file and figures)
 
     """
+    # Unpack input_tuple
+    campaign, WG, savefig , figdir = input_tuple
     print('Processing ' + WG + ' ' + campaign + ' data \n -------------------------------------')
 
     plt.rcParams['figure.figsize'] = (10,7)
@@ -74,7 +80,10 @@ def WG_L3_processor_function(campaign, WG, savefig , figdir = '../plots/WG_L3/')
     file = 'SMODE_' + campaign + '_Wavegliders_'+WG+'.nc'
     file_out = 'SMODE_' + campaign + '_Wavegliders_'+WG+'_L3.nc'
 
-
+    # check if file exists
+    if not os.path.exists(path+file):
+        print('File ' + path + file + ' does not exist-- skipping')
+        return
 
     # %% Some functions
     # Some functions
@@ -133,7 +142,15 @@ def WG_L3_processor_function(campaign, WG, savefig , figdir = '../plots/WG_L3/')
         Resample a Workhorse variable to a uniform time base
         '''
         var_raw = ds_in.data_vars.get(var).copy()
+        # remove any values corresponding to duplicate times
+        # This is a kludge to deal with the fact that the Workhorse time base is not monotonic
+        # find duplicate times
+        _, index = np.unique(var_raw.Workhorse_time, return_index=True)
+        # remove duplicate times
+        var_raw = var_raw.isel(Workhorse_time=index)
+        # resample
         var_resampled = var_raw.resample(Workhorse_time = '1 min',skipna = True).mean()
+
         return var_resampled
 
     def add_vars(var_list, ds_in, ds_out):
@@ -171,14 +188,11 @@ def WG_L3_processor_function(campaign, WG, savefig , figdir = '../plots/WG_L3/')
 
 
     # %%
-    # Make wind vector before smoothing, for both Gill Sonic anemometer and WXT
+    # Make wind vectors from WXT wind speed and direction before smoothing
     ds['WXT_wind_east'] = ds.WXT_wind_speed*np.cos(ds.WXT_wind_direction*np.pi/180)
     ds['WXT_wind_north'] = ds.WXT_wind_speed*np.sin(ds.WXT_wind_direction*np.pi/180)
-    ds['wind_east']=ds.wind_speed*np.cos(ds.wind_direction*np.pi/180)
-    ds['wind_north']=ds.wind_speed*np.sin(ds.wind_direction*np.pi/180)
 
-    # %%
-    # add metadata for new variables
+    # add metadata for new WXT variables
     ds['WXT_wind_east'].attrs = ds.WXT_wind_speed.attrs
     ds['WXT_wind_east'].attrs['long_name'] = 'WXT wind zonal component (positive to the east)'
     ds['WXT_wind_east'].attrs['standard_name'] = 'eastward_wind'
@@ -197,23 +211,31 @@ def WG_L3_processor_function(campaign, WG, savefig , figdir = '../plots/WG_L3/')
     ds['WXT_wind_north'].attrs['valid_min'] = -50
     ds['WXT_wind_north'].attrs['valid_max'] = 50
 
-    ds['wind_east'].attrs = ds.wind_speed.attrs
-    ds['wind_east'].attrs['long_name'] = 'Gill wind east component (positive to the east)'
-    ds['wind_east'].attrs['standard_name'] = 'eastward_wind'
-    ds['wind_east'].attrs['units'] = 'm s-1'
-    ds['wind_east'].attrs['comment'] = 'Gill wind speed and direction are measured at 20 Hz.  This variable is the eastward component of the wind vector, calculated from the Gill wind speed and direction.'
-    ds['wind_east'].attrs['instrument'] = 'INST_GILL'
-    ds['wind_east'].attrs['valid_min'] = -50
-    ds['wind_east'].attrs['valid_max'] = 50
+    # Now do the same for Gill R3 wind speed and direction
+    # First check if there is a Gill wind speed variable
+    flag_20Hz = False
+    if 'wind_speed' in ds.data_vars:
+        flag_20Hz = True
+        ds['wind_east']=ds.wind_speed*np.cos(ds.wind_direction*np.pi/180)
+        ds['wind_north']=ds.wind_speed*np.sin(ds.wind_direction*np.pi/180)
 
-    ds['wind_north'].attrs = ds.wind_speed.attrs
-    ds['wind_north'].attrs['long_name'] = 'Gill wind north component (positive to the north)'
-    ds['wind_north'].attrs['standard_name'] = 'northward_wind'
-    ds['wind_north'].attrs['units'] = 'm s-1'
-    ds['wind_north'].attrs['comment'] = 'Gill wind speed and direction are measured at 20 Hz.  This variable is the northward component of the wind vector, calculated from the Gill wind speed and direction.'
-    ds['wind_north'].attrs['instrument'] = 'INST_GILL'
-    ds['wind_north'].attrs['valid_min'] = -50
-    ds['wind_north'].attrs['valid_max'] = 50
+        ds['wind_east'].attrs = ds.wind_speed.attrs
+        ds['wind_east'].attrs['long_name'] = 'Gill wind east component (positive to the east)'
+        ds['wind_east'].attrs['standard_name'] = 'eastward_wind'
+        ds['wind_east'].attrs['units'] = 'm s-1'
+        ds['wind_east'].attrs['comment'] = 'Gill wind speed and direction are measured at 20 Hz.  This variable is the eastward component of the wind vector, calculated from the Gill wind speed and direction.'
+        ds['wind_east'].attrs['instrument'] = 'INST_GILL'
+        ds['wind_east'].attrs['valid_min'] = -50
+        ds['wind_east'].attrs['valid_max'] = 50
+
+        ds['wind_north'].attrs = ds.wind_speed.attrs
+        ds['wind_north'].attrs['long_name'] = 'Gill wind north component (positive to the north)'
+        ds['wind_north'].attrs['standard_name'] = 'northward_wind'
+        ds['wind_north'].attrs['units'] = 'm s-1'
+        ds['wind_north'].attrs['comment'] = 'Gill wind speed and direction are measured at 20 Hz.  This variable is the northward component of the wind vector, calculated from the Gill wind speed and direction.'
+        ds['wind_north'].attrs['instrument'] = 'INST_GILL'
+        ds['wind_north'].attrs['valid_min'] = -50
+        ds['wind_north'].attrs['valid_max'] = 50
 
 
     # %%
@@ -268,7 +290,10 @@ def WG_L3_processor_function(campaign, WG, savefig , figdir = '../plots/WG_L3/')
     # Change the name of the associated coordinate to 'time'
     ds_new = ds_new.rename({'time_1Hz':'time'})
     # Now drop the time_20Hz and Workhorse_time coordinates (dimensions do not need to be dropped)
-    ds_new = ds_new.drop_vars(['time_20Hz','Workhorse_time'])
+    if flag_20Hz:
+        ds_new = ds_new.drop_vars(['time_20Hz','Workhorse_time'])
+    else:
+        ds_new = ds_new.drop_vars(['Workhorse_time'])
 
     # %%
     # Put wave spectral variables into the new dataset without interpolating
@@ -289,7 +314,7 @@ def WG_L3_processor_function(campaign, WG, savefig , figdir = '../plots/WG_L3/')
     # add resampled data
     h3, = plt.plot(ds_new.time, ds_new.WXT_air_temperature)
     h4, = plt.plot(ds_new.time, ds_new.UCTD_sea_water_temperature)
-    plt.legend([h1, h2, h3, h4],['Air temp.','SST','Air temp. resampled','SST resampled'],loc='upper right')
+    plt.legend([h1, h2, h3, h4],['Air temp.','SST','Air temp. bin avg.','SST bin avg.'],loc='upper right')
     plt.ylabel('T [$^\circ$C]')
     plt.title(WG+': raw 1 Hz WXT measurements')
 
@@ -297,27 +322,33 @@ def WG_L3_processor_function(campaign, WG, savefig , figdir = '../plots/WG_L3/')
     plt.plot(ds.time_1Hz, ds.WXT_relative_humidity)
     plt.plot(ds_new.time, ds_new.WXT_relative_humidity)
     plt.ylabel('[%]')
-    plt.legend(['Rel. Humidity','Rel. Humidity resampled'],loc='upper right')
+    plt.legend(['Rel. Humidity','Rel. Humidity bin avg.'],loc='upper right')
 
     plt.subplot(5,1,3)
     plt.plot(ds.time_15min, ds.wave_significant_height)
     plt.plot(ds_new.time_15min, ds_new.wave_significant_height)
     plt.ylabel('[m]')
-    plt.legend(['Sig. wave height','Sig. wave height resampled'],loc='upper right')
+    plt.legend(['Sig. wave height','Sig. wave height bin avg.'],loc='upper right')
 
     plt.subplot(5,1,4)
-    plt.plot(ds.time_20Hz, ds.wind_speed)
-    plt.plot(ds_new.time, ds_new.wind_speed)
-    plt.plot(ds.time_1Hz, ds.WXT_wind_speed)
-    plt.plot(ds_new.time, ds_new.WXT_wind_speed)
-    plt.ylabel('[m/s]')
-    plt.legend(['Gill Wind speed','Gill Wind speed resampled','WXT wind speed','WXT wind speed resampled'],loc='upper right')
+    if flag_20Hz:
+        plt.plot(ds.time_20Hz, ds.wind_speed)
+        plt.plot(ds_new.time, ds_new.wind_speed)
+        plt.plot(ds.time_1Hz, ds.WXT_wind_speed)
+        plt.plot(ds_new.time, ds_new.WXT_wind_speed)
+        plt.ylabel('[m/s]')
+        plt.legend(['Gill Wind speed','Gill Wind speed bin avg.','WXT wind speed','WXT wind speed bin avg.'],loc='upper right')
+    else:
+        plt.plot(ds.time_1Hz, ds.WXT_wind_speed)
+        plt.plot(ds_new.time, ds_new.WXT_wind_speed)
+        plt.ylabel('[m/s]')
+        plt.legend(['WXT wind speed','WXT wind speed bin avg.'],loc='upper right')
 
     plt.subplot(5,1,5)
     plt.plot(ds.Workhorse_time, ds.Workhorse_vel_east[:,10])
     plt.plot(ds_new.time, ds_new.Workhorse_vel_east[:,10])
     plt.ylabel('[m/s]')
-    plt.legend(['WH east vel.','WH east vel. resampled'],loc='upper right')
+    plt.legend(['WH east vel.','WH east vel. bin avg.'],loc='upper right')
 
 
     if savefig:
@@ -331,7 +362,7 @@ def WG_L3_processor_function(campaign, WG, savefig , figdir = '../plots/WG_L3/')
     plt.plot(ds.time_1Hz, ds.WXT_atmospheric_pressure)
     plt.plot(ds_new.time, ds_new.WXT_atmospheric_pressure)
     plt.ylabel('[mbar]')
-    plt.legend(['Atm. pressure','Atm. pressure resampled'])
+    plt.legend(['Atm. pressure','Atm. pressure bin avg.'])
     plt.title(WG+': raw measurements')
 
     plt.subplot(4,1,2)
@@ -339,30 +370,30 @@ def WG_L3_processor_function(campaign, WG, savefig , figdir = '../plots/WG_L3/')
         plt.plot(ds.time_1Hz, ds.SGR4_longwave_flux)
         plt.plot(ds_new.time, ds_new.SGR4_longwave_flux)
         plt.ylabel('W/m^2')
-        plt.legend(['Longwave radiation','Longwave radiation resampled'],loc='upper right')
-    except:
+        plt.legend(['Longwave radiation','Longwave radiation bin avg.'],loc='upper right')
+    except Exception:
         plt.plot(ds.time_1Hz, ds.WXT_relative_humidity)
         plt.plot(ds_new.time, ds_new.WXT_relative_humidity)
         plt.ylabel('%')
-        plt.legend(['Relative humidity','Relative humidity resampled'],loc='upper right')
+        plt.legend(['Relative humidity','Relative humidity bin avg.'],loc='upper right')
 
     plt.subplot(4,1,3)
     try:
         plt.plot(ds.time_1Hz, ds.SMP21_shortwave_flux)
         plt.plot(ds_new.time, ds_new.SMP21_shortwave_flux)
         plt.ylabel('W/m^2')
-        plt.legend(['Shortwave radiation','Shortwave radiation resampled'],loc='upper right')
-    except:
+        plt.legend(['Shortwave radiation','Shortwave radiation bin avg.'],loc='upper right')
+    except Exception:
         plt.plot(ds.time_15min, ds.wave_significant_height)
         plt.plot(ds_new.time_15min, ds_new.wave_significant_height)
         plt.ylabel('m')
-        plt.legend(['SWH','SWH resampled'],loc='upper right')
+        plt.legend(['SWH','SWH bin avg.'],loc='upper right')
 
     plt.subplot(4,1,4)
     plt.plot(ds.time_1Hz, ds.WXT_rain_intensity)
     plt.plot(ds_new.time, ds_new.WXT_rain_intensity)
     plt.ylabel('[mm/hr]')
-    plt.legend(['Precip. rate','Precip. rate resampled'],loc='upper right')
+    plt.legend(['Precip. rate','Precip. rate bin avg.'],loc='upper right')
 
     if savefig:
         plt.savefig(figdir+WG+'_'+ campaign +'_raw_met2' + '.' +plotfiletype,**savefig_args)
@@ -380,7 +411,7 @@ def WG_L3_processor_function(campaign, WG, savefig , figdir = '../plots/WG_L3/')
     fig.autofmt_xdate()
     plt.plot(ds.time_1Hz, np.isnan(ds.WXT_wind_speed.values))
     plt.plot(ds_new.time, np.isnan(ds_new.WXT_wind_speed.values))
-    plt.legend(['WXT wind speed','WXT wind speed resampled'],loc='upper right')
+    plt.legend(['WXT wind speed','WXT wind speed bin avg.'],loc='upper right')
     plt.title('NaNs in WXT wind speed, ' + WG + '\n' + WXT_nan_str)
 
     if savefig:
@@ -388,23 +419,25 @@ def WG_L3_processor_function(campaign, WG, savefig , figdir = '../plots/WG_L3/')
 
     # %%
     # NaNs in Gill wind speed
-    ff = np.where(np.isnan(ds.wind_speed.values)==0)
-    t = ds.time_20Hz[ff]
-    Gill_nan_str = str(np.round(100*(1-np.size(ff)/np.size(ds.time_20Hz)),3))+'% of values are NaN'
-    print(Gill_nan_str)
+    if flag_20Hz:
+        ff = np.where(np.isnan(ds.wind_speed.values)==0)
+        t = ds.time_20Hz[ff]
+        Gill_nan_str = str(np.round(100*(1-np.size(ff)/np.size(ds.time_20Hz)),3))+'% of values are NaN'
+        print(Gill_nan_str)
 
 
     # %%
     # There is also a limited number of NaNs in Gill wind speed
-    fig, axs = plt.subplots(1, 1)
-    fig.autofmt_xdate()
-    plt.plot(ds.time_20Hz, np.isnan(ds.wind_speed.values))
-    plt.plot(ds_new.time, np.isnan(ds_new.wind_speed.values))
-    plt.legend(['Gill wind speed','Gill wind speed resampled'],loc='upper right')
-    plt.title('NaNs in Gill wind speed, ' + WG + '\n' + Gill_nan_str + '\n (includes large blocks of NaNs when instrument is off)')
+    if flag_20Hz:
+        fig, axs = plt.subplots(1, 1)
+        fig.autofmt_xdate()
+        plt.plot(ds.time_20Hz, np.isnan(ds.wind_speed.values))
+        plt.plot(ds_new.time, np.isnan(ds_new.wind_speed.values))
+        plt.legend(['Gill wind speed','Gill wind speed bin avg.'],loc='upper right')
+        plt.title('NaNs in Gill wind speed, ' + WG + '\n' + Gill_nan_str + '\n (includes large blocks of NaNs when instrument is off)')
 
-    if savefig:
-        plt.savefig(figdir+WG+'_'+ campaign +'_Gill_wspd_NaNs' + '.' +plotfiletype,**savefig_args)
+        if savefig:
+            plt.savefig(figdir+WG+'_'+ campaign +'_Gill_wspd_NaNs' + '.' +plotfiletype,**savefig_args)
 
 
 
