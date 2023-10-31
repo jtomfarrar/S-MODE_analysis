@@ -87,6 +87,39 @@ def make_var_list(ds_in,time_coord):
 
     return var_list
 
+def make_coord_list(ds_in,time_coord):
+    """
+    Find all the coordinates with a given time coord.  (This is needed because some coordinates 
+    like latitude and longitude are not variables, but they are coordinates.)
+ 
+    Parameters
+    ----------
+    ds_in : xarray.dataset
+    time_coord : str 
+
+    Returns
+    -------
+    result : list of str
+        list of coords meeting criterion
+    """
+    
+    coord_list = []  
+    not_used = []  
+    for coord in ds_in.coords:
+        try:
+            if ds_in.coords.get(coord).dims[0]==time_coord:
+                coord_list.append(coord)
+                print(coord)
+
+        except Exception: # if there is no time coord, just skip it
+            not_used.append(var)
+        
+    # Do not include time coord in coord_list
+    coord_list.remove(time_coord)
+
+    return coord_list
+
+
 
 # Make a function that will use the xr.resample method to resample a single variable
 # This function will determine the time base from the input variable
@@ -98,6 +131,15 @@ def resample_var_1Hz(var, ds_in):
     var_raw = ds_in.data_vars.get(var).copy()
     var_resampled = var_raw.resample(time_1Hz = '1 min',skipna = True).mean()
     return var_resampled
+
+# make an analogous function for 1 Hz coordinates
+def resample_coord_1Hz(coord, ds_in):
+    '''
+    Resample a 1Hz coordinate to a uniform time base
+    '''
+    coord_raw = ds_in.coords.get(coord).copy()
+    coord_resampled = coord_raw.resample(time_1Hz = '1 min',skipna = True).mean()
+    return coord_resampled
 
 def resample_var_20Hz(var, ds_in):
     '''
@@ -128,7 +170,6 @@ def add_vars(var_list, ds_in, ds_out):
     return ds_out
 
 
-
 # %%
 # With the preliminary data, it was the case that this needed to be set before 
 # any dates are encoded as datetime64-- not sure if it is still needed
@@ -145,6 +186,14 @@ foo = ds.time_1Hz.resample(time_1Hz = '1 min').mean()
 time_diff = foo[0]-foo[0].time_1Hz
 #express time_diff in seconds with 3 significant figures
 print('Center of time interval is shifted by '+str(np.round(time_diff.values/np.timedelta64(1,'s'),7))+' seconds')
+
+# %%
+# latitude and longitude are coordinates, not variables
+foo = ds.latitude_1Hz.resample(time_1Hz = '1 min').mean()
+
+
+#print('Center of time interval is shifted by '+str(np.round(time_diff.values/np.timedelta64(1,'s'),7))+' seconds')
+
 
 # %%
 # The 20 Hz variables from WHOI43 for the pilot campaign has a 20 year time offset
@@ -220,6 +269,17 @@ for var in var_list:
     ds_new[var] = locals()[var]
     ds_new[var].attrs = ds[var].attrs # copy attributes from original variable
 
+# %%
+# Do the same for coordinate variables  
+coord_list = make_coord_list(ds, 'time_1Hz')
+for coord in coord_list:
+    print(coord)
+    coord_resampled = resample_coord_1Hz(coord, ds)
+    locals()[coord] = coord_resampled.rename(coord) #locals()['string'] makes a variable with the name string
+    ds_new[coord] = locals()[coord]
+    ds_new[coord].attrs = ds[coord].attrs # copy attributes from original variable
+    # make the variable into a coordinate
+    ds_new = ds_new.set_coords(coord)
 # %%
 # Do the same for time_20Hz variables
 var_list = make_var_list(ds, 'time_20Hz')
