@@ -14,6 +14,9 @@ http://smode.whoi.edu:8080/thredds/dodsC/IOP2_2023/satellite/VIIRS_NPP/VIIRS_NPP
 '''
 # %%
 import os
+# change directory to '/home/jtomf/Python/S-MODE_analysis/code_analysis')
+os.chdir('/home/jtomf/Python/S-MODE_analysis/code_analysis')
+
 import xarray as xr
 import functions
 import numpy as np
@@ -31,7 +34,6 @@ from cartopy.io.shapereader import Reader
 # %matplotlib widget
 
 # %%
-os.system('cd ~/Python/S-MODE_analysis/code_analysis')
 
 # %%
 plt.rcParams['figure.figsize'] = (7.5,6)
@@ -48,7 +50,7 @@ plotfiletype='png'
 
 # %%
 WG_list = ['WHOI22','WHOI32','WHOI43','STOKES', 'PLANCK', 'KELVIN', 'CARSON','PASCAL','WHOI1102']
-path='../data/raw/WG_NRT/'
+path='../data/raw/IOP1/WG_NRT/'
 
 # Make a list of the files:
 n=0
@@ -73,7 +75,8 @@ for WG in WG_list:
 
 # %% 
 # Read in Bold Horizon position data
-BH_position_file = 'http://smode.whoi.edu:8080/thredds/dodsC/IOP1_2022/Bold_Horizon/BH_drifter_position/SMODE_IOP1_surface_drifter_0-4442680.nc'
+BH_position_file = 'http://bigcreek.whoi.edu:8080/thredds/dodsC/IOP1_2022/Bold_Horizon/BH_drifter_position/SMODE_IOP1_surface_drifter_0-4442680.nc'
+#BH_position_file = 'http://smode.whoi.edu:8080/thredds/dodsC/IOP1_2022/Bold_Horizon/BH_drifter_position/SMODE_IOP1_surface_drifter_0-4442680.nc'
 ship_position = xr.open_dataset(BH_position_file)
 
 
@@ -203,7 +206,8 @@ def plot_SST_map(ds2, mean_SST):
 # url for the data (use xml extension instead of html)
 ds_name = 'VIIRS_NRT'
 # ds_name = 'VIIRS_N20'
-server_url = 'http://smode.whoi.edu:8080/thredds/'
+server_url = 'http://bigcreek.whoi.edu:8080/thredds/'
+#server_url = 'http://smode.whoi.edu:8080/thredds/'
 request_url = 'catalog/IOP1_2022/satellite/' + ds_name + '/catalog.xml'
 url = server_url + request_url
 sst_filelist = functions.list_THREDDS(server_url,request_url)
